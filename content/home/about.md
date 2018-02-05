@@ -11,7 +11,7 @@ weight = 5
 [interests]
   interests = [
     "Cognitive Control Processes",
-    "Application & Development of Computational Models",
+    "Application & Development of Computational Cognitive Models",
     "Reproducibility in Psychological Science"
   ]
 
