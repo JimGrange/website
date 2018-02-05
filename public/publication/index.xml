@@ -13,12 +13,21 @@
     
     
     <item>
-      <title>Mobile visual clothing search</title>
-      <link>/publication/clothing-search/</link>
-      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
+      <title>Justify your alpha</title>
+      <link>/publication/lakens-nathumbeh/</link>
+      <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/publication/clothing-search/</guid>
-      <description>More detail can easily be written here using Markdown and $\rm \LaTeX$ math code.</description>
+      <guid>/publication/lakens-nathumbeh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Risky decision-making and affective features of impulse control disorder in Parkinson’s disease</title>
+      <link>/publication/martini-neuraltransmission/</link>
+      <pubDate>Wed, 03 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/martini-neuraltransmission/</guid>
+      <description></description>
     </item>
     
   </channel>
