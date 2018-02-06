@@ -13,20 +13,38 @@
     
     
     <item>
-      <title>test publication</title>
-      <link>/publication/test-publication/</link>
-      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <title>Justify your alpha</title>
+      <link>/publication/lakens-2018/</link>
+      <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/publication/test-publication/</guid>
+      <guid>/publication/lakens-2018/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>test publication 2 </title>
-      <link>/publication/test-publication-2/</link>
+      <title>The effect of aging on response congruency in task switching: A meta-analysis.</title>
+      <link>/publication/grange-congruency_meta/</link>
+      <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-congruency_meta/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Risky decision-making and affective features of impulse control disorder in Parkinson’s disease</title>
+      <link>/publication/martini-2018/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/publication/test-publication-2/</guid>
+      <guid>/publication/martini-2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Does familial risk for alcohol use disorder predict alcohol hangover?</title>
+      <link>/publication/stephens-familial_risk/</link>
+      <pubDate>Fri, 06 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/stephens-familial_risk/</guid>
       <description></description>
     </item>
     

@@ -5,7 +5,25 @@
     
     <url>
     
-      <loc>/publication/test-publication/</loc>
+      <loc>/publication/lakens-2018/</loc>
+      <lastmod>2018-01-10T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/publication/grange-congruency_meta/</loc>
+      <lastmod>2018-01-09T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/publication/martini-2018/</loc>
       <lastmod>2018-01-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -14,8 +32,8 @@
     
     <url>
     
-      <loc>/publication/test-publication-2/</loc>
-      <lastmod>2018-01-01T00:00:00+00:00</lastmod>
+      <loc>/publication/stephens-familial_risk/</loc>
+      <lastmod>2017-01-06T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -104,8 +122,8 @@
     
     <url>
     
-      <loc>/publication_types/1/</loc>
-      <lastmod>2018-01-01T00:00:00+00:00</lastmod>
+      <loc>/publication_types/2/</loc>
+      <lastmod>2018-01-10T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -174,7 +192,7 @@
     <url>
     
       <loc>/publication_types/</loc>
-      <lastmod>2018-01-01T00:00:00+00:00</lastmod>
+      <lastmod>2018-01-10T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
