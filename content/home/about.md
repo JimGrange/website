@@ -10,29 +10,31 @@ weight = 5
 # List your academic interests.
 [interests]
   interests = [
-    "Cognitive Control Processes",
-    "Application & Development of Computational Cognitive Models",
-    "Reproducibility in Psychological Science"
+    "Artificial Intelligence",
+    "Computational Linguistics",
+    "Information Retrieval"
   ]
 
 # List your qualifications (such as academic degrees).
 [[education.courses]]
-  course = "PhD in Cognitive Psychology"
-  institution = "Bangor University"
-  year = 2010
+  course = "PhD in Artificial Intelligence"
+  institution = "Stanford University"
+  year = 2012
 
 [[education.courses]]
-  course = "MSc in Psychological Research"
-  institution = "Bangor University"
-  year = 2007
+  course = "MEng in Artificial Intelligence"
+  institution = "Massachusetts Institute of Technology"
+  year = 2009
 
 [[education.courses]]
-  course = "BSc in Psychology"
-  institution = "Bangor University"
-  year = 2006
+  course = "BSc in Artificial Intelligence"
+  institution = "Massachusetts Institute of Technology"
+  year = 2008
  
 +++
 
 # Biography
 
-I am a Senior Lecturer in Cognitive Psychology at Keele University, UK, where I am also currently serving as interim Head of School. 
+Lena Smith is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate. 

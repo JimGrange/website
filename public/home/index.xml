@@ -18,11 +18,21 @@
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
       <guid>/home/about/</guid>
-      <description>Biography I am a Senior Lecturer in Cognitive Psychology at Keele University, UK, where I am also currently serving as interim Head of School.</description>
+      <description>Biography Lena Smith is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet.</description>
     </item>
     
     <item>
-      <title> Publications</title>
+      <title>Selected Publications</title>
+      <link>/home/publications_selected/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0100</pubDate>
+      
+      <guid>/home/publications_selected/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent Publications</title>
       <link>/home/publications/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0100</pubDate>
       
@@ -84,15 +94,6 @@ I am a teaching instructor for the following courses at University X:
       
       <guid>/home/contact/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/home/publications_selected/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/home/publications_selected/</guid>
-      <description>+++ # Selected Publications widget. # This widget displays publications from content/publication/ which have # selected = true in their +++ front matter. widget = &amp;ldquo;publications_selected&amp;rdquo; active = true date = 2016-04-20 title = &amp;ldquo;Selected Publications&amp;rdquo; subtitle = &amp;ldquo;&amp;rdquo; # Order that this section will appear in. weight = 10 # List format. # 0 = Simple # 1 = Detailed # 2 = APA # 3 = MLA list_format = 1 # Filter by publication type.</description>
     </item>
     
   </channel>
