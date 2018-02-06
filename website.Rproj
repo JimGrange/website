@@ -13,3 +13,4 @@ RnwWeave: knitr
 LaTeX: pdfLaTeX
 
 BuildType: Website
+WebsitePath: //ufs.psy.keele.ac.uk/homes/My Documents/Git/website
