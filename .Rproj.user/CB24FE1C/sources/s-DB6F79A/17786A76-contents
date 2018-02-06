@@ -50,7 +50,7 @@ defaultContentLanguageInSubdir = false
   font = "default"
 
   # Your details.
-  name = "Jim Grange"
+  name = "Jim Grange test"
   role = "Senior Lecturer in Cognitive Psychology"
 
   # Organizations/Affiliations.
