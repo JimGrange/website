@@ -39,19 +39,19 @@
     
     <item>
       <title>Inhibition in task switching: The reliability of the n−2 repetition cost</title>
-      <link>/publication/kowalczyk-2017-reliability/</link>
+      <link>/publication/kowalczyk-inhition_reliability/</link>
       <pubDate>Thu, 12 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>/publication/kowalczyk-2017-reliability/</guid>
+      <guid>/publication/kowalczyk-inhition_reliability/</guid>
       <description></description>
     </item>
     
     <item>
       <title>The effect of episodic retrieval on inhibition in task switching</title>
-      <link>/publication/grange-2017_jephpp/</link>
+      <link>/publication/grange-episodic_retrieval/</link>
       <pubDate>Sun, 08 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>/publication/grange-2017_jephpp/</guid>
+      <guid>/publication/grange-episodic_retrieval/</guid>
       <description></description>
     </item>
     
@@ -291,10 +291,10 @@ git submodule update --init --recursive
     
     <item>
       <title>flankr: An R package implementing computational models of attentional selectivity</title>
-      <link>/publication/grange-flankr_2016/</link>
+      <link>/publication/grange-flankr/</link>
       <pubDate>Wed, 06 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>/publication/grange-flankr_2016/</guid>
+      <guid>/publication/grange-flankr/</guid>
       <description></description>
     </item>
     
@@ -309,19 +309,19 @@ git submodule update --init --recursive
     
     <item>
       <title>The effect of alcohol hangover on choice response time</title>
-      <link>/publication/grange-hangover_rt_2016/</link>
+      <link>/publication/grange-hangover_rt/</link>
       <pubDate>Tue, 05 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>/publication/grange-hangover_rt_2016/</guid>
+      <guid>/publication/grange-hangover_rt/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Time for insulting reviews to stop</title>
-      <link>/publication/grange-insulting_reviews_2016/</link>
+      <link>/publication/grange-insulting_reviews/</link>
       <pubDate>Sun, 03 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>/publication/grange-insulting_reviews_2016/</guid>
+      <guid>/publication/grange-insulting_reviews/</guid>
       <description></description>
     </item>
     
