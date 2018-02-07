@@ -18,10 +18,8 @@ publication_types = ["2"]
 publication = "*Science, 351*, 1037"
 publication_short = "*Science, 351*, 1037"
 
-abstract = "Gilbert et al. conclude that evidence from the Open Science Collaboration’s Reproducibility Project: Psychology indicates high reproducibility, given the study methodology. Their very optimistic assessment is limited by statistical misconceptions and by causal
-inferences from selectively interpreted, correlational data. Using the Reproducibility Project: Psychology data, both optimistic and pessimistic conclusions about reproducibility are possible, and neither are yet warranted."
-abstract_short = "Gilbert et al. conclude that evidence from the Open Science Collaboration’s Reproducibility Project: Psychology indicates high reproducibility, given the study methodology. Their very optimistic assessment is limited by statistical misconceptions and by causal
-inferences from selectively interpreted, correlational data. Using the Reproducibility Project: Psychology data, both optimistic and pessimistic conclusions about reproducibility are possible, and neither are yet warranted."
+abstract = "Gilbert et al. conclude that evidence from the Open Science Collaboration’s Reproducibility Project: Psychology indicates high reproducibility, given the study methodology. Their very optimistic assessment is limited by statistical misconceptions and by causal inferences from selectively interpreted, correlational data. Using the Reproducibility Project: Psychology data, both optimistic and pessimistic conclusions about reproducibility are possible, and neither are yet warranted."
+abstract_short = "Gilbert et al. conclude that evidence from the Open Science Collaboration’s Reproducibility Project: Psychology indicates high reproducibility, given the study methodology. Their very optimistic assessment is limited by statistical misconceptions and by causal inferences from selectively interpreted, correlational data. Using the Reproducibility Project: Psychology data, both optimistic and pessimistic conclusions about reproducibility are possible, and neither are yet warranted."
 
 selected = "true"
 
