@@ -2,7 +2,7 @@
 title = "Inhibition in task switching: The reliability of the n−2 repetition cost"
 date = "2017-01-12"
 
-authors = ["Kowalczyk, A.W.", "& **Grange, J.A.**"]
+authors = ["Kowalczyk, A.W.", "& **Grange, J.A**"]
 
 # Publication type.
 # Legend:

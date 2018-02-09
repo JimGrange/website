@@ -2,7 +2,7 @@
 title = "Temporal distinctiveness in task switching: Assessing the mixture-distribution assumption."
 date = "2016-02-24"
 
-authors = ["**Grange, J.A.**"]
+authors = ["**Grange, J.A**"]
 
 # Publication type.
 # Legend:

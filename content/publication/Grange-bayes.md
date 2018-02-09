@@ -2,7 +2,7 @@
 title = "What's all this business about Bayes?"
 date = "2013-12-01"
 
-authors = ["**Grange, J.A.**"]
+authors = ["**Grange, J.A**"]
 
 # Publication type.
 # Legend:

@@ -2,7 +2,7 @@
 title = "Models of cognitive control in task switching"
 date = "2014-06-17"
 
-authors = ["**Grange, J.A.**", "& Houghton, G."]
+authors = ["**Grange, J.A.**", "& Houghton, G"]
 
 # Publication type.
 # Legend:

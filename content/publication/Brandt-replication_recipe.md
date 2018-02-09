@@ -2,7 +2,7 @@
 title = "The replication recipe: What makes for a convincing replication?"
 date = "2014-03-01"
 
-authors = ["Brandt, M.J", "IJzerman, H.", "Dijksterhuis, A.", "Farach, F.", "Geller, J.", "Giner-Sorolla, R.", "**Grange, J.A.**", "Perugini, M.", "Spies, J.", "& van 't Veer, A."]
+authors = ["Brandt, M.J", "IJzerman, H.", "Dijksterhuis, A.", "Farach, F.", "Geller, J.", "Giner-Sorolla, R.", "**Grange, J.A.**", "Perugini, M.", "Spies, J.", "& van 't Veer, A"]
 
 # Publication type.
 # Legend:

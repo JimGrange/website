@@ -2,7 +2,7 @@
 title = "Time for insulting reviews to stop"
 date = "2016-01-03"
 
-authors = ["**Grange, J.A.**"]
+authors = ["**Grange, J.A**"]
 
 # Publication type.
 # Legend:

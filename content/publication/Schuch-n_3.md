@@ -2,7 +2,7 @@
 title = "The effect of n–3 on n–2 repetition costs in task switching"
 date = "2015-05-01"
 
-authors = ["Schuch, S.", "& **Grange, J.A.**"]
+authors = ["Schuch, S.", "& **Grange, J.A**"]
 
 # Publication type.
 # Legend:

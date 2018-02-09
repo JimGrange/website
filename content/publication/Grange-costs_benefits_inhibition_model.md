@@ -2,7 +2,7 @@
 title = "On costs and benefits of n–2 repetitions in task switching: Towards a behavioural marker of cognitive inhibition."
 date = "2013-04-01"
 
-authors = ["**Grange, J.A.**", "Juvina, I.", "& Houghton, G."]
+authors = ["**Grange, J.A.**", "Juvina, I.", "& Houghton, G"]
 
 # Publication type.
 # Legend:

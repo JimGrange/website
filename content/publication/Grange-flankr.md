@@ -2,7 +2,7 @@
 title = "flankr: An R package implementing computational models of attentional selectivity"
 date = "2016-01-06"
 
-authors = ["**Grange, J.A.**"]
+authors = ["**Grange, J.A**"]
 
 # Publication type.
 # Legend:

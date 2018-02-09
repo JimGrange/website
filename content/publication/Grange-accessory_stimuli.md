@@ -2,7 +2,7 @@
 title = "Cost–benefit and distributional analyses of accessory stimuli"
 date = "2012-09-01"
 
-authors = ["**Grange, J.A.**", "Lody, A.", "& Bratt, S."]
+authors = ["**Grange, J.A.**", "Lody, A.", "& Bratt, S"]
 
 # Publication type.
 # Legend:
