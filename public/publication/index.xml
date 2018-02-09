@@ -121,15 +121,6 @@
     </item>
     
     <item>
-      <title>Estimating the reproducibility of psychological science</title>
-      <link>/publication/osc-estimating_reproducibility/</link>
-      <pubDate>Fri, 28 Aug 2015 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/osc-estimating_reproducibility/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>The effect of n–3 on n–2 repetition costs in task switching</title>
       <link>/publication/schuch-n_3/</link>
       <pubDate>Fri, 01 May 2015 00:00:00 +0000</pubDate>
@@ -198,6 +189,51 @@
       <pubDate>Sat, 01 Mar 2014 00:00:00 +0000</pubDate>
       
       <guid>/publication/brandt-replication_recipe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>What&#39;s all this business about Bayes?</title>
+      <link>/publication/grange-bayes/</link>
+      <pubDate>Sun, 01 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-bayes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Reproducibility Project: A model of large-scale collaboration for empirical research on reproducibility</title>
+      <link>/publication/osc-book_chapter/</link>
+      <pubDate>Sat, 01 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/osc-book_chapter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>On costs and benefits of n–2 repetitions in task switching: Towards a behavioural marker of cognitive inhibition.</title>
+      <link>/publication/grange-costs_benefits_inhibition_model/</link>
+      <pubDate>Mon, 01 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-costs_benefits_inhibition_model/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>An open, large-scale, collaborative effort to estimate the reproducibility of psychological science</title>
+      <link>/publication/osc-estimating_reproducibility/</link>
+      <pubDate>Wed, 07 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/osc-estimating_reproducibility/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cost–benefit and distributional analyses of accessory stimuli</title>
+      <link>/publication/grange-accessory_stimuli/</link>
+      <pubDate>Sat, 01 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-accessory_stimuli/</guid>
       <description></description>
     </item>
     
