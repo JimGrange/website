@@ -2,7 +2,7 @@
 title = "The replication recipe: What makes for a convincing replication?"
 date = "2014-03-01"
 
-authors = ["Brandt, M.J"]
+authors = ["Brandt, M.J", "IJzerman, H.", "Dijksterhuis, A.", "Farach, F.", "Geller, J.", "Giner-Sorolla, R.", "**Grange, J.A.**", "Perugini, M.", "Spies, J.", "& van 't Veer, A."]
 
 # Publication type.
 # Legend:
@@ -15,16 +15,16 @@ authors = ["Brandt, M.J"]
 # 6 = Book chapter
 publication_types = ["2"]
 
-publication = "*Psychopharmacology, 231*, 2223--2236"
-publication_short = "*Psychopharmacology, 231*, 2223--2236"
+publication = "*Journal of Experimental Social Psychology, 50*, 217--224."
+publication_short = "*Journal of Experimental Social Psychology, 50*, 217--224."
 
-abstract = "Alcohol hangover may be defined as an adverse effect of heavy alcohol consumption present after sufficient time has elapsed for the alcohol to have been eliminated from the blood. Understanding how hangover may impair performance is important for public safety; yet, there is relatively little hangover research. This paper outlines good practice for future studies. This paper presents a critical analysis of hangover methodology for surveys or studies of effects on cognition with human subjects and provides suggestions for optimum research practice for laboratory-based and naturalistic alcohol hangover studies. Four hangover symptom scales have been developed and subjected to psychometric testing. For retrospective assessment, we recommend the Hangover Symptoms Scale (HSS) or the Alcohol Hangover Severity Scale (AHSS). For concurrent assessment of hangover symptoms, we recommend either the Acute Hangover Scale (AHS), the five-item version of the HSS, or the AHSS. In research aiming to assess the cognitive effects of alcohol hangover, we suggest focusing on the cognitive domains of attention, memory and executive function, and we specify a number of tests within these cognitive domains that are likely to be sensitive to any decrements due to hangover. Finally, we argue that naturalistic studies should assess biological markers to improve the accuracy of estimates of alcohol consumption. Specifically, we recommend the assessment of ethyl glucuronide (EtG) for this purpose. Recommendations are made with respect to assessing hangover symptoms, cognitive effects of hangover and biological markers of alcohol consumption."
-abstract_short = "Alcohol hangover may be defined as an adverse effect of heavy alcohol consumption present after sufficient time has elapsed for the alcohol to have been eliminated from the blood. Understanding how hangover may impair performance is important for public safety; yet, there is relatively little hangover research. This paper outlines good practice for future studies. This paper presents a critical analysis of hangover methodology for surveys or studies of effects on cognition with human subjects and provides suggestions for optimum research practice for laboratory-based and naturalistic alcohol hangover studies. Four hangover symptom scales have been developed and subjected to psychometric testing. For retrospective assessment, we recommend the Hangover Symptoms Scale (HSS) or the Alcohol Hangover Severity Scale (AHSS). For concurrent assessment of hangover symptoms, we recommend either the Acute Hangover Scale (AHS), the five-item version of the HSS, or the AHSS. In research aiming to assess the cognitive effects of alcohol hangover, we suggest focusing on the cognitive domains of attention, memory and executive function, and we specify a number of tests within these cognitive domains that are likely to be sensitive to any decrements due to hangover. Finally, we argue that naturalistic studies should assess biological markers to improve the accuracy of estimates of alcohol consumption. Specifically, we recommend the assessment of ethyl glucuronide (EtG) for this purpose. Recommendations are made with respect to assessing hangover symptoms, cognitive effects of hangover and biological markers of alcohol consumption."
+abstract = "Psychological scientists have recently started to reconsider the importance of close replications in building a cumulative knowledge base; however, there is no consensus about what constitutes a convincing close replication study. To facilitate convincing close replication attempts we have developed a Replication Recipe, outlining standard criteria for a convincing close replication. Our Replication Recipe can be used by researchers, teachers, and students to conduct meaningful replication studies and integrate replications into their scholarly habits."
+abstract_short = "Psychological scientists have recently started to reconsider the importance of close replications in building a cumulative knowledge base; however, there is no consensus about what constitutes a convincing close replication study. To facilitate convincing close replication attempts we have developed a Replication Recipe, outlining standard criteria for a convincing close replication. Our Replication Recipe can be used by researchers, teachers, and students to conduct meaningful replication studies and integrate replications into their scholarly habits."
 
 selected = "true"
 
 # Links (optional).
-url_pdf = "https://www.researchgate.net/profile/James_Grange/publication/260842305_A_critical_analysis_of_alcohol_hangover_research_methodolgy_for_surveys_or_studies_of_effects_on_cognition/links/54c0ccd80cf28a6324a33d23/A-critical-analysis-of-alcohol-hangover-research-methodolgy-for-surveys-or-studies-of-effects-on-cognition.pdf"
+url_pdf = "https://www.researchgate.net/profile/Hans_IJzerman2/publication/259090892_The_Replication_Recipe_What_Makes_for_a_Convincing_Replication/links/00b7d52c6a3b82c65a000000/The-Replication-Recipe-What-Makes-for-a-Convincing-Replication.pdf"
 url_preprint = ""
 url_code = ""
 url_dataset = ""
