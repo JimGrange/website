@@ -35,4 +35,4 @@ weight = 5
 
 # Biography
 
-I am a Sennior Lecturer in Cognitive Psychology at Keele University, UK, where I am also currently serving as interim Head of School. My research interests are centered on three interlinked topics: (1) Cognitive control processes, both at a basic and an applied level; (2) Application & development of computational cognitive models; and (3) Issues surrounding reproducibility and replication in psychological science.
+I am a Senior Lecturer in Cognitive Psychology at Keele University, UK, where I am also currently serving as interim Head of School. My research interests are centered on three interlinked topics: (1) Cognitive control processes, both at a basic and an applied level; (2) Application & development of computational cognitive models; and (3) Issues surrounding reproducibility and replication in psychological science.
