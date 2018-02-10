@@ -19,17 +19,17 @@ weight = 5
 # List your qualifications (such as academic degrees).
 [[education.courses]]
   course = "PhD in Cognitive Psychology"
-  institution = "Bangor University"
+  institution = "Bangor University, UK"
   year = 2010
 
 [[education.courses]]
   course = "MSc in Psychological Research"
-  institution = "Bangor University"
+  institution = "Bangor University, UK"
   year = 2007
 
 [[education.courses]]
   course = "BSc in Psychology"
-  institution = "Bangor University"
+  institution = "Bangor University, UK"
   year = 2006
  
 +++
