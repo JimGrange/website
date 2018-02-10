@@ -11,6 +11,7 @@ weight = 5
 [interests]
   interests = [
     "Cognitive Control Processes",
+    "Memory & Attention",
     "Computational Modelling",
     "Scientific Reproducibility"
   ]
@@ -34,5 +35,6 @@ weight = 5
 +++
 
 # Biography
+I am a Senior Lecturer in Cognitive Psychology at [Keele University, UK](https://www.keele.ac.uk/psychology/), where I am also currently serving as interim Head of School. I joined Keele after completing my PhD at Bangor University under the supervision of [Dr George Houghton.](https://www.bangor.ac.uk/psychology/people/profiles/george_houghton.php.en)
 
-I am a Senior Lecturer in Cognitive Psychology at Keele University, UK, where I am also currently serving as interim Head of School. My research interests are centered on three interlinked topics: (1) Cognitive control processes, both at a basic and an applied level; (2) Application & development of computational cognitive models; and (3) Issues surrounding reproducibility and replication in psychological science.
+I primarily teach research methods & statistics. My research interests are centered on three interlinked topics: (1) Cognitive control processes, both at a basic and an applied level; (2) Application & development of computational cognitive models; and (3) Issues surrounding reproducibility and replication in psychological science.  
