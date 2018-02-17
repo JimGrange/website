@@ -3,7 +3,7 @@
 date = "2018-02-16"
 
 # Project title.
-title = "Cognition in clinical & ageing populations"
+title = "Cognition in Clinical & Ageing Populations"
 
 # Project summary to display on homepage.
 summary = "Using our understanding of healthy cognition to probe cognition in clinical & ageing populations"
@@ -13,7 +13,7 @@ image_preview = "ageing.jpg"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-#tags = ["demo"]
+tags = ["cognitive-control", "healthy-ageing", "clinical-applications"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = ""
@@ -21,7 +21,11 @@ external_link = ""
 # Does the project detail page use math formatting?
 math = false
 
-+++
+# Optional featured image (relative to `static/img/` folder).
+[header]
+image = "headers/bubbles-wide.jpg"
+caption = "My caption :smile:"
 
++++
 
 ## Representative Publications

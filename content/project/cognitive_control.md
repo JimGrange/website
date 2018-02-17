@@ -3,24 +3,28 @@
 date = "2018-02-17"
 
 # Project title.
-title = "Cognitive test Control Processes"
+title = "Cognitive Control Processes"
 
 # Project summary to display on homepage.
-summary = "Blah blah blah"
+summary = "How do we control out attention to external stimuli and internal goals?"
 
 # Optional image to display on homepage (relative to `static/img/` folder).
 image_preview = "cognitive_control.jpg"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-#tags = ["cognitive-control"]
+tags = ["cognitive-control"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = ""
 
 # Does the project detail page use math formatting?
-math = true
+math = false
 
+# Optional featured image (relative to `static/img/` folder).
+[header]
+image = "headers/bubbles-wide.jpg"
+caption = "My caption :smile:"
 
 +++
 

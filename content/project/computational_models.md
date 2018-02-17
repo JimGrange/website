@@ -1,19 +1,19 @@
 +++
 # Date this page was created.
-date = "2018-02-15"
+date = "2018-02-16"
 
 # Project title.
 title = "Computational Cognitive Models"
 
 # Project summary to display on homepage.
-summary = "Application & development of theoretical models to understand cognition."
+summary = "Applying theoretical models to understand cognition in basic & applied settings"
 
 # Optional image to display on homepage (relative to `static/img/` folder).
 image_preview = "computational_models.jpg"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-#tags = ["demo"]
+tags = ["computational-models"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = ""
@@ -21,7 +21,7 @@ external_link = ""
 # Does the project detail page use math formatting?
 math = false
 
-+++
 
++++
 
 ## Representative Publications

@@ -5,10 +5,10 @@ active = true
 date = "2016-04-20T00:00:00"
 
 title = "Current Projects"
-subtitle = "Click on each of my research interests to see the current projects I am working on"
+subtitle = "Click on my research interests to see the current projects my lab is working on"
 
 # Order that this section will appear in.
-weight = 3
+weight = 2
 
 # Content.
 # Display content from the following folder.
