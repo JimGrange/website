@@ -1,14 +1,14 @@
 +++
 # Projects widget.
 widget = "projects"
-active = false
+active = true
 date = "2016-04-20T00:00:00"
 
-title = "Projects"
-subtitle = ""
+title = "Current Projects"
+subtitle = "Click on each of my research interests to see the current projects I am working on"
 
 # Order that this section will appear in.
-weight = 6
+weight = 3
 
 # Content.
 # Display content from the following folder.
@@ -28,17 +28,17 @@ filter_default = 0
 # Add or remove as many filters (`[[filter]]` instances) as you like.
 # Use "*" tag to show all projects or an existing tag prefixed with "." to filter by specific tag.
 # To remove toolbar, delete/comment all instances of `[[filter]]` below.
-[[filter]]
-  name = "All"
-  tag = "*"
+#[[filter]]
+ # name = "All"
+ # tag = "*"
 
-[[filter]]
-  name = "Deep Learning"
-  tag = ".deep-learning"
+#[[filter]]
+ # name = "Deep Learning"
+ # tag = ".deep-learning"
 
-[[filter]]
-  name = "Other"
-  tag = ".demo"
+#[[filter]]
+  #name = "Other"
+  #tag = ".demo"
 
 +++
 
