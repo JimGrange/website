@@ -27,6 +27,7 @@ math = false
 #caption = "My caption :smile:"
 
 +++
+***
 ## Current Projects:
 
 [Task Switching](#task_switching)
@@ -62,7 +63,7 @@ In a typical task switching experiment, a participant might be presented with a 
 
 There is evidence that this memory retrieval is automatic (see for example the classic paper by [Logan, 1998](http://www.psy.vanderbilt.edu/faculty/logan/1988LoganPR.pdf)): When presented with a stimulus, the cognitive system automatically retrieves all responses previously associated with that stimulus. Such *episodic retrieval* is obviously very useful in some circumstances, allowing us to act on auto-pilot. However, if multiple---conflicting---responses have been associated with the same stimulus, this can often lead to difficulties in selecting the most appropriate action. 
 
-My work has investigated how memory retrieval interacts with cognitive control in task switching. I have shown that successful episodic retrieval depends on how distinctiveness that episodic trace is in long term memory (Grange & Cross, 2015). In this work I also extended a successful model of episodic retrieval from the memory literature [(SIMPLE; Brown et al., 2007)](http://psycnet.apa.org/fulltext/2007-10421-001.html) to the task switching paradigm to predict both mean response times [(Grange & Cross, 2015)](https://www.jimgrange.org/publication/Grange-temporal_distinctiveness/) and their distributions [(Grange, 2016)](https://www.jimgrange.org/publication/Grange-mixture_dist/). I have also shown that measures of inhibition in task switching can also largely be explained by episodic memory processes [(Grange et al., 2017)](https://www.jimgrange.org/publication/episodic_retrieval/). 
+My work has investigated how memory retrieval interacts with cognitive control in task switching. I have shown that successful episodic retrieval depends on how distinctivene that episodic trace is in long term memory (Grange & Cross, 2015). In this work I also extended a successful model of episodic retrieval from the memory literature [(SIMPLE; Brown et al., 2007)](http://psycnet.apa.org/fulltext/2007-10421-001.html) to the task switching paradigm to predict both mean response times [(Grange & Cross, 2015)](https://www.jimgrange.org/publication/Grange-temporal_distinctiveness/) and their distributions [(Grange, 2016)](https://www.jimgrange.org/publication/Grange-mixture_dist/). I have also shown that measures of inhibition in task switching can also largely be explained by episodic memory processes [(Grange et al., 2017)](https://www.jimgrange.org/publication/episodic_retrieval/). 
 
 ### Representative Publications
 
@@ -71,3 +72,5 @@ My work has investigated how memory retrieval interacts with cognitive control i
 * **Grange, J.A.** (2016). Temporal distinctiveness in task switching: Assessing the mixture-distribution assumption. *Frontiers in Cognition, 7*:251. [(Link)](https://www.jimgrange.org/publication/Grange-mixture_dist/)
 
 * **Grange, J.A.,** & Cross, E. (2015). Can time-based decay explain temporal distinctiveness effects in task switching? *Quarterly Journal of Experimental Psychology, 68*, 19--45. [(Link)](https://www.jimgrange.org/publication/Grange-temporal_distinctiveness/)
+
+***
