@@ -32,3 +32,7 @@ image = "headers/research_overview_small.png"
 * **Grange, J.A.**, & Becker, R. (2018). The effect of aging on response congruency in task switching. *Journals of Gerentology Series B: Psychological Sciences & Social Sciences*, in press. [(Link)](https://www.jimgrange.org/publication/Grange-congruency_meta/)
 
 * Martini, A., Ellis, S.J., **Grange, J.A.,** Tamburin, S., Dal Lago, D., Vianello, G., & Edelstyn, N.M.J. (2018). Risky decision-making and affective features of impulse control disorder in Parkinson's disease. *Journal of Neural Transmission, 125*, 131-143. [(Link)](https://www.jimgrange.org/publication/Martini-2018/)
+
+* Stephens, R., Holloway, K., **Grange, J.A.,** Jones, K., & Owen, L. (2017). Does familial rish for alcohol use disorder predict alcohol hangover? *Psychopharmacology, 234*, 1795-1802. [(Link)](https://www.jimgrange.org/publication/Stephens-familial_risk/)
+
+* Edelstyn, N.M.J., **Grange, J.A.,** Ellis, S.J., & Mayes, A.M. (2016). A deficit in familiarity-driven recognition in a right-sided mediodorsal thalamic lesion patient. *Neuropsychology, 30*, 213-214. [(Link)](https://www.jimgrange.org/publication/Edelstyn-familiarity_parkinsons/)
