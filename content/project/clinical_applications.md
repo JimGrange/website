@@ -28,3 +28,7 @@ image = "headers/research_overview_small.png"
 +++
 
 ## Representative Publications
+
+* **Grange, J.A.**, & Becker, R. (2018). The effect of aging on response congruency in task switching. *Journals of Gerentology Series B: Psychological Sciences & Social Sciences*, in press. [(Link)](https://www.jimgrange.org/publication/Grange-congruency_meta/)
+
+* Martini, A., Ellis, S.J., **Grange, J.A.,** Tamburin, S., Dal Lago, D., Vianello, G., & Edelstyn, N.M.J. (2018). Risky decision-making and affective features of impulse control disorder in Parkinson's disease. *Journal of Neural Transmission, 125*, 131-143. [(Link)](https://www.jimgrange.org/publication/Martini-2018/)

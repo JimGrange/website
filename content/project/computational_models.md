@@ -13,7 +13,7 @@ image_preview = "computational_models.jpg"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["computational modelling"]`
-tags = ["computational-models"]
+tags = ["computational modelling"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = ""
