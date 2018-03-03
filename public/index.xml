@@ -96,7 +96,29 @@
       <guid>/project/computational_models/</guid>
       <description>
 
+&lt;p&gt;The ultimate goal in the field of cognitive science/psychology is to understand the workings of the human/animal mind. How do we selectively attend to goal-relevant stimuli? How do we remember such vast amounts of information? How do we plan and co-ordinate complex plans of action? Researchers address these problems by describing behaviour, through observation and experimentation. At a higher level, researchers aim to predict behaviour: Only a solid understanding of a phenomenon allows successful prediction of future behaviour in differing contexts. Prediction is a key tool for assessing whether our understanding of a phenomenon is sufficient.&lt;/p&gt;
+
+&lt;p&gt;Understanding cognitive phenomena is challenging as the human mind is impossibly complex; thus, researchers develop models of cognition, which abstract away from unnecessary details whilst emphasising details thought to underlie the phenomena under investigation. Examination of the modelís behaviour provides a window onto the more complex system that it is representing, increasing our understanding of that system.&lt;/p&gt;
+
+&lt;p&gt;Inspired by several outstanding theorists in my field, I am interested in applying models of cognition to experimental data to understand human behaviour in more detail. In particular, recent work in my lab has focussed on developing and testing models of inhibition during task switching. I am also interested in integrating task switching models with models that address other cognitive processes (such as memory models; see for example Grange &amp;amp; Cross, 2015).&lt;/p&gt;
+
+&lt;p&gt;We use these models to aid our understanding of cognition, with the aim of applying this knowledge to probing cognition in (for example) clinical and ageing populations.&lt;/p&gt;
+
 &lt;h2 id=&#34;representative-publications&#34;&gt;Representative Publications&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Grange, J.A.&lt;/strong&gt;, Stephens, R., Jones, K., &amp;amp; Owen, L. (2016). The effect of alcohol hangover on choice response time. &lt;em&gt;Journal of Psychopharmacology, 30&lt;/em&gt;, 654&amp;ndash;661. &lt;a href=&#34;https://www.jimgrange.org/publication/Grange-hangover_rt/&#34; target=&#34;_blank&#34;&gt;(Link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Grange, J.A.&lt;/strong&gt; (2016). flankr: An R package implementing computational models of attentional selectivity. &lt;em&gt;Behavior Research Methods, 48&lt;/em&gt;, 528&amp;ndash;541. &lt;a href=&#34;https://www.jimgrange.org/publication/Grange-flankr/&#34; target=&#34;_blank&#34;&gt;(Link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Grange, J.A.&lt;/strong&gt; (2016). Temporal distinctiveness in task switching: Assessing the mixture-distribution assumption. &lt;em&gt;Frontiers in Cognition, 7&lt;/em&gt;:251. &lt;a href=&#34;https://www.jimgrange.org/publication/Grange-mixture_dist/&#34; target=&#34;_blank&#34;&gt;(Link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Grange, J.A.,&lt;/strong&gt; &amp;amp; Cross, E. (2015). Can time-based decay explain temporal distinctiveness effects in task switching? &lt;em&gt;Quarterly Journal of Experimental Psychology, 68&lt;/em&gt;, 19&amp;ndash;45. &lt;a href=&#34;https://www.jimgrange.org/publication/Grange-temporal_distinctiveness/&#34; target=&#34;_blank&#34;&gt;(Link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Grange, J.A.,&lt;/strong&gt; &amp;amp; Houghton, G. (2014). Models of cognitive control in task switching. In J.A. Grange &amp;amp; G.Houghton (Eds.), &lt;em&gt;Task switching and cognitive control&lt;/em&gt;. New York, NY: Oxford University Press. &lt;a href=&#34;https://www.jimgrange.org/publication/grange-task_switching_book_models/&#34; target=&#34;_blank&#34;&gt;(Link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Grange, J.A.,&lt;/strong&gt; Juvina, I., &amp;amp; Houghton, G. (2013). On costs and benefits of n&amp;ndash;2 repetition costs in task switching: Toward a behavioral marker of cognitive inhibition. &lt;em&gt;Psychological Research, 77&lt;/em&gt;, 211&amp;ndash;222. &lt;a href=&#34;https://www.jimgrange.org/publication/grange-costs_benefits_inhibition_model/&#34; target=&#34;_blank&#34;&gt;(Link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
