@@ -11,6 +11,16 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>A new website</title>
+      <link>/post/a-new-website/</link>
+      <pubDate>Fri, 20 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/a-new-website/</guid>
+      <description>&lt;p&gt;Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah &lt;img src=&#34;/post/2018-04-20-a-new-website_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Cognitive Control Processes</title>
       <link>/project/cognitive_control/</link>
       <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
@@ -118,7 +128,7 @@
       <guid>/project/clinical_applications/</guid>
       <description>
 
-&lt;p&gt;Much of our work has focussed on basic questions on cognitive psychology. More recently, we have shifted our attention to some more applied questions. It is our aim to increase our focus on this line of research. We aim to utilise the findings from our basic research programme to probe cognition in clinical and ageing populations.&lt;/p&gt;
+&lt;p&gt;Much of our work has focussed on basic questions on cognitive psychology. More recently, we have shifted our attention to some more applied questions, and it is our aim to increase our focus on this line of research. We aim to utilise the findings from our basic research programme to probe cognition in clinical and ageing populations.&lt;/p&gt;
 
 &lt;h2 id=&#34;representative-publications&#34;&gt;Representative Publications&lt;/h2&gt;
 
@@ -252,15 +262,6 @@
       <pubDate>Wed, 06 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>/publication/grange-flankr/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Response to a comment on &#39;Estimating the reproducibility of psychological science&#39;</title>
-      <link>/publication/anderson-2016-osc_reply/</link>
-      <pubDate>Tue, 05 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/anderson-2016-osc_reply/</guid>
       <description></description>
     </item>
     

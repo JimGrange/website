@@ -27,7 +27,7 @@ image = "headers/research_overview_small.png"
 
 +++
 
-Much of our work has focussed on basic questions on cognitive psychology. More recently, we have shifted our attention to some more applied questions. It is our aim to increase our focus on this line of research. We aim to utilise the findings from our basic research programme to probe cognition in clinical and ageing populations.
+Much of our work has focussed on basic questions on cognitive psychology. More recently, we have shifted our attention to some more applied questions, and it is our aim to increase our focus on this line of research. We aim to utilise the findings from our basic research programme to probe cognition in clinical and ageing populations.
 
 ## Representative Publications
 
