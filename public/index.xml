@@ -20,6 +20,29 @@
     </item>
     
     <item>
+      <title>A new website</title>
+      <link>/post/a-new-website/</link>
+      <pubDate>Sat, 28 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/a-new-website/</guid>
+      <description>&lt;p&gt;I have spent the past day or so transporting my acedemic website from &lt;a href=&#34;https://jimgrange.wordpress.com&#34;&gt;Wordpress&lt;/a&gt; to the current website, which is written using the (superb!) &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;R package ‘blogdown’&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I made the change for a variety of reasons:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;I am now able to use R for &lt;em&gt;most&lt;/em&gt; things—analysis, simulations, writing papers using &lt;a href=&#34;https://github.com/crsh/papaja&#34;&gt;papaja&lt;/a&gt; and now my website—making my workflow more efficient (and high on the nerd-scale).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;I could never really get my wordpress site to look sleek and professional. Using R and blogdown I was able to utilise the &lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;Hugo website templates&lt;/a&gt;, which look very nice. (The current versio of my website uses the &lt;a href=&#34;https://themes.gohugo.io/academic/&#34;&gt;Hugo Academic theme&lt;/a&gt;.)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;As the blog is written in R and blogdown, it means that all the content &amp;amp; code behind it can be made freely available. You can see the Github page for the code of my website &lt;a href=&#34;https://github.com/JimGrange/website&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The blog posts on my previous site which I enjoyed writing the most had R demonstrations in them. As blogdown uses markdown, I can now write blog posts using markdown meaning I can integrate R code into the blog post! Not just that, plots are automatically integrated into the blog! Observe thus!&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)
+ggplot(faithfuld, aes(waiting, eruptions)) +
+  geom_raster(aes(fill = density)) +
+  scale_fill_distiller(palette = &amp;quot;Spectral&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-04-20-a-new-website_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;What other reasons did I need?&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Cognitive Control Processes</title>
       <link>/project/cognitive_control/</link>
       <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
@@ -252,15 +275,6 @@
       <pubDate>Wed, 24 Feb 2016 00:00:00 +0000</pubDate>
       
       <guid>/publication/grange-mixture_dist/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>flankr: An R package implementing computational models of attentional selectivity</title>
-      <link>/publication/grange-flankr/</link>
-      <pubDate>Wed, 06 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/grange-flankr/</guid>
       <description></description>
     </item>
     
