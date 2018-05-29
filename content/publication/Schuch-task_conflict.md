@@ -24,7 +24,7 @@ abstract_short = "Task inhibition is considered to facilitate switching to a new
 selected = "true"
 
 # Links (optional).
-url_pdf = ""
+url_pdf = "https://link.springer.com/epdf/10.1007/s00426-018-1025-4?author_access_token=7_Wm9Rg4PIR4yokoCsZ2KPe4RwlQNchNByi7wbcMAY4fQmBeA5xXcaIJZsGXtm8ajAKPYUP6qvjFj2JYDDirqfmALmBadph5OJsZrqq0jxWnNJivpygeHYw5VNO6rfGgIpsYSPOFUcVAVq8kBmLZXA%3D%3D"
 url_preprint = ""
 url_code = ""
 url_dataset = ""
