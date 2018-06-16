@@ -115,10 +115,10 @@ This data is simulated, and has data from 32 subjects. This data is from a task 
 
 The example data consists of 4 columns:
 
-1. *participant:* Codes the number of each participant in the experiment
-1. *condition:* In this example, there are two experimental conditions: "Switch", and "Repeat".
-1. *rt:* Logs the response time of the participant in milliseconds.
-1. *accuracy:* Logs the accuracy of the response. 1 codes a correct response, 0 an error response.
+1. **participant:** Codes the number of each participant in the experiment
+1. **condition:** In this example, there are two experimental conditions: "Switch", and "Repeat".
+1. **rt:** Logs the response time of the participant in milliseconds.
+1. **accuracy:** Logs the accuracy of the response. 1 codes a correct response, 0 an error response.
 
 If the columns of your data frame (from your real experiment) have different names from the defaults these can be specified in the calls to the trimming functions (described later). For now, here is an example:
 
@@ -147,7 +147,7 @@ The trimming functions provided by *trimr*---at present---fall broadly into thre
     - absoluteRT
 2. [Standard Deviation Criterion:](#sd_criterion) whereby the upper limit for RT removal is based on a standard deviation criterion (e.g., "RTs slower than 2.5 standard deviations about the mean for each participant for each experimental condition were excluded from data analysis").
     - sdTrim
-3. [Recursive / Moving Criterion:](#recursive_criterion)
+3. [Recursive / Moving Criterion:](#recursive_criterion) are various function introduced by Van Selst & Jolicoeur (1994) which try to minimise bias when the number of trials entering the trimming function can vary.
     - nonRecursive
     - modifiedRecursive
     - hybridRecursive
@@ -238,7 +238,7 @@ head(trimmedData)
 ***
 ## [Recursive / Moving Criterion]{#recursive_criterion}
 
-Three functions in this family implement the trimming methods proposed & discussed by van Selst & Jolicoeur (1994): **nonRecursive**, **modifiedRecursive**, and *hybridRecursive.** van Selst & Jolicoeur noted that the outcome of many trimming methods is influenced by the sample size (i.e., the number of trials) being considered, thus potentially producing bias. For example, even if RTs are drawn from identical positively-skewed distributions, a “per condition per participant” SD procedure (see sdTrim above) would result in a higher mean estimate for small sample sizes than larger sample sizes. 
+Three functions in this family implement the trimming methods proposed & discussed by van Selst & Jolicoeur (1994): **nonRecursive**, **modifiedRecursive**, and **hybridRecursive.** van Selst & Jolicoeur noted that the outcome of many trimming methods is influenced by the sample size (i.e., the number of trials) being considered, thus potentially producing bias. For example, even if RTs are drawn from identical positively-skewed distributions, a “per condition per participant” SD procedure (see sdTrim above) would result in a higher mean estimate for small sample sizes than larger sample sizes. 
 
 This bias was shown to be removed when a “moving criterion” (MC) was used; this is where the SD used for trimming is adapted to the sample size being considered.
 

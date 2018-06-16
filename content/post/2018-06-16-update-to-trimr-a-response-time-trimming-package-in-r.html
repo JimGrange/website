@@ -85,10 +85,10 @@ head(exampleData)</code></pre>
 <p>This data is simulated, and has data from 32 subjects. This data is from a task switching experiment, where RT and accuracy was recorded for two experimental conditions: Switch, when the task switched from the previous trial, and Repeat, when the task repeated from the previous trial. (If you have data from a factorial design (i.e., the condition codes are spread over more than one column), then please see the final section of this vignette for how to deal with this in <em>trimr</em>).</p>
 <p>The example data consists of 4 columns:</p>
 <ol style="list-style-type: decimal">
-<li><em>participant:</em> Codes the number of each participant in the experiment</li>
-<li><em>condition:</em> In this example, there are two experimental conditions: “Switch”, and “Repeat”.</li>
-<li><em>rt:</em> Logs the response time of the participant in milliseconds.</li>
-<li><em>accuracy:</em> Logs the accuracy of the response. 1 codes a correct response, 0 an error response.</li>
+<li><strong>participant:</strong> Codes the number of each participant in the experiment</li>
+<li><strong>condition:</strong> In this example, there are two experimental conditions: “Switch”, and “Repeat”.</li>
+<li><strong>rt:</strong> Logs the response time of the participant in milliseconds.</li>
+<li><strong>accuracy:</strong> Logs the accuracy of the response. 1 codes a correct response, 0 an error response.</li>
 </ol>
 <p>If the columns of your data frame (from your real experiment) have different names from the defaults these can be specified in the calls to the trimming functions (described later). For now, here is an example:</p>
 <pre class="r"><code># perform the trimming (note this is just an example and won&#39;t run)
@@ -117,7 +117,7 @@ trimmedData &lt;- absoluteRT(data = exampleData,
 <ul>
 <li>sdTrim</li>
 </ul></li>
-<li><a href="#recursive_criterion">Recursive / Moving Criterion:</a>
+<li><a href="#recursive_criterion">Recursive / Moving Criterion:</a> are various function introduced by Van Selst &amp; Jolicoeur (1994) which try to minimise bias when the number of trials entering the trimming function can vary.
 <ul>
 <li>nonRecursive</li>
 <li>modifiedRecursive</li>
@@ -221,7 +221,7 @@ head(trimmedData)</code></pre>
 </div>
 <div id="recursive-moving-criterion" class="section level2">
 <h2><span id="recursive_criterion">Recursive / Moving Criterion</span></h2>
-<p>Three functions in this family implement the trimming methods proposed &amp; discussed by van Selst &amp; Jolicoeur (1994): <strong>nonRecursive</strong>, <strong>modifiedRecursive</strong>, and *hybridRecursive.** van Selst &amp; Jolicoeur noted that the outcome of many trimming methods is influenced by the sample size (i.e., the number of trials) being considered, thus potentially producing bias. For example, even if RTs are drawn from identical positively-skewed distributions, a “per condition per participant” SD procedure (see sdTrim above) would result in a higher mean estimate for small sample sizes than larger sample sizes.</p>
+<p>Three functions in this family implement the trimming methods proposed &amp; discussed by van Selst &amp; Jolicoeur (1994): <strong>nonRecursive</strong>, <strong>modifiedRecursive</strong>, and <strong>hybridRecursive.</strong> van Selst &amp; Jolicoeur noted that the outcome of many trimming methods is influenced by the sample size (i.e., the number of trials) being considered, thus potentially producing bias. For example, even if RTs are drawn from identical positively-skewed distributions, a “per condition per participant” SD procedure (see sdTrim above) would result in a higher mean estimate for small sample sizes than larger sample sizes.</p>
 <p>This bias was shown to be removed when a “moving criterion” (MC) was used; this is where the SD used for trimming is adapted to the sample size being considered.</p>
 <div id="nonrecursive" class="section level3">
 <h3>nonRecursive</h3>
@@ -374,8 +374,8 @@ head(newData)</code></pre>
 ## 1           1 1660        1       Switch   Reward
 ## 2           1  913        1       Switch NoReward
 ## 3           1 2312        1       Repeat NoReward
-## 4           1  754        1       Repeat NoReward
-## 5           1 3394        1       Switch   Reward
+## 4           1  754        1       Repeat   Reward
+## 5           1 3394        1       Switch NoReward
 ## 6           1  930        1       Repeat NoReward</code></pre>
 <p>This now looks how data typically comes in from a factorial design. Now, to get trimr to work on this, we need to create a new column called “condition”, and to place in this column the levels of all factors in the design. For example, if the first trial in our newData has taskSequence = Switch and reward = NoReward, we would like our condition entry for this trial to read “Switch_NoReward”. This is simple to do using R’s “paste” function. (Note that this code can be adapted to deal with any number of factors.)</p>
 <pre class="r"><code># add a new column called &quot;condition&quot;, and fill it with information from both 
@@ -388,8 +388,8 @@ head(newData)</code></pre>
 ## 1           1 1660        1       Switch   Reward   Switch_Reward
 ## 2           1  913        1       Switch NoReward Switch_NoReward
 ## 3           1 2312        1       Repeat NoReward Repeat_NoReward
-## 4           1  754        1       Repeat NoReward Repeat_NoReward
-## 5           1 3394        1       Switch   Reward   Switch_Reward
+## 4           1  754        1       Repeat   Reward   Repeat_Reward
+## 5           1 3394        1       Switch NoReward Switch_NoReward
 ## 6           1  930        1       Repeat NoReward Repeat_NoReward</code></pre>
 <p>Now we can pass this data frame to any function in <em>trimr</em>, and it will work perfectly:</p>
 <pre class="r"><code># trim the data
@@ -399,12 +399,12 @@ trimmedData &lt;- sdTrim(newData, minRT = 150, sd = 2.5, digits = 0,
 # check it worked
 head(trimmedData)</code></pre>
 <pre><code>##   participant Switch_Reward Switch_NoReward Repeat_NoReward Repeat_Reward
-## 1           1          1094            1011             741           730
-## 2          10           785             774             647           654
-## 3          11          1104            1030             962           951
-## 4          12           900             844             644           636
-## 5          13           895             910             751           782
-## 6          14           981            1066             782           853</code></pre>
+## 1           1          1043            1053             725           741
+## 2          10           759             800             655           653
+## 3          11          1071            1068             929           994
+## 4          12           875             861             603           665
+## 5          13           925             882             760           767
+## 6          14          1025            1027             867           773</code></pre>
 <hr />
 </div>
 <div id="references" class="section level2">
