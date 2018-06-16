@@ -130,7 +130,7 @@ trimmedData <- absoluteRT(data = exampleData,
                           digits = 0)
 ```
 
-In this call, the arguments are as follows:
+This is the functionality added by [Ed Berry](https://eddjberry.netlify.com/). In this call, the arguments are as follows:
 
 * **pptVar:** The name of the column holding participant identification numbers
 * **condVar:** The name of the column holding the different conditions

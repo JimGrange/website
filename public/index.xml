@@ -100,7 +100,7 @@ trimmedData &amp;lt;- absoluteRT(data = exampleData,
                           pptVar = &amp;quot;id&amp;quot;, condVar = &amp;quot;cond&amp;quot;, rtVar = &amp;quot;RT&amp;quot;, 
                           accVar = &amp;quot;correct&amp;quot;, minRT = 150, maxRT = 2000, 
                           digits = 0)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;In this call, the arguments are as follows:&lt;/p&gt;
+&lt;p&gt;This is the functionality added by &lt;a href=&#34;https://eddjberry.netlify.com/&#34;&gt;Ed Berry&lt;/a&gt;. In this call, the arguments are as follows:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;pptVar:&lt;/strong&gt; The name of the column holding participant identification numbers&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;condVar:&lt;/strong&gt; The name of the column holding the different conditions&lt;/li&gt;
@@ -375,12 +375,12 @@ newData &amp;lt;- subset(newData, select = -condition)
 # now let&amp;#39;s look at our new data
 head(newData)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##   participant   rt accuracy taskSequence   reward
-## 1           1 1660        1       Switch   Reward
-## 2           1  913        1       Switch NoReward
-## 3           1 2312        1       Repeat NoReward
-## 4           1  754        1       Repeat   Reward
+## 1           1 1660        1       Switch NoReward
+## 2           1  913        1       Switch   Reward
+## 3           1 2312        1       Repeat   Reward
+## 4           1  754        1       Repeat NoReward
 ## 5           1 3394        1       Switch NoReward
-## 6           1  930        1       Repeat NoReward&lt;/code&gt;&lt;/pre&gt;
+## 6           1  930        1       Repeat   Reward&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This now looks how data typically comes in from a factorial design. Now, to get trimr to work on this, we need to create a new column called “condition”, and to place in this column the levels of all factors in the design. For example, if the first trial in our newData has taskSequence = Switch and reward = NoReward, we would like our condition entry for this trial to read “Switch_NoReward”. This is simple to do using R’s “paste” function. (Note that this code can be adapted to deal with any number of factors.)&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# add a new column called &amp;quot;condition&amp;quot;, and fill it with information from both 
 # columns that code for our factors
@@ -389,12 +389,12 @@ newData$condition &amp;lt;- paste(newData$taskSequence, &amp;quot;_&amp;quot;, n
 # let&amp;#39;s again look at the data
 head(newData)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##   participant   rt accuracy taskSequence   reward       condition
-## 1           1 1660        1       Switch   Reward   Switch_Reward
-## 2           1  913        1       Switch NoReward Switch_NoReward
-## 3           1 2312        1       Repeat NoReward Repeat_NoReward
-## 4           1  754        1       Repeat   Reward   Repeat_Reward
+## 1           1 1660        1       Switch NoReward Switch_NoReward
+## 2           1  913        1       Switch   Reward   Switch_Reward
+## 3           1 2312        1       Repeat   Reward   Repeat_Reward
+## 4           1  754        1       Repeat NoReward Repeat_NoReward
 ## 5           1 3394        1       Switch NoReward Switch_NoReward
-## 6           1  930        1       Repeat NoReward Repeat_NoReward&lt;/code&gt;&lt;/pre&gt;
+## 6           1  930        1       Repeat   Reward   Repeat_Reward&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now we can pass this data frame to any function in &lt;em&gt;trimr&lt;/em&gt;, and it will work perfectly:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# trim the data
 trimmedData &amp;lt;- sdTrim(newData, minRT = 150, sd = 2.5, digits = 0, 
@@ -402,13 +402,13 @@ trimmedData &amp;lt;- sdTrim(newData, minRT = 150, sd = 2.5, digits = 0,
 
 # check it worked
 head(trimmedData)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##   participant Switch_Reward Switch_NoReward Repeat_NoReward Repeat_Reward
-## 1           1          1043            1053             725           741
-## 2          10           759             800             655           653
-## 3          11          1071            1068             929           994
-## 4          12           875             861             603           665
-## 5          13           925             882             760           767
-## 6          14          1025            1027             867           773&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   participant Switch_NoReward Switch_Reward Repeat_Reward Repeat_NoReward
+## 1           1            1112           986           723             732
+## 2          10             803           761           659             637
+## 3          11            1073          1062           975             937
+## 4          12             872           866           623             659
+## 5          13             914           886           781             752
+## 6          14            1020          1017           803             824&lt;/code&gt;&lt;/pre&gt;
 &lt;hr /&gt;
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level2&#34;&gt;
