@@ -1,0 +1,416 @@
+---
+title: 'Update to trimr: A response time trimming package in R'
+author: ~
+date: '2018-06-16'
+slug: update-to-trimr-a-response-time-trimming-package-in-r
+categories: []
+tags: [R, response times]
+header:
+  caption: ''
+  image: ''
+---
+
+
+
+<p>In 2015, I published my first ever R package: <a href="https://cran.r-project.org/web/packages/trimr/index.html">“trimr: An implementation of common response time trimming methods”</a>. To date, this package has had over 5,600 downloads from CRAN, which is unbelievable!</p>
+<p>3 years is a long time for a package, so I thought it was time to update the package, fix some bugs, and implement some additional functionality. To this end, I have spent some time over the past few days working on a new release. This new release is version 1.1.0. I will spend some time testing this version before updating it on CRAN; at present, <a href="https://github.com/JimGrange/trimr">it is only available at GitHub</a>.</p>
+<p>In this post I will provide an overview of the main changes since the previous version. I will also provide an updated tutorial on how to use <em>trimr</em> from the <a href="https://jimgrange.wordpress.com/2015/08/03/trimr-an-r-package-of-response-time-trimming-methods/">previous tutorial released in 2015</a>.</p>
+<p><strong>If you use trimr in your work</strong>, I would really appreciate a citation to the package. Please see the <a href="#references">references</a> section for how to do this.</p>
+<hr />
+<div id="contents" class="section level2">
+<h2>Contents</h2>
+<p>Here’s a table of contents for the blog post. If you are here just to learn about how to use <em>trimr</em>, then just skip over the list of updates and get stuck right in:</p>
+<p><a href="#updates">Overview of Updates</a></p>
+<p><a href="#install">Installing trimr</a></p>
+<p><a href="#example_data">Example Data</a></p>
+<p><a href="#trimming_overview">Overview of Trimming Methods</a></p>
+<p><a href="#absolute_value_criterion">Absolute Value Criterion:</a></p>
+<p><a href="#sd_criterion">Standard Deviation Criterion</a></p>
+<p><a href="#recursive_criterion">Recursive / Moving Criterion</a></p>
+<p><a href="#factorial_designs">Data from Factorial Designs</a></p>
+<p><a href="#references">References</a></p>
+<hr />
+</div>
+<div id="updates" class="section level2">
+<h2>Overview of Updates</h2>
+<ol style="list-style-type: decimal">
+<li><p><strong>Bug fixes.</strong> Since its release in 2015, I have been contacted by many users kindly pointing out some bugs in <em>trimr</em>. Some of these were very minor and won’t be mentioned here, but below I outline some of the key bugs that are fixed in the newest release. Note that some issues remain, but are less urgent; you can find a list of issues <a href="https://github.com/JimGrange/trimr/issues">and add your own if you find any here</a>.</p>
+<ul>
+<li>There was an error in the <em>sdTrim</em> function when the user was asking for trimming at the participant and condition level. It would just return a blank data frame (ooops, sorry!).</li>
+<li>The recursive trimming functions would break when there were more than 97 trials.</li>
+</ul></li>
+<li><p><strong>Flexible naming of columns in file containing the data.</strong> In the previous version of <em>trimr</em>, users were forced to name their columns in a fixed way so that the package knew (for example) which column contained the response time data, which column contained the experimental conditions, etc. With massive thanks to contributions made by <a href="https://eddjberry.netlify.com/">Ed Berry</a>, users can now specify their own names for the columns, and tell <em>trimr</em> where to find the relevant data. This is a huge improvement, so a massive thanks to Ed!!</p></li>
+<li><p><strong>All trimming functions now return trial-level data.</strong> The two trimming methods I expect most users are utilising in <em>trimr</em> are the <em>absoluteTrim</em> method and the <em>sdTrim</em> method. Both of these methods allowed users to dictate the format for how the trimmed data should be returned:</p>
+<ul>
+<li><em>mean</em> returns calculated mean RT per participant per condition after trimming</li>
+<li><em>median</em> returns calculated median RT per participant per condition after trimming</li>
+<li><em>raw</em> returns trial-level data after the trials with trimmed RTs are removed</li>
+</ul>
+<p>However, this “returnType” argument was not available for the recursive / moving criterion trimming methods. In particular, I received several email requests for an update to <em>trimr</em> to allow return-type of “raw” for these methods to allow the user to model their data using linear mixed effect modelling (which often requires trial-level, rather than aggregated, participant data). These different return-types are now implemented for all methods.</p></li>
+</ol>
+<hr />
+</div>
+<div id="install" class="section level2">
+<h2>Installing trimr</h2>
+<p>This version of <em>trimr</em> will soon be submitted to the official R package repository, CRAN. When it is available on CRAN (I will provide an update here when this is the case), you can install <em>trimr</em> directly by opening R and typing:</p>
+<pre class="r"><code>install.packages(&quot;trimr&quot;)</code></pre>
+<p>To install the latest version of trimr (which should always be considered developmental), you will first need to install the <em>devtools</em> package and install <em>trimr</em> directly from GitHub by using the following commands:</p>
+<pre class="r"><code># install devtools
+install.packages(&quot;devtools&quot;)
+
+# install trimr from GitHub
+devools::install_github(&quot;JimGrange/trimr&quot;)</code></pre>
+<hr />
+</div>
+<div id="example_data" class="section level2">
+<h2>Example Data</h2>
+<p>Of course, you will be using <em>trimr</em> on your own data. This data will be a <a href="http://www.r-tutor.com/r-introduction/data-frame">data frame</a> that contains your experimental data. At present, <em>trimr</em> only accepts data in <a href="https://www.theanalysisfactor.com/wide-and-long-data/">wide format</a>, but it is on my to-do list to allow long format entry. This data frame should contain (at a minimum) columns that specify your participant numbers, your experimental conditions, your response time data, and your accuracy data.</p>
+<p>In previous versions of <em>trimr</em> your data had to contain columns with the same names used below. However, you can now specify your own column names. The default values are the old required values meaning no code written for previous versions of <em>trimr</em> will be broken by this change. You can have other columns in your data file (which will just be ignored by <em>trimr</em>).</p>
+<p>Whilst you are getting use to <em>trimr</em>’s functionality, you can use some example data that ships with the package.</p>
+<pre class="r"><code># load the trimr package
+library(trimr)
+
+# activate the data
+data(exampleData)
+
+# look at the top of the data
+head(exampleData)</code></pre>
+<pre><code>##   participant condition   rt accuracy
+## 1           1    Switch 1660        1
+## 2           1    Switch  913        1
+## 3           1    Repeat 2312        1
+## 4           1    Repeat  754        1
+## 5           1    Switch 3394        1
+## 6           1    Repeat  930        1</code></pre>
+<p>This data is simulated, and has data from 32 subjects. This data is from a task switching experiment, where RT and accuracy was recorded for two experimental conditions: Switch, when the task switched from the previous trial, and Repeat, when the task repeated from the previous trial. (If you have data from a factorial design (i.e., the condition codes are spread over more than one column), then please see the final section of this vignette for how to deal with this in <em>trimr</em>).</p>
+<p>The example data consists of 4 columns:</p>
+<ol style="list-style-type: decimal">
+<li><em>participant:</em> Codes the number of each participant in the experiment</li>
+<li><em>condition:</em> In this example, there are two experimental conditions: “Switch”, and “Repeat”.</li>
+<li><em>rt:</em> Logs the response time of the participant in milliseconds.</li>
+<li><em>accuracy:</em> Logs the accuracy of the response. 1 codes a correct response, 0 an error response.</li>
+</ol>
+<p>If the columns of your data frame (from your real experiment) have different names from the defaults these can be specified in the calls to the trimming functions (described later). For now, here is an example:</p>
+<pre class="r"><code># perform the trimming (note this is just an example and won&#39;t run)
+trimmedData &lt;- absoluteRT(data = exampleData, 
+                          pptVar = &quot;id&quot;, condVar = &quot;cond&quot;, rtVar = &quot;RT&quot;, 
+                          accVar = &quot;correct&quot;, minRT = 150, maxRT = 2000, 
+                          digits = 0)</code></pre>
+<p>In this call, the arguments are as follows:</p>
+<ul>
+<li><strong>pptVar:</strong> The name of the column holding participant identification numbers</li>
+<li><strong>condVar:</strong> The name of the column holding the different conditions</li>
+<li><strong>rtVar:</strong> The name of the column holding response time data</li>
+<li><strong>accVar:</strong> The name of the column holding accuracy data</li>
+</ul>
+<hr />
+</div>
+<div id="overview-of-trimming" class="section level2">
+<h2><span id="trimming_overview">Overview of Trimming</span></h2>
+<p>The trimming functions provided by <em>trimr</em>—at present—fall broadly into three families (seen here with their <em>trimr</em> function names). Click on each family member to be taken to the relevant overview &amp; tutorial:</p>
+<ol style="list-style-type: decimal">
+<li><a href="#absolute_value_criterion">Absolute Value Criterion:</a> involves identifying an absolute upper- and lower-limit on RTs to include in the final analysis (e.g., “RTs faster than 150ms and slower than 2,000ms were excluded from data analysis”).
+<ul>
+<li>absoluteRT</li>
+</ul></li>
+<li><a href="#sd_criterion">Standard Deviation Criterion:</a> whereby the upper limit for RT removal is based on a standard deviation criterion (e.g., “RTs slower than 2.5 standard deviations about the mean for each participant for each experimental condition were excluded from data analysis”).
+<ul>
+<li>sdTrim</li>
+</ul></li>
+<li><a href="#recursive_criterion">Recursive / Moving Criterion:</a>
+<ul>
+<li>nonRecursive</li>
+<li>modifiedRecursive</li>
+<li>hybridRecursive</li>
+</ul></li>
+</ol>
+<hr />
+</div>
+<div id="absolute-value-criterion" class="section level2">
+<h2><span id="absolute_value_criterion">Absolute Value Criterion</span></h2>
+<p>The absolute value criterion is the simplest of all of the trimming methods available (except of course for having no trimming). An upper- and lower-criterion is set by the user, and any response time that falls outside of these limits are removed. The function that performs this trimming method in <em>trimr</em> is called <em>absoluteRT</em>.</p>
+<div id="absolutert" class="section level3">
+<h3>absoluteRT</h3>
+<p>In this function, the user declares lower- and upper-criterion for RT trimming (minRT and maxRT arguments, respectively); RTs outside of these criteria are removed. Note that these criteria must be in the same unit as the RTs are logged in within the data frame being used. The function also has some other important arguments:</p>
+<ul>
+<li><strong>omitErrors:</strong> If the user wishes error trials to be removed from the trimming, this needs to be set to TRUE (it is set to this by default). Alternatively, some users may wish to keep error trials included. Therefore, set this argument to FALSE.</li>
+<li><strong>returnType:</strong> Here, the user can control how the data are returned.
+<ul>
+<li>“raw” returns trial-level data after the trials with trimmed RTs are removed;</li>
+<li>“mean” returns calculated mean RT per participant per condition after trimming;</li>
+<li>“median” returns calculated median RT per participant per condition after trimming. This is set to “mean” by default.</li>
+</ul></li>
+<li><strong>digits:</strong> Controls how many digits to round the data to after trimming. If the user has a data frame where the RTs are recorded in seconds (e.g., 0.657), this argument can be left at its default value of 3. However, if the data are logged in milliseconds, it might be best to change this argument to zero, so there are no decimal places in the rounding of RTs (e.g., 657).</li>
+</ul>
+<p>In this first example, let’s trim the data using criteria of RTs less than 150 milliseconds and greater than 2,000 milliseconds, with error trials removed before trimming commences. Let’s also return the mean RTs for each condition, and round the data to zero decimal places.</p>
+<pre class="r"><code># perform the trimming
+trimmedData &lt;- absoluteRT(data = exampleData, minRT = 150, maxRT = 2000, 
+                          omitErrors = TRUE, returnType = &quot;mean&quot;, 
+                          digits = 0)
+
+# look at the top of the data
+head(trimmedData)</code></pre>
+<pre><code>##   participant Switch Repeat
+## 1           1    901    742
+## 2          10    793    669
+## 3          11   1054    943
+## 4          12    880    662
+## 5          13    914    773
+## 6          14   1000    817</code></pre>
+<p>Just to show how the other arguments are used, let’s now do the same trimming but return the raw (i.e., trial-level) data rather than just participant averages (by changing the <em>returnType</em> argument input):</p>
+<pre class="r"><code># perform the trimming
+trimmedData &lt;- absoluteRT(data = exampleData, minRT = 150, maxRT = 2000, 
+                          omitErrors = TRUE, returnType = &quot;raw&quot;, 
+                          digits = 0)
+
+# look at the top of the data
+head(trimmedData)</code></pre>
+<pre><code>##    participant condition   rt accuracy
+## 1            1    Switch 1660        1
+## 2            1    Switch  913        1
+## 4            1    Repeat  754        1
+## 6            1    Repeat  930        1
+## 7            1    Switch 1092        1
+## 11           1    Repeat  708        1</code></pre>
+<p>You will see in this case that the returned data frame is the same format as the input, but now the trimmed trials are removed.</p>
+<hr />
+</div>
+</div>
+<div id="standard-deviation-criterion" class="section level2">
+<h2><span id="sd_criterion">Standard Deviation Criterion</span></h2>
+<p>This trimming method uses a standard deviation multiplier as the upper criterion for RT removal (users still need to enter a lower-bound manually via <em>minRT</em>). For example, this method can be used to trim all RTs 2.5 standard deviations above the mean RT. This trimming can be done per condition (e.g., 2.5 SDs above the mean of each condition), per participant (e.g., 2.5 SDs above the mean of each participant), or per condition per participant (e.g., 2.5 SDs above the mean of each participant for each condition).</p>
+<div id="sdtrim" class="section level3">
+<h3>sdTrim</h3>
+<p>In this function, the user declares a lower-bound on RT trimming (e.g., 150 milliseconds) and an upper-bound in standard deviations. The value of standard deviation used is set by the SD argument. How this is used varies depending on the values the user passes to two important additional function arguments:</p>
+<ul>
+<li><strong>perCondition:</strong> If set to TRUE, the trimming will occur above the mean of each experimental condition in the data file</li>
+<li><strong>perParticipant:</strong> If set to TRUE, the trimming will occur above the mean of each participant in the data file</li>
+</ul>
+<p>Note that if both are set to TRUE, the trimming will occur per participant per condition (e.g., if SD is set to 2.5, the function will trim RTs 2.5 SDs above the mean RT of each participant for each condition).</p>
+<p>In this example, let’s trim RTs faster than 150 milliseconds, and greater than 3 SDs above the mean of each participant, and return the mean RTs:</p>
+<pre class="r"><code>trimmedData &lt;- sdTrim(data = exampleData, minRT = 150, sd = 3, 
+                      perCondition = FALSE, perParticipant = TRUE, 
+                      returnType = &quot;mean&quot;, digits = 0)
+
+# look at the top of the data
+head(trimmedData)</code></pre>
+<pre><code>##   participant Switch Repeat
+## 1           1   1042    775
+## 2          10    779    666
+## 3          11   1082    964
+## 4          12    871    652
+## 5          13    914    773
+## 6          14   1034    827</code></pre>
+<p>Now, let’s trim per condition per participant:</p>
+<pre class="r"><code># trim the data
+trimmedData &lt;- sdTrim(data = exampleData, minRT = 150, sd = 3, 
+                      perCondition = TRUE, perParticipant = TRUE, 
+                      returnType = &quot;mean&quot;, digits = 0)
+
+# look at the top of the data
+head(trimmedData)</code></pre>
+<pre><code>##   participant Switch Repeat
+## 1           1   1099    742
+## 2          10    784    660
+## 3          11   1079    968
+## 4          12    874    644
+## 5          13    911    776
+## 6          14   1038    827</code></pre>
+<hr />
+</div>
+</div>
+<div id="recursive-moving-criterion" class="section level2">
+<h2><span id="recursive_criterion">Recursive / Moving Criterion</span></h2>
+<p>Three functions in this family implement the trimming methods proposed &amp; discussed by van Selst &amp; Jolicoeur (1994): <strong>nonRecursive</strong>, <strong>modifiedRecursive</strong>, and *hybridRecursive.** van Selst &amp; Jolicoeur noted that the outcome of many trimming methods is influenced by the sample size (i.e., the number of trials) being considered, thus potentially producing bias. For example, even if RTs are drawn from identical positively-skewed distributions, a “per condition per participant” SD procedure (see sdTrim above) would result in a higher mean estimate for small sample sizes than larger sample sizes.</p>
+<p>This bias was shown to be removed when a “moving criterion” (MC) was used; this is where the SD used for trimming is adapted to the sample size being considered.</p>
+<div id="nonrecursive" class="section level3">
+<h3>nonRecursive</h3>
+<p>The non-recursive method proposed by van Selst &amp; Jolicoeur (1994) is very similar to the standard deviation method outlined above with the exception that the user does not specify the SD to use as the upper bound. The SD used for the upper bound is instead decided by the sample size of the RTs being passed to the trimming function, with larger SDs being used for larger sample sizes.</p>
+<p>Also, the function only trims per participant per condition.</p>
+<p>The <strong>nonRecursive</strong> function checks the sample size of the data being passed to it, and looks up the SD criterion required for the data’s sample size. The function looks in a data file contained in <em>trimr</em> called <strong>linearInterpolation</strong>. Should the user wish to see this data file (although the user will never need to access it if they are not interested), type:</p>
+<pre class="r"><code># load the linear interpolation data file
+data(linearInterpolation)
+
+# show the first 20 rows (there are 100 in total)
+linearInterpolation[1:20, ]</code></pre>
+<pre><code>##    sampleSize modifiedRecursive nonRecursive
+## 1           4             8.000       1.4580
+## 2           5             6.200       1.6800
+## 3           6             5.300       1.8410
+## 4           7             4.800       1.9610
+## 5           8             4.475       2.0500
+## 6           9             4.250       2.1200
+## 7          10             4.110       2.1700
+## 8          11             4.000       2.2200
+## 9          12             3.920       2.2460
+## 10         13             3.850       2.2740
+## 11         14             3.800       2.3100
+## 12         15             3.750       2.3260
+## 13         16             3.728       2.3390
+## 14         17             3.706       2.3520
+## 15         18             3.684       2.3650
+## 16         19             3.662       2.3780
+## 17         20             3.640       2.3910
+## 18         21             3.631       2.3948
+## 19         22             3.622       2.3986
+## 20         23             3.613       2.4024</code></pre>
+<p>Notice there are two columns. This current function will only look in the nonRecursive column; the other column is used by the modifiedRecursive function, discussed below. If the sample size of the current set of data is 16 RTs (for example), the function will use an upper SD criterion of 2.359, and will proceed much like the sdTrim function’s operations.</p>
+<p>Here is how to use the function:</p>
+<pre class="r"><code># trim the data
+trimmedData &lt;- nonRecursive(data = exampleData, minRT = 150, digits = 0, 
+                            returnType = &quot;mean&quot;)
+
+# see the top of the data
+head(trimmedData)</code></pre>
+<pre><code>##   participant Switch Repeat
+## 1           1   1053    732
+## 2          10    779    652
+## 3          11   1066    960
+## 4          12    871    638
+## 5          13    900    766
+## 6          14   1018    817</code></pre>
+<div id="important-update" class="section level4">
+<h4>Important update!</h4>
+<p>Note that in previous versions of <em>trimr</em>, the user could only return the mean trimmed RTs (i.e., there was no “returnType” argument for this function). This has now been changed for the newest release of <em>trimr</em>.</p>
+<p>To show this new functionality, let’s repeat the above, but return the raw (i.e., trial-level) data:</p>
+<pre class="r"><code># trim the data
+trimmedData &lt;- nonRecursive(data = exampleData, minRT = 150, digits = 0, 
+                            returnType = &quot;raw&quot;)
+
+# see the top of the data
+head(trimmedData)</code></pre>
+<pre><code>##   participant condition   rt accuracy
+## 1           1    Switch 1660        1
+## 2           1    Switch  913        1
+## 4           1    Switch 1092        1
+## 6           1    Switch 2473        1
+## 7           1    Switch 2211        1
+## 8           1    Switch 1842        1</code></pre>
+</div>
+</div>
+<div id="modifiedrecursive" class="section level3">
+<h3>modifiedRecursive</h3>
+<p>The modifiedRecursive function is more involved than the nonRecursive function. This function performs trimming in cycles. It first temporarily removes the slowest RT from the distribution; then, the mean of the sample is calculated, and the cut-off value is calculated using a certain number of SDs around the mean, with the value for SD being determined by the current sample size. In this procedure, required SD <em>decreases</em> with increased sample size (cf., the nonRecursive method, with increasing SDs with <em>increasing</em> sample size; see the linearInterpolation data file above); see Van Selst and Jolicoeur (1994) for justification.</p>
+<p>The temporarily removed RT is then returned to the sample, and the fastest and slowest RTs are then compared to the cut-off, and removed if they fall outside. This process is then repeated until no outliers remain, or until the sample size drops below four. The SD used for the cut-off is thus <em>dynamically altered</em> based on the sample size of each cycle of the procedure, rather than static like the nonRecursive method.</p>
+<pre class="r"><code># trim the data
+trimmedData &lt;- modifiedRecursive(data = exampleData, minRT = 150, digits = 0, 
+                                 returnType = &quot;mean&quot;)
+
+# see the top of the data
+head(trimmedData)</code></pre>
+<pre><code>##   participant Switch Repeat
+## 1           1   1047    717
+## 2          10    779    647
+## 3          11   1075    931
+## 4          12    871    638
+## 5          13    911    763
+## 6          14   1014    799</code></pre>
+<p>As with the nonRecursive function, in the new release of <em>trimr</em> you can now obtain trial-level trimmed data:</p>
+<pre class="r"><code># trim the data
+trimmedData &lt;- modifiedRecursive(data = exampleData, minRT = 150, digits = 0, 
+                                 returnType = &quot;raw&quot;)
+
+# see the top of the data
+head(trimmedData)</code></pre>
+<pre><code>##   participant condition   rt accuracy
+## 1           1    Switch 1660        1
+## 2           1    Switch  913        1
+## 3           1    Switch 1092        1
+## 4           1    Switch 2473        1
+## 5           1    Switch 2211        1
+## 6           1    Switch 1842        1</code></pre>
+</div>
+<div id="hybridrecursive" class="section level3">
+<h3>hybridRecursive</h3>
+<p>van Selst and Jolicoeur (1994) reported slight opposing trends of the non-recursive and modified-recursive trimming methods (see page 648, footnote 2). They therefore, in passing, suggested a “hybrid-recursive” method might balance the opposing trends. The hybrid-recursive method simply takes the average of the non-recursive and the modified-recursive methods.</p>
+<p><strong>Please note</strong> that this function does not allow for different types of “returnType”; it only returns mean data per participant, per condition.</p>
+<pre class="r"><code># trim the data
+trimmedData &lt;- hybridRecursive(data = exampleData, minRT = 150, digits = 0)
+
+# see the top of the data
+head(trimmedData)</code></pre>
+<pre><code>##   participant Switch Repeat
+## 1           1   1050    724
+## 2          10    779    649
+## 3          11   1071    946
+## 4          12    871    638
+## 5          13    906    764
+## 6          14   1016    808</code></pre>
+<hr />
+</div>
+</div>
+<div id="data-from-factorial-designs" class="section level2">
+<h2><span id="factorial_designs">Data from Factorial Designs</span></h2>
+<p>In the example data that ships with <em>trimr</em>, the RT data comes from just two conditions (Switch vs. Repeat), which are coded in the column “condition”. However, in experimental psychology, factorial designs are prevalent, where RT data comes from more than one independent variable, with each IV having multiple levels. How can <em>trimr</em> deal with this format?</p>
+<p>First, let’s re-shape the exampleData set to how data might be stored from a factorial design. Let there be two IVs, each with two levels:</p>
+<ol style="list-style-type: decimal">
+<li><strong>taskSequence:</strong> Switch vs. Repeat</li>
+<li><strong>reward:</strong> Reward vs. NoReward</li>
+</ol>
+<p>The <em>taskSequence</em> factor is coding whether the task has Switched or Repeated from the task on the previous trial (as before). The <em>reward</em> factor is coding whether the participant was presented with a reward or not on the current trial (presented randomly). Let’s reshape our data frame to match this fictitious experimental scenario:</p>
+<pre class="r"><code># get the example data that ships with trimr
+data(exampleData)
+
+# pass it to a new variable
+newData &lt;- exampleData
+
+# add a column called &quot;taskSequence&quot; that logs whether the current task was a 
+# repetition or a switch trial (which is currently coded in the &quot;condition&quot;)
+# column
+newData$taskSequence &lt;- newData$condition
+
+# add a column called &quot;reward&quot; that logs whether the participant received a 
+# reward or not. Fill it with random entries, just for example. This uses Rs
+# &quot;sample&quot; function
+newData$reward &lt;- sample(c(&quot;Reward&quot;, &quot;NoReward&quot;), nrow(newData), 
+                         replace = TRUE)
+
+# delete the &quot;condition&quot; column
+newData &lt;- subset(newData, select = -condition)
+
+# now let&#39;s look at our new data
+head(newData)</code></pre>
+<pre><code>##   participant   rt accuracy taskSequence   reward
+## 1           1 1660        1       Switch   Reward
+## 2           1  913        1       Switch NoReward
+## 3           1 2312        1       Repeat NoReward
+## 4           1  754        1       Repeat NoReward
+## 5           1 3394        1       Switch   Reward
+## 6           1  930        1       Repeat NoReward</code></pre>
+<p>This now looks how data typically comes in from a factorial design. Now, to get trimr to work on this, we need to create a new column called “condition”, and to place in this column the levels of all factors in the design. For example, if the first trial in our newData has taskSequence = Switch and reward = NoReward, we would like our condition entry for this trial to read “Switch_NoReward”. This is simple to do using R’s “paste” function. (Note that this code can be adapted to deal with any number of factors.)</p>
+<pre class="r"><code># add a new column called &quot;condition&quot;, and fill it with information from both 
+# columns that code for our factors
+newData$condition &lt;- paste(newData$taskSequence, &quot;_&quot;, newData$reward, sep = &quot;&quot;)
+
+# let&#39;s again look at the data
+head(newData)</code></pre>
+<pre><code>##   participant   rt accuracy taskSequence   reward       condition
+## 1           1 1660        1       Switch   Reward   Switch_Reward
+## 2           1  913        1       Switch NoReward Switch_NoReward
+## 3           1 2312        1       Repeat NoReward Repeat_NoReward
+## 4           1  754        1       Repeat NoReward Repeat_NoReward
+## 5           1 3394        1       Switch   Reward   Switch_Reward
+## 6           1  930        1       Repeat NoReward Repeat_NoReward</code></pre>
+<p>Now we can pass this data frame to any function in <em>trimr</em>, and it will work perfectly:</p>
+<pre class="r"><code># trim the data
+trimmedData &lt;- sdTrim(newData, minRT = 150, sd = 2.5, digits = 0, 
+                      returnType = &quot;mean&quot;)
+
+# check it worked
+head(trimmedData)</code></pre>
+<pre><code>##   participant Switch_Reward Switch_NoReward Repeat_NoReward Repeat_Reward
+## 1           1          1094            1011             741           730
+## 2          10           785             774             647           654
+## 3          11          1104            1030             962           951
+## 4          12           900             844             644           636
+## 5          13           895             910             751           782
+## 6          14           981            1066             782           853</code></pre>
+<hr />
+</div>
+<div id="references" class="section level2">
+<h2><span id="references">References</span></h2>
+<ul>
+<li><p>Grange, J.A. (2015). trimr: An implementation of common response time trimming methods. R package version 1.0.1. <a href="https://cran.r-project.org/web/packages/trimr/index.html" class="uri">https://cran.r-project.org/web/packages/trimr/index.html</a></p></li>
+<li><p>Van Selst, M. &amp; Jolicoeur, P. (1994). A solution to the effect of sample size on outlier elimination. <em>Quarterly Journal of Experimental Psychology, 47 (A)</em>, 631—650.</p></li>
+</ul>
+</div>

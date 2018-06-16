@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>/post/update-to-trimr-a-response-time-trimming-package-in-r/</loc>
+      <lastmod>2018-06-16T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/publication/schuch-task_conflict/</loc>
       <lastmod>2018-05-14T00:00:00+00:00</lastmod>
     </url>
@@ -123,15 +132,6 @@
     <url>
     
       <loc>/talk/example-talk/</loc>
-      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -470,8 +470,28 @@
     
     <url>
     
+      <loc>/post/</loc>
+      <lastmod>2018-06-16T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/project/</loc>
       <lastmod>2018-02-17T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/r/</loc>
+      <lastmod>2018-06-16T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -492,6 +512,16 @@
     
       <loc>/tags/reproducibility/</loc>
       <lastmod>2018-02-14T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/response-times/</loc>
+      <lastmod>2018-06-16T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
