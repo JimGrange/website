@@ -85,7 +85,7 @@ devtools::install_github("JimGrange/trimr")
 install.packages("devtools")
 
 # install trimr from GitHub
-devools::install_github("JimGrange/trimr")
+devtools::install_github("JimGrange/trimr")
 
 ```
 
