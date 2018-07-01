@@ -1,6 +1,6 @@
 +++
 title = "Justify your alpha"
-date = "2018-01-10"
+date = "2018-01-02"
 
 authors = ["Lakens, D.", "Adolfi, C.", "...**Grange, J.A.**...", "& Zwaan, R"]
 
@@ -15,8 +15,8 @@ authors = ["Lakens, D.", "Adolfi, C.", "...**Grange, J.A.**...", "& Zwaan, R"]
 # 6 = Book chapter
 publication_types = ["2"]
 
-publication = "*Nature Human Behavior*, in press"
-publication_short = "*Nature Human Behavior*, in press"
+publication = "*Nature Human Behavior, 2*, 168--171"
+publication_short = "*Nature Human Behavior, 2*, 168--171"
 
 abstract = "In response to recommendations to redefine statistical significance to p ≤ .005, we propose that researchers should transparently report and justify all choices they make when designing a study, including the alpha level."
 abstract_short = "In response to recommendations to redefine statistical significance to p ≤ .005, we propose that researchers should transparently report and justify all choices they make when designing a study, including the alpha level."
@@ -24,7 +24,7 @@ abstract_short = "In response to recommendations to redefine statistical signifi
 selected = "true"
 
 # Links (optional).
-url_pdf = ""
+url_pdf = "https://www.nature.com/articles/s41562-018-0311-x"
 url_preprint = "https://psyarxiv.com/9s3y6"
 url_code = ""
 url_dataset = ""

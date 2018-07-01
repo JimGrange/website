@@ -1,6 +1,6 @@
 +++
 title = "The effect of aging on response congruency in task switching: A meta-analysis."
-date = "2018-01-09"
+date = "2018-01-03"
 
 authors = ["**Grange, J.A.**", " & Becker, R"]
 
@@ -24,7 +24,7 @@ abstract_short = "Response congruency effects in task switching are the observed
 selected = "true"
 
 # Links (optional).
-url_pdf = "http://bit.ly/2BZgBuT"
+url_pdf = "https://academic.oup.com/psychsocgerontology/advance-article-abstract/doi/10.1093/geronb/gbx122/4555065?redirectedFrom=PDF"
 url_preprint = "https://psyarxiv.com/5bs2r"
 url_code = "https://osf.io/uscm7/"
 url_dataset = "https://osf.io/uscm7/"

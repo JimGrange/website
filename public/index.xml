@@ -312,9 +312,9 @@ head(trimmedData)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;As with the nonRecursive function, in the new release of &lt;em&gt;trimr&lt;/em&gt; you can now obtain trial-level trimmed data:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# trim the data
 trimmedData &amp;lt;- modifiedRecursive(data = exampleData, minRT = 150, digits = 0, 
-                                 returnType = &amp;quot;raw&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;bindrcpp&amp;#39; was built under R version 3.4.4&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# see the top of the data
+                                 returnType = &amp;quot;raw&amp;quot;)
+
+# see the top of the data
 head(trimmedData)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##   participant condition   rt accuracy
 ## 1           1    Switch 1660        1
@@ -375,12 +375,12 @@ newData &amp;lt;- subset(newData, select = -condition)
 # now let&amp;#39;s look at our new data
 head(newData)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##   participant   rt accuracy taskSequence   reward
-## 1           1 1660        1       Switch NoReward
+## 1           1 1660        1       Switch   Reward
 ## 2           1  913        1       Switch   Reward
-## 3           1 2312        1       Repeat   Reward
-## 4           1  754        1       Repeat   Reward
+## 3           1 2312        1       Repeat NoReward
+## 4           1  754        1       Repeat NoReward
 ## 5           1 3394        1       Switch   Reward
-## 6           1  930        1       Repeat   Reward&lt;/code&gt;&lt;/pre&gt;
+## 6           1  930        1       Repeat NoReward&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This now looks how data typically comes in from a factorial design. Now, to get trimr to work on this, we need to create a new column called “condition”, and to place in this column the levels of all factors in the design. For example, if the first trial in our newData has taskSequence = Switch and reward = NoReward, we would like our condition entry for this trial to read “Switch_NoReward”. This is simple to do using R’s “paste” function. (Note that this code can be adapted to deal with any number of factors.)&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# add a new column called &amp;quot;condition&amp;quot;, and fill it with information from both 
 # columns that code for our factors
@@ -389,12 +389,12 @@ newData$condition &amp;lt;- paste(newData$taskSequence, &amp;quot;_&amp;quot;, n
 # let&amp;#39;s again look at the data
 head(newData)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##   participant   rt accuracy taskSequence   reward       condition
-## 1           1 1660        1       Switch NoReward Switch_NoReward
+## 1           1 1660        1       Switch   Reward   Switch_Reward
 ## 2           1  913        1       Switch   Reward   Switch_Reward
-## 3           1 2312        1       Repeat   Reward   Repeat_Reward
-## 4           1  754        1       Repeat   Reward   Repeat_Reward
+## 3           1 2312        1       Repeat NoReward Repeat_NoReward
+## 4           1  754        1       Repeat NoReward Repeat_NoReward
 ## 5           1 3394        1       Switch   Reward   Switch_Reward
-## 6           1  930        1       Repeat   Reward   Repeat_Reward&lt;/code&gt;&lt;/pre&gt;
+## 6           1  930        1       Repeat NoReward Repeat_NoReward&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now we can pass this data frame to any function in &lt;em&gt;trimr&lt;/em&gt;, and it will work perfectly:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# trim the data
 trimmedData &amp;lt;- sdTrim(newData, minRT = 150, sd = 2.5, digits = 0, 
@@ -402,13 +402,13 @@ trimmedData &amp;lt;- sdTrim(newData, minRT = 150, sd = 2.5, digits = 0,
 
 # check it worked
 head(trimmedData)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##   participant Switch_NoReward Switch_Reward Repeat_Reward Repeat_NoReward
-## 1           1            1046          1048           724             758
-## 2          10             777           781           645             652
-## 3          11            1086          1052           951             940
-## 4          12             868           865           632             647
-## 5          13             920           881           755             776
-## 6          14            1034          1017           802             820&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   participant Switch_Reward Repeat_NoReward Switch_NoReward Repeat_Reward
+## 1           1          1068             739            1035           727
+## 2          10           784             645             775           661
+## 3          11          1035             937            1089           954
+## 4          12           863             632             869           642
+## 5          13           918             760             883           766
+## 6          14          1048             811             992           823&lt;/code&gt;&lt;/pre&gt;
 &lt;hr /&gt;
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level2&#34;&gt;
@@ -419,15 +419,6 @@ head(trimmedData)&lt;/code&gt;&lt;/pre&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Increased cognitive control after task conflict? Investigating the n–3 effect in task switching</title>
-      <link>/publication/schuch-task_conflict/</link>
-      <pubDate>Mon, 14 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/schuch-task_conflict/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -608,20 +599,38 @@ ggplot(faithfuld, aes(waiting, eruptions)) +
     </item>
     
     <item>
-      <title>Justify your alpha</title>
-      <link>/publication/lakens-2018/</link>
-      <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
+      <title>Does task activation in task switching influence inhibition or episodic interference?</title>
+      <link>/publication/grange-rci_inhibition/</link>
+      <pubDate>Sat, 06 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/publication/lakens-2018/</guid>
+      <guid>/publication/grange-rci_inhibition/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Increased cognitive control after task conflict? Investigating the n–3 effect in task switching</title>
+      <link>/publication/schuch-task_conflict/</link>
+      <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/schuch-task_conflict/</guid>
       <description></description>
     </item>
     
     <item>
       <title>The effect of aging on response congruency in task switching: A meta-analysis.</title>
       <link>/publication/grange-congruency_meta/</link>
-      <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 03 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/publication/grange-congruency_meta/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Justify your alpha</title>
+      <link>/publication/lakens-2018/</link>
+      <pubDate>Tue, 02 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/lakens-2018/</guid>
       <description></description>
     </item>
     
@@ -669,15 +678,6 @@ ggplot(faithfuld, aes(waiting, eruptions)) +
       <guid>/talk/example-talk/</guid>
       <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://sourcethemes.com/academic/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>A deficit in familiarity-driven recognition in a right-sided mediodorsal thalamic lesion patient</title>
-      <link>/publication/edelstyn-familiarity_parkinsons/</link>
-      <pubDate>Wed, 24 Feb 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/edelstyn-familiarity_parkinsons/</guid>
-      <description></description>
     </item>
     
   </channel>
