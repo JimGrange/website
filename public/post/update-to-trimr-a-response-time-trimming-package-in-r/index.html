@@ -623,9 +623,9 @@ head(trimmedData)</code></pre>
 <p>As with the nonRecursive function, in the new release of <em>trimr</em> you can now obtain trial-level trimmed data:</p>
 <pre class="r"><code># trim the data
 trimmedData &lt;- modifiedRecursive(data = exampleData, minRT = 150, digits = 0, 
-                                 returnType = &quot;raw&quot;)
-
-# see the top of the data
+                                 returnType = &quot;raw&quot;)</code></pre>
+<pre><code>## Warning: package &#39;bindrcpp&#39; was built under R version 3.4.4</code></pre>
+<pre class="r"><code># see the top of the data
 head(trimmedData)</code></pre>
 <pre><code>##   participant condition   rt accuracy
 ## 1           1    Switch 1660        1
@@ -686,12 +686,12 @@ newData &lt;- subset(newData, select = -condition)
 # now let&#39;s look at our new data
 head(newData)</code></pre>
 <pre><code>##   participant   rt accuracy taskSequence   reward
-## 1           1 1660        1       Switch   Reward
-## 2           1  913        1       Switch   Reward
+## 1           1 1660        1       Switch NoReward
+## 2           1  913        1       Switch NoReward
 ## 3           1 2312        1       Repeat NoReward
-## 4           1  754        1       Repeat NoReward
+## 4           1  754        1       Repeat   Reward
 ## 5           1 3394        1       Switch   Reward
-## 6           1  930        1       Repeat NoReward</code></pre>
+## 6           1  930        1       Repeat   Reward</code></pre>
 <p>This now looks how data typically comes in from a factorial design. Now, to get trimr to work on this, we need to create a new column called “condition”, and to place in this column the levels of all factors in the design. For example, if the first trial in our newData has taskSequence = Switch and reward = NoReward, we would like our condition entry for this trial to read “Switch_NoReward”. This is simple to do using R’s “paste” function. (Note that this code can be adapted to deal with any number of factors.)</p>
 <pre class="r"><code># add a new column called &quot;condition&quot;, and fill it with information from both 
 # columns that code for our factors
@@ -700,12 +700,12 @@ newData$condition &lt;- paste(newData$taskSequence, &quot;_&quot;, newData$rewar
 # let&#39;s again look at the data
 head(newData)</code></pre>
 <pre><code>##   participant   rt accuracy taskSequence   reward       condition
-## 1           1 1660        1       Switch   Reward   Switch_Reward
-## 2           1  913        1       Switch   Reward   Switch_Reward
+## 1           1 1660        1       Switch NoReward Switch_NoReward
+## 2           1  913        1       Switch NoReward Switch_NoReward
 ## 3           1 2312        1       Repeat NoReward Repeat_NoReward
-## 4           1  754        1       Repeat NoReward Repeat_NoReward
+## 4           1  754        1       Repeat   Reward   Repeat_Reward
 ## 5           1 3394        1       Switch   Reward   Switch_Reward
-## 6           1  930        1       Repeat NoReward Repeat_NoReward</code></pre>
+## 6           1  930        1       Repeat   Reward   Repeat_Reward</code></pre>
 <p>Now we can pass this data frame to any function in <em>trimr</em>, and it will work perfectly:</p>
 <pre class="r"><code># trim the data
 trimmedData &lt;- sdTrim(newData, minRT = 150, sd = 2.5, digits = 0, 
@@ -713,13 +713,13 @@ trimmedData &lt;- sdTrim(newData, minRT = 150, sd = 2.5, digits = 0,
 
 # check it worked
 head(trimmedData)</code></pre>
-<pre><code>##   participant Switch_Reward Repeat_NoReward Switch_NoReward Repeat_Reward
-## 1           1          1068             739            1035           727
-## 2          10           784             645             775           661
-## 3          11          1035             937            1089           954
-## 4          12           863             632             869           642
-## 5          13           918             760             883           766
-## 6          14          1048             811             992           823</code></pre>
+<pre><code>##   participant Switch_NoReward Repeat_NoReward Repeat_Reward Switch_Reward
+## 1           1            1086             710           767          1022
+## 2          10             750             641           658           800
+## 3          11            1077             967           938          1056
+## 4          12             867             621           648           871
+## 5          13             929             806           712           882
+## 6          14            1022             865           767          1012</code></pre>
 <hr />
 </div>
 <div id="references" class="section level2">
