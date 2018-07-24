@@ -599,6 +599,15 @@ ggplot(faithfuld, aes(waiting, eruptions)) +
     </item>
     
     <item>
+      <title>Impulse control disorder in Parkinson’s disease: A meta-analysis of cognitive, affective, and motivational correlates</title>
+      <link>/publication/martini-meta-2018/</link>
+      <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/martini-meta-2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Does task activation in task switching influence inhibition or episodic interference?</title>
       <link>/publication/grange-rci_inhibition/</link>
       <pubDate>Sat, 06 Jan 2018 00:00:00 +0000</pubDate>
@@ -668,16 +677,6 @@ ggplot(faithfuld, aes(waiting, eruptions)) +
       
       <guid>/publication/stephens-familial_risk/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Example Talk</title>
-      <link>/talk/example-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/talk/example-talk/</guid>
-      <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://sourcethemes.com/academic/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
-</description>
     </item>
     
   </channel>
