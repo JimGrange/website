@@ -24,7 +24,7 @@ abstract_short = "In Parkinson's disease (PD), impulse control disorders (ICDs) 
 selected = "true"
 
 # Links (optional).
-url_pdf = ""
+url_pdf = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
 url_preprint = ""
 url_code = ""
 url_dataset = ""
