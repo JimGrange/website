@@ -609,6 +609,15 @@ ggplot(faithfuld, aes(waiting, eruptions)) +
     
     <item>
       <title>Does task activation in task switching influence inhibition or episodic interference?</title>
+      <link>/publication/grange-inhibition_ep_retrieval/</link>
+      <pubDate>Sat, 06 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-inhibition_ep_retrieval/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Does task activation in task switching influence inhibition or episodic interference?</title>
       <link>/publication/grange-rci_inhibition/</link>
       <pubDate>Sat, 06 Jan 2018 00:00:00 +0000</pubDate>
       
@@ -667,15 +676,6 @@ ggplot(faithfuld, aes(waiting, eruptions)) +
       <pubDate>Sun, 08 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>/publication/episodic_retrieval/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Does familial risk for alcohol use disorder predict alcohol hangover?</title>
-      <link>/publication/stephens-familial_risk/</link>
-      <pubDate>Fri, 06 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/stephens-familial_risk/</guid>
       <description></description>
     </item>
     
