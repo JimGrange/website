@@ -308,9 +308,9 @@ head(trimmedData)</code></pre>
 <p>As with the nonRecursive function, in the new release of <em>trimr</em> you can now obtain trial-level trimmed data:</p>
 <pre class="r"><code># trim the data
 trimmedData &lt;- modifiedRecursive(data = exampleData, minRT = 150, digits = 0, 
-                                 returnType = &quot;raw&quot;)</code></pre>
-<pre><code>## Warning: package &#39;bindrcpp&#39; was built under R version 3.4.4</code></pre>
-<pre class="r"><code># see the top of the data
+                                 returnType = &quot;raw&quot;)
+
+# see the top of the data
 head(trimmedData)</code></pre>
 <pre><code>##   participant condition   rt accuracy
 ## 1           1    Switch 1660        1
@@ -373,7 +373,7 @@ head(newData)</code></pre>
 <pre><code>##   participant   rt accuracy taskSequence   reward
 ## 1           1 1660        1       Switch NoReward
 ## 2           1  913        1       Switch NoReward
-## 3           1 2312        1       Repeat NoReward
+## 3           1 2312        1       Repeat   Reward
 ## 4           1  754        1       Repeat   Reward
 ## 5           1 3394        1       Switch   Reward
 ## 6           1  930        1       Repeat   Reward</code></pre>
@@ -387,7 +387,7 @@ head(newData)</code></pre>
 <pre><code>##   participant   rt accuracy taskSequence   reward       condition
 ## 1           1 1660        1       Switch NoReward Switch_NoReward
 ## 2           1  913        1       Switch NoReward Switch_NoReward
-## 3           1 2312        1       Repeat NoReward Repeat_NoReward
+## 3           1 2312        1       Repeat   Reward   Repeat_Reward
 ## 4           1  754        1       Repeat   Reward   Repeat_Reward
 ## 5           1 3394        1       Switch   Reward   Switch_Reward
 ## 6           1  930        1       Repeat   Reward   Repeat_Reward</code></pre>
@@ -398,13 +398,13 @@ trimmedData &lt;- sdTrim(newData, minRT = 150, sd = 2.5, digits = 0,
 
 # check it worked
 head(trimmedData)</code></pre>
-<pre><code>##   participant Switch_NoReward Repeat_NoReward Repeat_Reward Switch_Reward
-## 1           1            1086             710           767          1022
-## 2          10             750             641           658           800
-## 3          11            1077             967           938          1056
-## 4          12             867             621           648           871
-## 5          13             929             806           712           882
-## 6          14            1022             865           767          1012</code></pre>
+<pre><code>##   participant Switch_NoReward Repeat_Reward Switch_Reward Repeat_NoReward
+## 1           1            1103           730          1020             740
+## 2          10             771           674           791             626
+## 3          11            1094           966          1028             955
+## 4          12             872           641           856             639
+## 5          13             907           765           896             767
+## 6          14            1005           813          1029             821</code></pre>
 <hr />
 </div>
 <div id="references" class="section level2">
