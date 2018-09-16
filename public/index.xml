@@ -387,7 +387,7 @@ head(newData)&lt;/code&gt;&lt;/pre&gt;
 ## 1           1 1660        1       Switch NoReward
 ## 2           1  913        1       Switch NoReward
 ## 3           1 2312        1       Repeat   Reward
-## 4           1  754        1       Repeat   Reward
+## 4           1  754        1       Repeat NoReward
 ## 5           1 3394        1       Switch   Reward
 ## 6           1  930        1       Repeat   Reward&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This now looks how data typically comes in from a factorial design. Now, to get trimr to work on this, we need to create a new column called “condition”, and to place in this column the levels of all factors in the design. For example, if the first trial in our newData has taskSequence = Switch and reward = NoReward, we would like our condition entry for this trial to read “Switch_NoReward”. This is simple to do using R’s “paste” function. (Note that this code can be adapted to deal with any number of factors.)&lt;/p&gt;
@@ -401,7 +401,7 @@ head(newData)&lt;/code&gt;&lt;/pre&gt;
 ## 1           1 1660        1       Switch NoReward Switch_NoReward
 ## 2           1  913        1       Switch NoReward Switch_NoReward
 ## 3           1 2312        1       Repeat   Reward   Repeat_Reward
-## 4           1  754        1       Repeat   Reward   Repeat_Reward
+## 4           1  754        1       Repeat NoReward Repeat_NoReward
 ## 5           1 3394        1       Switch   Reward   Switch_Reward
 ## 6           1  930        1       Repeat   Reward   Repeat_Reward&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now we can pass this data frame to any function in &lt;em&gt;trimr&lt;/em&gt;, and it will work perfectly:&lt;/p&gt;
@@ -411,13 +411,13 @@ trimmedData &amp;lt;- sdTrim(newData, minRT = 150, sd = 2.5, digits = 0,
 
 # check it worked
 head(trimmedData)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##   participant Switch_NoReward Repeat_Reward Switch_Reward Repeat_NoReward
-## 1           1            1103           730          1020             740
-## 2          10             771           674           791             626
-## 3          11            1094           966          1028             955
-## 4          12             872           641           856             639
-## 5          13             907           765           896             767
-## 6          14            1005           813          1029             821&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   participant Switch_NoReward Repeat_Reward Repeat_NoReward Switch_Reward
+## 1           1            1063           722             750          1070
+## 2          10             762           650             650           795
+## 3          11            1076           920             995          1063
+## 4          12             883           636             641           862
+## 5          13             903           718             804           903
+## 6          14            1028           796             846          1014&lt;/code&gt;&lt;/pre&gt;
 &lt;hr /&gt;
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level2&#34;&gt;
@@ -444,8 +444,9 @@ head(trimmedData)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;&lt;p&gt;As the blog is written in R and blogdown, it means that all the content &amp;amp; code behind it can be made freely available. You can see the Github page for the code of my website &lt;a href=&#34;https://github.com/JimGrange/website&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;The blog posts on my previous site which I enjoyed writing the most had R demonstrations in them. As blogdown uses markdown, I can now write blog posts using markdown meaning I can integrate R code into the blog post! Not just that, plots are automatically integrated into the blog! Observe thus!&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)
-ggplot(faithfuld, aes(waiting, eruptions)) +
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;ggplot2&amp;#39; was built under R version 3.5.1&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(faithfuld, aes(waiting, eruptions)) +
   geom_raster(aes(fill = density)) +
   scale_fill_distiller(palette = &amp;quot;Spectral&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/2018-04-20-a-new-website_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
@@ -608,18 +609,9 @@ ggplot(faithfuld, aes(waiting, eruptions)) +
     </item>
     
     <item>
-      <title>Impulse control disorder in Parkinson’s disease: A meta-analysis of cognitive, affective, and motivational correlates</title>
-      <link>/publication/martini-meta-2018/</link>
-      <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/martini-meta-2018/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Does task activation in task switching influence inhibition or episodic interference?</title>
       <link>/publication/grange-rci_inhibition/</link>
-      <pubDate>Sat, 06 Jan 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/publication/grange-rci_inhibition/</guid>
       <description></description>
@@ -628,7 +620,7 @@ ggplot(faithfuld, aes(waiting, eruptions)) +
     <item>
       <title>Increased cognitive control after task conflict? Investigating the n–3 effect in task switching</title>
       <link>/publication/schuch-task_conflict/</link>
-      <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 06 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/publication/schuch-task_conflict/</guid>
       <description></description>
@@ -637,9 +629,18 @@ ggplot(faithfuld, aes(waiting, eruptions)) +
     <item>
       <title>The effect of aging on response congruency in task switching: A meta-analysis.</title>
       <link>/publication/grange-congruency_meta/</link>
-      <pubDate>Wed, 03 Jan 2018 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/publication/grange-congruency_meta/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Impulse control disorder in Parkinson’s disease: A meta-analysis of cognitive, affective, and motivational correlates</title>
+      <link>/publication/martini-meta-2018/</link>
+      <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/martini-meta-2018/</guid>
       <description></description>
     </item>
     
