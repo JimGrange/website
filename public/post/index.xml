@@ -30,8 +30,8 @@
       <guid>/post/a-new-website/</guid>
       <description>I have spent the past day or so transporting my acedemic website from Wordpress to the current website, which is written using the (superb!) R package ‘blogdown’.
 I made the change for a variety of reasons:
-I am now able to use R for most things—analysis, simulations, writing papers using papaja and now my website—making my workflow more efficient (and high on the nerd-scale).
-I could never really get my wordpress site to look sleek and professional.</description>
+ I am now able to use R for most things—analysis, simulations, writing papers using papaja and now my website—making my workflow more efficient (and high on the nerd-scale).
+ I could never really get my wordpress site to look sleek and professional.</description>
     </item>
     
   </channel>
