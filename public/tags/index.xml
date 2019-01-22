@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Jim Grange</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on Jim Grange</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Content tagged as &#39;Academic&#39;</title>
+      <link>/tags/academic/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/academic/</guid>
+      <description>Here is a list of all the content that has been tagged as academic.</description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>/tags/r/</link>
+      <pubDate>Sat, 16 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>clinical-applications</title>
+      <link>/tags/clinical-applications/</link>
+      <pubDate>Thu, 15 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/clinical-applications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cognitive-control</title>
+      <link>/tags/cognitive-control/</link>
+      <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/cognitive-control/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>computational modelling</title>
+      <link>/tags/computational-modelling/</link>
+      <pubDate>Fri, 16 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/computational-modelling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>healthy-ageing</title>
+      <link>/tags/healthy-ageing/</link>
+      <pubDate>Thu, 15 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/healthy-ageing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>open-science</title>
+      <link>/tags/open-science/</link>
+      <pubDate>Wed, 14 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/open-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>replication</title>
+      <link>/tags/replication/</link>
+      <pubDate>Wed, 14 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/replication/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reproducibility</title>
+      <link>/tags/reproducibility/</link>
+      <pubDate>Wed, 14 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/reproducibility/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>response times</title>
+      <link>/tags/response-times/</link>
+      <pubDate>Sat, 16 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/response-times/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,6 +1,6 @@
 +++
-title = "The effect of aging on response congruency in task switching: A meta-analysis."
-date = "2018-01-05"
+title = "The effect of aging on response congruency in task switching: A meta-analysis"
+date = "2019-01-02"
 
 authors = ["**Grange, J.A.**", " & Becker, R"]
 

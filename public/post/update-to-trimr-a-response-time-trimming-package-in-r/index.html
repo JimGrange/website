@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.36" />
+  <meta name="generator" content="Hugo 0.53" />
   <meta name="author" content="Jim Grange">
 
   
@@ -327,7 +327,10 @@
 
 
     <div class="article-style" itemprop="articleBody">
-      <p>In 2015, I published my first ever R package: <a href="https://cran.r-project.org/web/packages/trimr/index.html">“trimr: An implementation of common response time trimming methods”</a>. To date, this package has had over 5,600 downloads from CRAN, which is unbelievable!</p>
+      
+
+
+<p>In 2015, I published my first ever R package: <a href="https://cran.r-project.org/web/packages/trimr/index.html">“trimr: An implementation of common response time trimming methods”</a>. To date, this package has had over 5,600 downloads from CRAN, which is unbelievable!</p>
 <p>3 years is a long time for a package, so I thought it was time to update the package, fix some bugs, and implement some additional functionality. To this end, I have spent some time over the past few days working on a new release. This new release is version 1.1.0. I will spend some time testing this version before updating it on CRAN; at present, <a href="https://github.com/JimGrange/trimr">it is only available at GitHub</a>.</p>
 <p>In this post I will provide an overview of the main changes since the previous version. I will also provide an updated tutorial on how to use <em>trimr</em> from the <a href="https://jimgrange.wordpress.com/2015/08/03/trimr-an-r-package-of-response-time-trimming-methods/">previous tutorial released in 2015</a>.</p>
 <p><strong>If you use trimr in your work</strong>, I would really appreciate a citation to the package. Please see the <a href="#references">references</a> section for how to do this.</p>
@@ -623,9 +626,9 @@ head(trimmedData)</code></pre>
 <p>As with the nonRecursive function, in the new release of <em>trimr</em> you can now obtain trial-level trimmed data:</p>
 <pre class="r"><code># trim the data
 trimmedData &lt;- modifiedRecursive(data = exampleData, minRT = 150, digits = 0, 
-                                 returnType = &quot;raw&quot;)</code></pre>
-<pre><code>## Warning: package &#39;bindrcpp&#39; was built under R version 3.4.4</code></pre>
-<pre class="r"><code># see the top of the data
+                                 returnType = &quot;raw&quot;)
+
+# see the top of the data
 head(trimmedData)</code></pre>
 <pre><code>##   participant condition   rt accuracy
 ## 1           1    Switch 1660        1
@@ -686,7 +689,7 @@ newData &lt;- subset(newData, select = -condition)
 # now let&#39;s look at our new data
 head(newData)</code></pre>
 <pre><code>##   participant   rt accuracy taskSequence   reward
-## 1           1 1660        1       Switch NoReward
+## 1           1 1660        1       Switch   Reward
 ## 2           1  913        1       Switch   Reward
 ## 3           1 2312        1       Repeat NoReward
 ## 4           1  754        1       Repeat   Reward
@@ -700,7 +703,7 @@ newData$condition &lt;- paste(newData$taskSequence, &quot;_&quot;, newData$rewar
 # let&#39;s again look at the data
 head(newData)</code></pre>
 <pre><code>##   participant   rt accuracy taskSequence   reward       condition
-## 1           1 1660        1       Switch NoReward Switch_NoReward
+## 1           1 1660        1       Switch   Reward   Switch_Reward
 ## 2           1  913        1       Switch   Reward   Switch_Reward
 ## 3           1 2312        1       Repeat NoReward Repeat_NoReward
 ## 4           1  754        1       Repeat   Reward   Repeat_Reward
@@ -713,13 +716,13 @@ trimmedData &lt;- sdTrim(newData, minRT = 150, sd = 2.5, digits = 0,
 
 # check it worked
 head(trimmedData)</code></pre>
-<pre><code>##   participant Switch_NoReward Switch_Reward Repeat_NoReward Repeat_Reward
-## 1           1            1062          1034             737           726
-## 2          10             773           785             652           648
-## 3          11            1085          1046             970           944
-## 4          12             865           878             655           620
-## 5          13             903           898             780           753
-## 6          14            1048           996             785           844</code></pre>
+<pre><code>##   participant Switch_Reward Repeat_NoReward Repeat_Reward Switch_NoReward
+## 1           1          1098             775           699            1006
+## 2          10           781             646           662             783
+## 3          11          1113             953           961            1011
+## 4          12           877             648           625             865
+## 5          13           894             728           809             907
+## 6          14          1062             811           822             981</code></pre>
 <hr />
 </div>
 <div id="references" class="section level2">

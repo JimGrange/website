@@ -5,6 +5,42 @@
     
     <url>
     
+      <loc>/publication/schuch-task_conflict/</loc>
+      <lastmod>2019-01-03T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/publication/grange-congruency_meta/</loc>
+      <lastmod>2019-01-02T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/publication/grange-practice_episodic/</loc>
+      <lastmod>2019-01-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/publication/grange-rci_inhibition/</loc>
+      <lastmod>2018-12-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/publication/grange-inhibition_ep_retrieval/</loc>
       <lastmod>2018-07-31T00:00:00+00:00</lastmod>
     </url>
@@ -68,33 +104,6 @@
     
     <url>
     
-      <loc>/publication/grange-rci_inhibition/</loc>
-      <lastmod>2018-01-07T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/publication/schuch-task_conflict/</loc>
-      <lastmod>2018-01-06T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/publication/grange-congruency_meta/</loc>
-      <lastmod>2018-01-05T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>/publication/martini-meta-2018/</loc>
       <lastmod>2018-01-04T00:00:00+00:00</lastmod>
     </url>
@@ -124,15 +133,6 @@
     
       <loc>/publication/kowalczyk-inhition_reliability/</loc>
       <lastmod>2017-01-12T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/publication/episodic_retrieval/</loc>
-      <lastmod>2017-01-08T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -428,7 +428,65 @@
     
     <url>
     
+      <loc>/publication/episodic_retrieval/</loc>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/categories/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/</loc>
+      <lastmod>2016-04-20T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/post/</loc>
+      <lastmod>2018-06-16T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/project/</loc>
+      <lastmod>2018-02-17T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/r/</loc>
+      <lastmod>2018-06-16T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/</loc>
+      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -477,48 +535,8 @@
     
     <url>
     
-      <loc>/</loc>
-      <lastmod>2016-04-20T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>/tags/open-science/</loc>
       <lastmod>2018-02-14T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/</loc>
-      <lastmod>2018-06-16T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/project/</loc>
-      <lastmod>2018-02-17T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/tags/r/</loc>
-      <lastmod>2018-06-16T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -549,16 +567,6 @@
     
       <loc>/tags/response-times/</loc>
       <lastmod>2018-06-16T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/tags/</loc>
-      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

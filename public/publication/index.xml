@@ -13,38 +13,47 @@
     
     
     <item>
-      <title>The effect of practice on inhibition in task switching: Controlling for episodic retrieval</title>
-      <link>/publication/grange-inhibition_ep_retrieval/</link>
-      <pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/grange-inhibition_ep_retrieval/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Does task activation in task switching influence inhibition or episodic interference?</title>
-      <link>/publication/grange-rci_inhibition/</link>
-      <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/grange-rci_inhibition/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Increased cognitive control after task conflict? Investigating the n–3 effect in task switching</title>
       <link>/publication/schuch-task_conflict/</link>
-      <pubDate>Sat, 06 Jan 2018 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>/publication/schuch-task_conflict/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>The effect of aging on response congruency in task switching: A meta-analysis.</title>
+      <title>The effect of aging on response congruency in task switching: A meta-analysis</title>
       <link>/publication/grange-congruency_meta/</link>
-      <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>/publication/grange-congruency_meta/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The effect of practice on inhibition in task switching: Controlling for episodic retrieval</title>
+      <link>/publication/grange-practice_episodic/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-practice_episodic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Does task activation in task switching influence inhibition or episodic interference?</title>
+      <link>/publication/grange-rci_inhibition/</link>
+      <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-rci_inhibition/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The effect of practice on inhibition in task switching: Controlling for episodic retrieval</title>
+      <link>/publication/grange-inhibition_ep_retrieval/</link>
+      <pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-inhibition_ep_retrieval/</guid>
       <description></description>
     </item>
     
@@ -81,15 +90,6 @@
       <pubDate>Thu, 12 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>/publication/kowalczyk-inhition_reliability/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>The effect of episodic retrieval on inhibition in task switching</title>
-      <link>/publication/episodic_retrieval/</link>
-      <pubDate>Sun, 08 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/episodic_retrieval/</guid>
       <description></description>
     </item>
     
@@ -343,6 +343,18 @@
       
       <guid>/publication/houghton-backward_inhibition/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/publication/episodic_retrieval/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/episodic_retrieval/</guid>
+      <description>Grange+++ title = &amp;ldquo;The effect of episodic retrieval on inhibition in task switching&amp;rdquo; date = &amp;ldquo;2017-01-08&amp;rdquo;
+authors = [&amp;rdquo;Grange, J.A.&amp;rdquo;, &amp;ldquo;Kowalczyk, A.W.&amp;rdquo;, &amp;ldquo;&amp;amp; O&amp;rsquo;Loughlin, R&amp;rdquo;]
+Publication type. Legend: 0 = Uncategorized 1 = Conference proceedings 2 = Journal 3 = Work in progress 4 = Technical report 5 = Book 6 = Book chapter publication_types = [&amp;ldquo;2&amp;rdquo;]
+publication = &amp;ldquo;Journal of Experimental Psychology: Human Perception &amp;amp; Performance, 43, 1568&amp;ndash;1583&amp;rdquo; publication_short = &amp;ldquo;Journal of Experimental Psychology: Human Perception &amp;amp; Performance, 43, 1568&amp;ndash;1583&amp;rdquo;</description>
     </item>
     
   </channel>

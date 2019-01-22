@@ -1,6 +1,6 @@
 +++
 title = "Increased cognitive control after task conflict? Investigating the n–3 effect in task switching"
-date = "2018-01-06"
+date = "2019-01-03"
 
 authors = ["Schuch, S.", "& **Grange, J.A**"]
 
