@@ -11,6 +11,15 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>The effect of episodic retrieval on inhibition in task switching: A diffusion model analysis</title>
+      <link>/publication/kowalczyk-diffusion/</link>
+      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/kowalczyk-diffusion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Increased cognitive control after task conflict? Investigating the n–3 effect in task switching</title>
       <link>/publication/schuch-task_conflict/</link>
       <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
@@ -673,15 +682,6 @@ ggplot(faithfuld, aes(waiting, eruptions)) +
       <pubDate>Fri, 13 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>/publication/grange-inhibition_ep_retrieval/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Inhibition in task switching: The reliability of the n−2 repetition cost</title>
-      <link>/publication/kowalczyk-inhition_reliability/</link>
-      <pubDate>Thu, 12 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/kowalczyk-inhition_reliability/</guid>
       <description></description>
     </item>
     
