@@ -5,8 +5,11 @@ date: '2019-04-03'
 slug: test
 categories: []
 tags: []
+draft: TRUE
 header:
   caption: ''
   image: ''
   preview: yes
 ---
+
+This is a test post.
