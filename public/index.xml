@@ -11,16 +11,12 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Test</title>
-      <link>/post/test/</link>
-      <pubDate>Wed, 03 Apr 2019 00:00:00 +0000</pubDate>
+      <title>Cognitive function, self-awareness, and neuroimaging findings in OCD-type presentations after Traumatic Brain Injury</title>
+      <link>/publication/coetzer/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/test/</guid>
-      <description>
-
-
-&lt;p&gt;This is a test post.&lt;/p&gt;
-</description>
+      <guid>/publication/coetzer/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -52,10 +48,10 @@
     
     <item>
       <title>The effect of practice on inhibition in task switching: Controlling for episodic retrieval</title>
-      <link>/publication/grange-practice_episodic/</link>
+      <link>/publication/grange---practice_episodic/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>/publication/grange-practice_episodic/</guid>
+      <guid>/publication/grange---practice_episodic/</guid>
       <description></description>
     </item>
     
@@ -74,10 +70,7 @@
       <pubDate>Sat, 16 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/update-to-trimr-a-response-time-trimming-package-in-r/</guid>
-      <description>
-
-
-&lt;p&gt;In 2015, I published my first ever R package: &lt;a href=&#34;https://cran.r-project.org/web/packages/trimr/index.html&#34;&gt;“trimr: An implementation of common response time trimming methods”&lt;/a&gt;. To date, this package has had over 5,600 downloads from CRAN, which is unbelievable!&lt;/p&gt;
+      <description>&lt;p&gt;In 2015, I published my first ever R package: &lt;a href=&#34;https://cran.r-project.org/web/packages/trimr/index.html&#34;&gt;“trimr: An implementation of common response time trimming methods”&lt;/a&gt;. To date, this package has had over 5,600 downloads from CRAN, which is unbelievable!&lt;/p&gt;
 &lt;p&gt;3 years is a long time for a package, so I thought it was time to update the package, fix some bugs, and implement some additional functionality. To this end, I have spent some time over the past few days working on a new release. This new release is version 1.1.0. I will spend some time testing this version before updating it on CRAN; at present, &lt;a href=&#34;https://github.com/JimGrange/trimr&#34;&gt;it is only available at GitHub&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;In this post I will provide an overview of the main changes since the previous version. I will also provide an updated tutorial on how to use &lt;em&gt;trimr&lt;/em&gt; from the &lt;a href=&#34;https://jimgrange.wordpress.com/2015/08/03/trimr-an-r-package-of-response-time-trimming-methods/&#34;&gt;previous tutorial released in 2015&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;If you use trimr in your work&lt;/strong&gt;, I would really appreciate a citation to the package. Please see the &lt;a href=&#34;#references&#34;&gt;references&lt;/a&gt; section for how to do this.&lt;/p&gt;
@@ -437,11 +430,11 @@ newData &amp;lt;- subset(newData, select = -condition)
 head(newData)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##   participant   rt accuracy taskSequence   reward
 ## 1           1 1660        1       Switch   Reward
-## 2           1  913        1       Switch   Reward
+## 2           1  913        1       Switch NoReward
 ## 3           1 2312        1       Repeat NoReward
-## 4           1  754        1       Repeat NoReward
+## 4           1  754        1       Repeat   Reward
 ## 5           1 3394        1       Switch NoReward
-## 6           1  930        1       Repeat NoReward&lt;/code&gt;&lt;/pre&gt;
+## 6           1  930        1       Repeat   Reward&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This now looks how data typically comes in from a factorial design. Now, to get trimr to work on this, we need to create a new column called “condition”, and to place in this column the levels of all factors in the design. For example, if the first trial in our newData has taskSequence = Switch and reward = NoReward, we would like our condition entry for this trial to read “Switch_NoReward”. This is simple to do using R’s “paste” function. (Note that this code can be adapted to deal with any number of factors.)&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# add a new column called &amp;quot;condition&amp;quot;, and fill it with information from both 
 # columns that code for our factors
@@ -451,11 +444,11 @@ newData$condition &amp;lt;- paste(newData$taskSequence, &amp;quot;_&amp;quot;, n
 head(newData)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##   participant   rt accuracy taskSequence   reward       condition
 ## 1           1 1660        1       Switch   Reward   Switch_Reward
-## 2           1  913        1       Switch   Reward   Switch_Reward
+## 2           1  913        1       Switch NoReward Switch_NoReward
 ## 3           1 2312        1       Repeat NoReward Repeat_NoReward
-## 4           1  754        1       Repeat NoReward Repeat_NoReward
+## 4           1  754        1       Repeat   Reward   Repeat_Reward
 ## 5           1 3394        1       Switch NoReward Switch_NoReward
-## 6           1  930        1       Repeat NoReward Repeat_NoReward&lt;/code&gt;&lt;/pre&gt;
+## 6           1  930        1       Repeat   Reward   Repeat_Reward&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now we can pass this data frame to any function in &lt;em&gt;trimr&lt;/em&gt;, and it will work perfectly:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# trim the data
 trimmedData &amp;lt;- sdTrim(newData, minRT = 150, sd = 2.5, digits = 0, 
@@ -463,13 +456,13 @@ trimmedData &amp;lt;- sdTrim(newData, minRT = 150, sd = 2.5, digits = 0,
 
 # check it worked
 head(trimmedData)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##   participant Switch_Reward Repeat_NoReward Switch_NoReward Repeat_Reward
-## 1           1          1071             762            1025           710
-## 2          10           771             660             787           627
-## 3          11          1049             945            1084           970
-## 4          12           872             634             867           643
-## 5          13           904             769             896           745
-## 6          14          1058             801            1003           827&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   participant Switch_Reward Switch_NoReward Repeat_NoReward Repeat_Reward
+## 1           1          1046            1049             714           759
+## 2          10           772             782             665           636
+## 3          11          1071            1074             948           970
+## 4          12           862             878             642           633
+## 5          13           886             915             762           770
+## 6          14          1026            1034             816           817&lt;/code&gt;&lt;/pre&gt;
 &lt;hr /&gt;
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level2&#34;&gt;
@@ -488,10 +481,7 @@ head(trimmedData)&lt;/code&gt;&lt;/pre&gt;
       <pubDate>Sat, 28 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/a-new-website/</guid>
-      <description>
-
-
-&lt;p&gt;I have spent the past day or so transporting my acedemic website from &lt;a href=&#34;https://jimgrange.wordpress.com&#34;&gt;Wordpress&lt;/a&gt; to the current website, which is written using the (superb!) &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;R package ‘blogdown’&lt;/a&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;I have spent the past day or so transporting my acedemic website from &lt;a href=&#34;https://jimgrange.wordpress.com&#34;&gt;Wordpress&lt;/a&gt; to the current website, which is written using the (superb!) &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;R package ‘blogdown’&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I made the change for a variety of reasons:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;I am now able to use R for &lt;em&gt;most&lt;/em&gt; things—analysis, simulations, writing papers using &lt;a href=&#34;https://github.com/crsh/papaja&#34;&gt;papaja&lt;/a&gt; and now my website—making my workflow more efficient (and high on the nerd-scale).&lt;/p&gt;&lt;/li&gt;
