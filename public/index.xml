@@ -11,20 +11,20 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>The effect of episodic retrieval on inhibition in task switching: A diffusion model analysis</title>
+      <link>/publication/kowalczyk-diffusion/</link>
+      <pubDate>Tue, 10 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/kowalczyk-diffusion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Cognitive function, self-awareness, and neuroimaging findings in OCD-type presentations after Traumatic Brain Injury</title>
       <link>/publication/coetzer/</link>
       <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>/publication/coetzer/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>The effect of episodic retrieval on inhibition in task switching: A diffusion model analysis</title>
-      <link>/publication/kowalczyk-diffusion/</link>
-      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/kowalczyk-diffusion/</guid>
       <description></description>
     </item>
     
@@ -48,10 +48,10 @@
     
     <item>
       <title>The effect of practice on inhibition in task switching: Controlling for episodic retrieval</title>
-      <link>/publication/grange---practice_episodic/</link>
+      <link>/publication/grange-practice_episodic/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>/publication/grange---practice_episodic/</guid>
+      <guid>/publication/grange-practice_episodic/</guid>
       <description></description>
     </item>
     
@@ -70,7 +70,10 @@
       <pubDate>Sat, 16 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/update-to-trimr-a-response-time-trimming-package-in-r/</guid>
-      <description>&lt;p&gt;In 2015, I published my first ever R package: &lt;a href=&#34;https://cran.r-project.org/web/packages/trimr/index.html&#34;&gt;“trimr: An implementation of common response time trimming methods”&lt;/a&gt;. To date, this package has had over 5,600 downloads from CRAN, which is unbelievable!&lt;/p&gt;
+      <description>
+
+
+&lt;p&gt;In 2015, I published my first ever R package: &lt;a href=&#34;https://cran.r-project.org/web/packages/trimr/index.html&#34;&gt;“trimr: An implementation of common response time trimming methods”&lt;/a&gt;. To date, this package has had over 5,600 downloads from CRAN, which is unbelievable!&lt;/p&gt;
 &lt;p&gt;3 years is a long time for a package, so I thought it was time to update the package, fix some bugs, and implement some additional functionality. To this end, I have spent some time over the past few days working on a new release. This new release is version 1.1.0. I will spend some time testing this version before updating it on CRAN; at present, &lt;a href=&#34;https://github.com/JimGrange/trimr&#34;&gt;it is only available at GitHub&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;In this post I will provide an overview of the main changes since the previous version. I will also provide an updated tutorial on how to use &lt;em&gt;trimr&lt;/em&gt; from the &lt;a href=&#34;https://jimgrange.wordpress.com/2015/08/03/trimr-an-r-package-of-response-time-trimming-methods/&#34;&gt;previous tutorial released in 2015&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;If you use trimr in your work&lt;/strong&gt;, I would really appreciate a citation to the package. Please see the &lt;a href=&#34;#references&#34;&gt;references&lt;/a&gt; section for how to do this.&lt;/p&gt;
@@ -431,7 +434,7 @@ head(newData)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##   participant   rt accuracy taskSequence   reward
 ## 1           1 1660        1       Switch NoReward
 ## 2           1  913        1       Switch   Reward
-## 3           1 2312        1       Repeat NoReward
+## 3           1 2312        1       Repeat   Reward
 ## 4           1  754        1       Repeat NoReward
 ## 5           1 3394        1       Switch NoReward
 ## 6           1  930        1       Repeat   Reward&lt;/code&gt;&lt;/pre&gt;
@@ -445,7 +448,7 @@ head(newData)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##   participant   rt accuracy taskSequence   reward       condition
 ## 1           1 1660        1       Switch NoReward Switch_NoReward
 ## 2           1  913        1       Switch   Reward   Switch_Reward
-## 3           1 2312        1       Repeat NoReward Repeat_NoReward
+## 3           1 2312        1       Repeat   Reward   Repeat_Reward
 ## 4           1  754        1       Repeat NoReward Repeat_NoReward
 ## 5           1 3394        1       Switch NoReward Switch_NoReward
 ## 6           1  930        1       Repeat   Reward   Repeat_Reward&lt;/code&gt;&lt;/pre&gt;
@@ -456,13 +459,13 @@ trimmedData &amp;lt;- sdTrim(newData, minRT = 150, sd = 2.5, digits = 0,
 
 # check it worked
 head(trimmedData)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##   participant Switch_NoReward Switch_Reward Repeat_NoReward Repeat_Reward
-## 1           1            1062          1044             755           711
-## 2          10             785           774             657           643
-## 3          11            1049          1067             964           941
-## 4          12             877           849             617           644
-## 5          13             889           909             791           727
-## 6          14            1027          1018             832           794&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   participant Switch_NoReward Switch_Reward Repeat_Reward Repeat_NoReward
+## 1           1            1123          1007           737             740
+## 2          10             787           771           650             654
+## 3          11            1034          1098           952             977
+## 4          12             867           876           636             645
+## 5          13             896           909           799             723
+## 6          14             988          1052           803             826&lt;/code&gt;&lt;/pre&gt;
 &lt;hr /&gt;
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level2&#34;&gt;
@@ -481,7 +484,10 @@ head(trimmedData)&lt;/code&gt;&lt;/pre&gt;
       <pubDate>Sat, 28 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/a-new-website/</guid>
-      <description>&lt;p&gt;I have spent the past day or so transporting my acedemic website from &lt;a href=&#34;https://jimgrange.wordpress.com&#34;&gt;Wordpress&lt;/a&gt; to the current website, which is written using the (superb!) &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;R package ‘blogdown’&lt;/a&gt;.&lt;/p&gt;
+      <description>
+
+
+&lt;p&gt;I have spent the past day or so transporting my acedemic website from &lt;a href=&#34;https://jimgrange.wordpress.com&#34;&gt;Wordpress&lt;/a&gt; to the current website, which is written using the (superb!) &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;R package ‘blogdown’&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I made the change for a variety of reasons:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;I am now able to use R for &lt;em&gt;most&lt;/em&gt; things—analysis, simulations, writing papers using &lt;a href=&#34;https://github.com/crsh/papaja&#34;&gt;papaja&lt;/a&gt; and now my website—making my workflow more efficient (and high on the nerd-scale).&lt;/p&gt;&lt;/li&gt;
@@ -489,8 +495,9 @@ head(trimmedData)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;&lt;p&gt;As the blog is written in R and blogdown, it means that all the content &amp;amp; code behind it can be made freely available. You can see the Github page for the code of my website &lt;a href=&#34;https://github.com/JimGrange/website&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;The blog posts on my previous site which I enjoyed writing the most had R demonstrations in them. As blogdown uses markdown, I can now write blog posts using markdown meaning I can integrate R code into the blog post! Not just that, plots are automatically integrated into the blog! Observe thus!&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)
-ggplot(faithfuld, aes(waiting, eruptions)) +
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;ggplot2&amp;#39; was built under R version 3.5.2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(faithfuld, aes(waiting, eruptions)) +
   geom_raster(aes(fill = density)) +
   scale_fill_distiller(palette = &amp;quot;Spectral&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/2018-04-20-a-new-website_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;

@@ -5,8 +5,8 @@
     
     <url>
     
-      <loc>/publication/coetzer/</loc>
-      <lastmod>2019-12-01T00:00:00+00:00</lastmod>
+      <loc>/publication/kowalczyk-diffusion/</loc>
+      <lastmod>2019-12-10T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -14,8 +14,8 @@
     
     <url>
     
-      <loc>/publication/kowalczyk-diffusion/</loc>
-      <lastmod>2019-02-01T00:00:00+00:00</lastmod>
+      <loc>/publication/coetzer/</loc>
+      <lastmod>2019-12-01T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -41,7 +41,7 @@
     
     <url>
     
-      <loc>/publication/grange---practice_episodic/</loc>
+      <loc>/publication/grange-practice_episodic/</loc>
       <lastmod>2019-01-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -463,6 +463,56 @@
     
     <url>
     
+      <loc>/</loc>
+      <lastmod>2016-04-20T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/post/</loc>
+      <lastmod>2018-06-16T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/project/</loc>
+      <lastmod>2018-02-17T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/r/</loc>
+      <lastmod>2018-06-16T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/</loc>
+      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/tags/clinical-applications/</loc>
       <lastmod>2018-02-15T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -503,48 +553,8 @@
     
     <url>
     
-      <loc>/</loc>
-      <lastmod>2016-04-20T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>/tags/open-science/</loc>
       <lastmod>2018-02-14T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/</loc>
-      <lastmod>2018-06-16T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/project/</loc>
-      <lastmod>2018-02-17T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/tags/r/</loc>
-      <lastmod>2018-06-16T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -575,16 +585,6 @@
     
       <loc>/tags/response-times/</loc>
       <lastmod>2018-06-16T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/tags/</loc>
-      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

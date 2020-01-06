@@ -373,7 +373,7 @@ head(newData)</code></pre>
 <pre><code>##   participant   rt accuracy taskSequence   reward
 ## 1           1 1660        1       Switch NoReward
 ## 2           1  913        1       Switch   Reward
-## 3           1 2312        1       Repeat NoReward
+## 3           1 2312        1       Repeat   Reward
 ## 4           1  754        1       Repeat NoReward
 ## 5           1 3394        1       Switch NoReward
 ## 6           1  930        1       Repeat   Reward</code></pre>
@@ -387,7 +387,7 @@ head(newData)</code></pre>
 <pre><code>##   participant   rt accuracy taskSequence   reward       condition
 ## 1           1 1660        1       Switch NoReward Switch_NoReward
 ## 2           1  913        1       Switch   Reward   Switch_Reward
-## 3           1 2312        1       Repeat NoReward Repeat_NoReward
+## 3           1 2312        1       Repeat   Reward   Repeat_Reward
 ## 4           1  754        1       Repeat NoReward Repeat_NoReward
 ## 5           1 3394        1       Switch NoReward Switch_NoReward
 ## 6           1  930        1       Repeat   Reward   Repeat_Reward</code></pre>
@@ -398,13 +398,13 @@ trimmedData &lt;- sdTrim(newData, minRT = 150, sd = 2.5, digits = 0,
 
 # check it worked
 head(trimmedData)</code></pre>
-<pre><code>##   participant Switch_NoReward Switch_Reward Repeat_NoReward Repeat_Reward
-## 1           1            1062          1044             755           711
-## 2          10             785           774             657           643
-## 3          11            1049          1067             964           941
-## 4          12             877           849             617           644
-## 5          13             889           909             791           727
-## 6          14            1027          1018             832           794</code></pre>
+<pre><code>##   participant Switch_NoReward Switch_Reward Repeat_Reward Repeat_NoReward
+## 1           1            1123          1007           737             740
+## 2          10             787           771           650             654
+## 3          11            1034          1098           952             977
+## 4          12             867           876           636             645
+## 5          13             896           909           799             723
+## 6          14             988          1052           803             826</code></pre>
 <hr />
 </div>
 <div id="references" class="section level2">

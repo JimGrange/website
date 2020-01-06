@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.36" />
+  <meta name="generator" content="Hugo 0.53" />
   <meta name="author" content="Jim Grange">
 
   
@@ -271,7 +271,7 @@ I made the change for a variety of reasons:
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    1 min read
+    2 min read
   </span>
   
 
@@ -331,7 +331,10 @@ I made the change for a variety of reasons:
 
 
     <div class="article-style" itemprop="articleBody">
-      <p>I have spent the past day or so transporting my acedemic website from <a href="https://jimgrange.wordpress.com">Wordpress</a> to the current website, which is written using the (superb!) <a href="https://bookdown.org/yihui/blogdown/">R package ‘blogdown’</a>.</p>
+      
+
+
+<p>I have spent the past day or so transporting my acedemic website from <a href="https://jimgrange.wordpress.com">Wordpress</a> to the current website, which is written using the (superb!) <a href="https://bookdown.org/yihui/blogdown/">R package ‘blogdown’</a>.</p>
 <p>I made the change for a variety of reasons:</p>
 <ul>
 <li><p>I am now able to use R for <em>most</em> things—analysis, simulations, writing papers using <a href="https://github.com/crsh/papaja">papaja</a> and now my website—making my workflow more efficient (and high on the nerd-scale).</p></li>
@@ -339,8 +342,9 @@ I made the change for a variety of reasons:
 <li><p>As the blog is written in R and blogdown, it means that all the content &amp; code behind it can be made freely available. You can see the Github page for the code of my website <a href="https://github.com/JimGrange/website">here</a>.</p></li>
 <li><p>The blog posts on my previous site which I enjoyed writing the most had R demonstrations in them. As blogdown uses markdown, I can now write blog posts using markdown meaning I can integrate R code into the blog post! Not just that, plots are automatically integrated into the blog! Observe thus!</p></li>
 </ul>
-<pre class="r"><code>library(ggplot2)
-ggplot(faithfuld, aes(waiting, eruptions)) +
+<pre class="r"><code>library(ggplot2)</code></pre>
+<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.5.2</code></pre>
+<pre class="r"><code>ggplot(faithfuld, aes(waiting, eruptions)) +
   geom_raster(aes(fill = density)) +
   scale_fill_distiller(palette = &quot;Spectral&quot;)</code></pre>
 <p><img src="/post/2018-04-20-a-new-website_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>

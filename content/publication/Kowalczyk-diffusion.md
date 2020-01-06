@@ -1,6 +1,6 @@
 +++
 title = "The effect of episodic retrieval on inhibition in task switching: A diffusion model analysis"
-date = "2019-02-01"
+date = "2019-12-10"
 
 authors = ["Kowalczyk, A.W.", "& **Grange, J.A**"]
 
