@@ -11,6 +11,33 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Computational modelling of attentional selectivity in depression reveals perceptual deficits</title>
+      <link>/publication/grange-depression_flanker/</link>
+      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-depression_flanker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exploring the impact of mindfulness on false-memory susceptibility</title>
+      <link>/publication/sherman-mindfulness/</link>
+      <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/sherman-mindfulness/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Beliefs about voices in voice-hearers: The role of schema functioning</title>
+      <link>/publication/davenport-/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/davenport-/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>The effect of episodic retrieval on inhibition in task switching: A diffusion model analysis</title>
       <link>/publication/kowalczyk-diffusion/</link>
       <pubDate>Tue, 10 Dec 2019 00:00:00 +0000</pubDate>
@@ -340,13 +367,13 @@ trimmedData &amp;lt;- nonRecursive(data = exampleData, minRT = 150, digits = 0,
 
 # see the top of the data
 head(trimmedData)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##   participant condition   rt accuracy
-## 1           1    Switch 1660        1
-## 2           1    Switch  913        1
-## 4           1    Switch 1092        1
-## 6           1    Switch 2473        1
-## 7           1    Switch 2211        1
-## 8           1    Switch 1842        1&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##    participant condition   rt accuracy
+## 1            1    Switch 1660        1
+## 2            1    Switch  913        1
+## 7            1    Switch 1092        1
+## 9            1    Switch 2473        1
+## 12           1    Switch 2211        1
+## 14           1    Switch 1842        1&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;modifiedrecursive&#34; class=&#34;section level3&#34;&gt;
@@ -434,7 +461,7 @@ head(newData)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##   participant   rt accuracy taskSequence   reward
 ## 1           1 1660        1       Switch NoReward
 ## 2           1  913        1       Switch   Reward
-## 3           1 2312        1       Repeat   Reward
+## 3           1 2312        1       Repeat NoReward
 ## 4           1  754        1       Repeat NoReward
 ## 5           1 3394        1       Switch NoReward
 ## 6           1  930        1       Repeat   Reward&lt;/code&gt;&lt;/pre&gt;
@@ -448,7 +475,7 @@ head(newData)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##   participant   rt accuracy taskSequence   reward       condition
 ## 1           1 1660        1       Switch NoReward Switch_NoReward
 ## 2           1  913        1       Switch   Reward   Switch_Reward
-## 3           1 2312        1       Repeat   Reward   Repeat_Reward
+## 3           1 2312        1       Repeat NoReward Repeat_NoReward
 ## 4           1  754        1       Repeat NoReward Repeat_NoReward
 ## 5           1 3394        1       Switch NoReward Switch_NoReward
 ## 6           1  930        1       Repeat   Reward   Repeat_Reward&lt;/code&gt;&lt;/pre&gt;
@@ -459,13 +486,13 @@ trimmedData &amp;lt;- sdTrim(newData, minRT = 150, sd = 2.5, digits = 0,
 
 # check it worked
 head(trimmedData)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##   participant Switch_NoReward Switch_Reward Repeat_Reward Repeat_NoReward
-## 1           1            1123          1007           737             740
-## 2          10             787           771           650             654
-## 3          11            1034          1098           952             977
-## 4          12             867           876           636             645
-## 5          13             896           909           799             723
-## 6          14             988          1052           803             826&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   participant Switch_NoReward Switch_Reward Repeat_NoReward Repeat_Reward
+## 1           1            1032          1066             743           741
+## 2          10             771           789             659           642
+## 3          11            1066          1063             930           983
+## 4          12             872           871             621           656
+## 5          13             897           898             782           743
+## 6          14            1045           994             843           797&lt;/code&gt;&lt;/pre&gt;
 &lt;hr /&gt;
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level2&#34;&gt;
@@ -657,33 +684,6 @@ head(trimmedData)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Open Science Collaboration.&lt;/strong&gt; (2012). An open, large-scale, collaborative effort to estimate the reproducibility of psychological science. &lt;em&gt;Perspectives on Psychological Science, 7,&lt;/em&gt; 657-670. &lt;a href=&#34;https://www.jimgrange.org/publication/OSC-estimating_reproducibility/&#34; target=&#34;_blank&#34;&gt;(Link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Impulse control disorder in Parkinson’s disease: A meta-analysis of cognitive, affective, and motivational correlates</title>
-      <link>/publication/martini-meta-2018/</link>
-      <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/martini-meta-2018/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Justify your alpha</title>
-      <link>/publication/lakens-2018/</link>
-      <pubDate>Tue, 02 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/lakens-2018/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Risky decision-making and affective features of impulse control disorder in Parkinson’s disease</title>
-      <link>/publication/martini-2018/</link>
-      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/martini-2018/</guid>
-      <description></description>
     </item>
     
   </channel>

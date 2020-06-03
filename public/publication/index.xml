@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Computational modelling of attentional selectivity in depression reveals perceptual deficits</title>
+      <link>/publication/grange-depression_flanker/</link>
+      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-depression_flanker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exploring the impact of mindfulness on false-memory susceptibility</title>
+      <link>/publication/sherman-mindfulness/</link>
+      <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/sherman-mindfulness/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Beliefs about voices in voice-hearers: The role of schema functioning</title>
+      <link>/publication/davenport-/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/davenport-/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>The effect of episodic retrieval on inhibition in task switching: A diffusion model analysis</title>
