@@ -32,7 +32,7 @@ I made the change for a variety of reasons:
 
   
   
-  <meta name="theme-color" content="hsl(339, 90%, 68%)">
+  <meta name="theme-color" content="#EF525B">
   
   
   
@@ -43,7 +43,7 @@ I made the change for a variety of reasons:
     
     
       
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
       
     
   
@@ -98,7 +98,7 @@ I made the change for a variety of reasons:
   <title>A new website | Jim Grange</title>
 
 </head>
-<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" class="dark">
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
 
 <nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
   <div class="container">
@@ -271,7 +271,7 @@ I made the change for a variety of reasons:
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    2 min read
+    1 min read
   </span>
   
 
@@ -342,9 +342,8 @@ I made the change for a variety of reasons:
 <li><p>As the blog is written in R and blogdown, it means that all the content &amp; code behind it can be made freely available. You can see the Github page for the code of my website <a href="https://github.com/JimGrange/website">here</a>.</p></li>
 <li><p>The blog posts on my previous site which I enjoyed writing the most had R demonstrations in them. As blogdown uses markdown, I can now write blog posts using markdown meaning I can integrate R code into the blog post! Not just that, plots are automatically integrated into the blog! Observe thus!</p></li>
 </ul>
-<pre class="r"><code>library(ggplot2)</code></pre>
-<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.5.2</code></pre>
-<pre class="r"><code>ggplot(faithfuld, aes(waiting, eruptions)) +
+<pre class="r"><code>library(ggplot2)
+ggplot(faithfuld, aes(waiting, eruptions)) +
   geom_raster(aes(fill = density)) +
   scale_fill_distiller(palette = &quot;Spectral&quot;)</code></pre>
 <p><img src="/post/2018-04-20-a-new-website_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
