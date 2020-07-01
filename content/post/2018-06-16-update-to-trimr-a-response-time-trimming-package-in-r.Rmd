@@ -3,7 +3,7 @@ title: 'Update to trimr: A response time trimming package in R'
 author: ~
 date: '2018-06-16'
 slug: update-to-trimr-a-response-time-trimming-package-in-r
-categories: []
+categories: [R, response times]
 tags: [R, response times]
 header:
   caption: ''

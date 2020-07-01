@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>/post/a-decade-at-keele/</loc>
+      <lastmod>2020-07-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/publication/grange-depression_flanker/</loc>
       <lastmod>2020-05-01T00:00:00+00:00</lastmod>
     </url>
@@ -481,6 +490,26 @@
     
     <url>
     
+      <loc>/tags/general/</loc>
+      <lastmod>2020-07-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/categories/general/</loc>
+      <lastmod>2020-07-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/</loc>
       <lastmod>2016-04-20T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -492,7 +521,7 @@
     <url>
     
       <loc>/post/</loc>
-      <lastmod>2018-06-16T00:00:00+00:00</lastmod>
+      <lastmod>2020-07-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -522,6 +551,16 @@
     <url>
     
       <loc>/tags/r/</loc>
+      <lastmod>2018-06-16T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/categories/r/</loc>
       <lastmod>2018-06-16T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -612,6 +651,16 @@
     <url>
     
       <loc>/tags/response-times/</loc>
+      <lastmod>2018-06-16T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/categories/response-times/</loc>
       <lastmod>2018-06-16T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>

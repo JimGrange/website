@@ -11,6 +11,26 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>A decade at Keele</title>
+      <link>/post/a-decade-at-keele/</link>
+      <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/a-decade-at-keele/</guid>
+      <description>
+
+
+&lt;p&gt;Today marks my 10 year anniversary of working at Keele University. On the one hand it feels like a blink of an eye, and yet on the other a lifetime. (Well, as I am 38 years old, a quarter of a lifetime.)&lt;/p&gt;
+&lt;p&gt;I started my lectureship in Psychology at Keele on the 1st July 2010, 3 weeks before I obtained my PhD. Imposter syndrome was—and still is—alive and well. Looking at the CV I appended to my job application, I had 2 papers published, 1 paper in press, and 1 under review. It’s strange to think that such a CV wouldn’t even make a long-list in today’s job market for lectureships. Even though I didn’t feel ready, I applied to Keele at the advice of my PhD supervisor: “If you get it, great; if not, you gain the experience of an application process”. This was wonderful advice, and on the day of the interview I remember being much more relaxed than I thought possible; after all, I was just there for the experience, right? On the day there was another candidate with a much better publication record than me interviewing, so that cemented in my mind that there was no way I would get the post. I left Keele that day thinking that I had gained a lot from the experience, but that I would not be successful.&lt;/p&gt;
+&lt;p&gt;So I was completely shocked when—a few days later—the Head of School called. I remember that moment vividly: It was March and I was in my PhD office at Bangor University working on a paper; my PhD didn’t finish until September 1st, so my early thesis submission meant I had a few months of working on other things. The HoS informed me I had been successful. I fell silent, and he had to prompt me: “Well, would you like to accept the position?”. Of course I did!&lt;/p&gt;
+&lt;p&gt;Starting Keele meant living away from my (now) wife mid-week. We lived in Bangor North Wales, and Keele was a 2 hour drive away. Whilst there would be days later in my Keele tenure when I would sleep at home and do daily 4-hour commutes, in the early days I rented a flat on Keele campus (later moving to the lap of luxury by staying in the local Travelodge). Relocation is a well-known challenge of academic life and it was certainly the hardest part of starting my first lectureship. There were many evenings where I sat in my flat wondering whether this upheaval was worth it. My wife and I viewed the temporary living arrangements as an investment in our future. We soon got into a routine: I would leave Wales very early Monday morning, and would travel home late Wednesday evening, so it was only two nights apart for most weeks.&lt;/p&gt;
+&lt;p&gt;Much has filled the past 10 years. I’ve tried to immerse myself in all arms of the academic profile (research, teaching, and service). Each bring their own unique challenges, and I’ve enjoyed engaging with them all.&lt;/p&gt;
+&lt;p&gt;I spend too much of my time comparing myself to others around me, especially when it comes to research productivity and success. This can be terribly demotivating, because there are many excellent scientists winning grants, winning awards, and publishing beautiful papers. So, if instead I compare myself &lt;strong&gt;to myself 10-years ago&lt;/strong&gt;, I think I am pretty pleased with what I have achieved at Keele. I have maintained a decent research profile. (I haven’t won any large grants, and this is something I need to work very hard on.) I have published a decent amount. I have published a book. I have developed my statistical skills, programming skills, and computational modelling skills. I have supervised over 100 undergraduate research projects, 10 MSc projects, and 2 PhD projects. I have designed and delivered many modules. I created and led an MSc programme. I have led a research group in the School. I have taught hundreds of students. I have won some teaching awards. I hope I have been a good colleague. For the past 3 years I have been the Head of School, which has been very challenging, but I am pleased I took it on.&lt;/p&gt;
+&lt;p&gt;I am now entering the dreaded “mid-career” stage. I step down from Head of School in September, so this will be an opportune time to reflect more on the past 10 years and my future direction.&lt;/p&gt;
+&lt;p&gt;Keele has been a wonderful place to spend the first 10 years of my academic career. I owe a debt of gratitude to all at Keele for giving me my start in my academic career.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Computational modelling of attentional selectivity in depression reveals perceptual deficits</title>
       <link>/publication/grange-depression_flanker/</link>
       <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
@@ -460,11 +480,11 @@ newData &amp;lt;- subset(newData, select = -condition)
 head(newData)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##   participant   rt accuracy taskSequence   reward
 ## 1           1 1660        1       Switch   Reward
-## 2           1  913        1       Switch NoReward
-## 3           1 2312        1       Repeat NoReward
+## 2           1  913        1       Switch   Reward
+## 3           1 2312        1       Repeat   Reward
 ## 4           1  754        1       Repeat   Reward
 ## 5           1 3394        1       Switch NoReward
-## 6           1  930        1       Repeat NoReward&lt;/code&gt;&lt;/pre&gt;
+## 6           1  930        1       Repeat   Reward&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This now looks how data typically comes in from a factorial design. Now, to get trimr to work on this, we need to create a new column called “condition”, and to place in this column the levels of all factors in the design. For example, if the first trial in our newData has taskSequence = Switch and reward = NoReward, we would like our condition entry for this trial to read “Switch_NoReward”. This is simple to do using R’s “paste” function. (Note that this code can be adapted to deal with any number of factors.)&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# add a new column called &amp;quot;condition&amp;quot;, and fill it with information from both 
 # columns that code for our factors
@@ -474,11 +494,11 @@ newData$condition &amp;lt;- paste(newData$taskSequence, &amp;quot;_&amp;quot;, n
 head(newData)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##   participant   rt accuracy taskSequence   reward       condition
 ## 1           1 1660        1       Switch   Reward   Switch_Reward
-## 2           1  913        1       Switch NoReward Switch_NoReward
-## 3           1 2312        1       Repeat NoReward Repeat_NoReward
+## 2           1  913        1       Switch   Reward   Switch_Reward
+## 3           1 2312        1       Repeat   Reward   Repeat_Reward
 ## 4           1  754        1       Repeat   Reward   Repeat_Reward
 ## 5           1 3394        1       Switch NoReward Switch_NoReward
-## 6           1  930        1       Repeat NoReward Repeat_NoReward&lt;/code&gt;&lt;/pre&gt;
+## 6           1  930        1       Repeat   Reward   Repeat_Reward&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now we can pass this data frame to any function in &lt;em&gt;trimr&lt;/em&gt;, and it will work perfectly:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# trim the data
 trimmedData &amp;lt;- sdTrim(newData, minRT = 150, sd = 2.5, digits = 0, 
@@ -486,13 +506,13 @@ trimmedData &amp;lt;- sdTrim(newData, minRT = 150, sd = 2.5, digits = 0,
 
 # check it worked
 head(trimmedData)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##   participant Switch_Reward Switch_NoReward Repeat_NoReward Repeat_Reward
-## 1           1          1057            1092             744           733
-## 2          10           758             800             650           647
-## 3          11          1082            1056             957           957
-## 4          12           873             866             627           645
-## 5          13           903             902             750           778
-## 6          14          1000            1050             806           827&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   participant Switch_Reward Repeat_Reward Switch_NoReward Repeat_NoReward
+## 1           1          1101           761            1011             711
+## 2          10           807           626             751             680
+## 3          11          1092           951            1036             968
+## 4          12           882           618             850             660
+## 5          13           887           746             914             775
+## 6          14          1019           808            1016             818&lt;/code&gt;&lt;/pre&gt;
 &lt;hr /&gt;
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level2&#34;&gt;
@@ -651,36 +671,6 @@ ggplot(faithfuld, aes(waiting, eruptions)) +
 &lt;li&gt;&lt;p&gt;Stephens, R., Holloway, K., &lt;strong&gt;Grange, J.A.,&lt;/strong&gt; Jones, K., &amp;amp; Owen, L. (2017). Does familial risk for alcohol use disorder predict alcohol hangover? &lt;em&gt;Psychopharmacology, 234&lt;/em&gt;, 1795-1802. &lt;a href=&#34;https://www.jimgrange.org/publication/Stephens-familial_risk/&#34; target=&#34;_blank&#34;&gt;(Link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Edelstyn, N.M.J., &lt;strong&gt;Grange, J.A.,&lt;/strong&gt; Ellis, S.J., &amp;amp; Mayes, A.M. (2016). A deficit in familiarity-driven recognition in a right-sided mediodorsal thalamic lesion patient. &lt;em&gt;Neuropsychology, 30&lt;/em&gt;, 213-214. &lt;a href=&#34;https://www.jimgrange.org/publication/Edelstyn-familiarity_parkinsons/&#34; target=&#34;_blank&#34;&gt;(Link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Scientific Reproducibility &amp; Replication</title>
-      <link>/project/scientific_reproducibility/</link>
-      <pubDate>Wed, 14 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/project/scientific_reproducibility/</guid>
-      <description>
-
-&lt;p&gt;Replication is the most important statistic. If an experimental effect does not replicateóeither in your own lab or independentlyóthen trust in that effect should rightly diminish. Thus, assessing the reproducibility of an effect should rightly be among the priorities of psychological scientists. Despite the importance, replication attempts in psychology are rare, likely due to the enhanced incentive (e.g. publications, grant income) to introduce new ideas to the field rather than assess the validity of old ones.&lt;/p&gt;
-
-&lt;p&gt;I was involved in the work conducted by the Open Science Collaboration, which was published in the journal &lt;em&gt;Science&lt;/em&gt; in 2015. This paper was a large-scale, world-wide collaborative effort to systematically examine the rate and predictors of reproducibility in psychological science. The collaboration  attempted to replicate 100 studies published in three prominent psychology journals in 2008, with the aim of calculating an empirical rate of replication, as well as investigating factors that predict reproducibility. The news wasn&amp;rsquo;t pretty: Reproducibility in psychological science is low.&lt;/p&gt;
-
-&lt;p&gt;I have been involved in several published projects working on improving reproducibility in psychological science. I also have ongoing work looking factors that might influence reproducibility in work more closely related to my own, and how to improve these factors. More on this soon&amp;hellip;&lt;/p&gt;
-
-&lt;h2 id=&#34;representative-publications&#34;&gt;Representative Publications&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Lakens, D., Adolfi, F., Albers, C.,&amp;hellip; &amp;hellip;&lt;strong&gt;Grange, J.A.,&lt;/strong&gt;&amp;hellip; &amp;hellip;&amp;amp; Zwaan, R. (2018). Justify your alpha. &lt;em&gt;Nature Human Behavior&lt;/em&gt;. &lt;a href=&#34;https://www.jimgrange.org/publication/Lakens-2018/&#34; target=&#34;_blank&#34;&gt;(Link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Anderson, C. J.,Bahnik, S., Barnett-Cowan, M.,&amp;hellip; &amp;hellip;&lt;strong&gt;Grange, J.A.&lt;/strong&gt;&amp;hellip; &amp;hellip; &amp;amp; Zuni, K. (2016). Response to a comment on ìEstimating the reproducibility of psychological scienceî. &lt;em&gt;Science, 351,&lt;/em&gt; 1037. &lt;a href=&#34;https://www.jimgrange.org/publication/Anderson-2016-OSC_reply/&#34; target=&#34;_blank&#34;&gt;(Link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Open Science Collaboration&lt;/strong&gt;. (2015). Estimating the reproducibility of psychological science. &lt;em&gt;Science, 349&lt;/em&gt;, 943. &lt;a href=&#34;https://www.jimgrange.org/publication/OSC-science_article/&#34; target=&#34;_blank&#34;&gt;(Link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Open Science Collaboration&lt;/strong&gt;. (2013). The Reproducibility Project: A model of large-scale collaboration for empirical research on reproducibility. In V. Stodden, F. Leisch, &amp;amp; R. Peng (Eds.), &lt;em&gt;Implementing Reproducible Computational Research (A Volume in the R Series)&lt;/em&gt;, New York, NY: Taylor &amp;amp; Francis. &lt;a href=&#34;https://www.jimgrange.org/publication/OSC-book_chapter/&#34; target=&#34;_blank&#34;&gt;(Link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Open Science Collaboration.&lt;/strong&gt; (2012). An open, large-scale, collaborative effort to estimate the reproducibility of psychological science. &lt;em&gt;Perspectives on Psychological Science, 7,&lt;/em&gt; 657-670. &lt;a href=&#34;https://www.jimgrange.org/publication/OSC-estimating_reproducibility/&#34; target=&#34;_blank&#34;&gt;(Link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
