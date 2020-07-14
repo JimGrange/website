@@ -24,7 +24,7 @@ abstract_short = "This prospective study examined associations between cognitive
 selected = "true"
 
 # Links (optional).
-url_pdf = ""
+url_pdf = "https://dialnet.unirioja.es/servlet/articulo?codigo=7175060"
 url_preprint = ""
 url_code = ""
 url_dataset = ""

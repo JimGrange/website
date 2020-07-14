@@ -24,7 +24,7 @@ abstract_short = "Evidence is emerging that beliefs about voices are influenced 
 selected = "true"
 
 # Links (optional).
-url_pdf = ""
+url_pdf = "https://bit.ly/2ZqoRTG"
 url_preprint = ""
 url_code = ""
 url_dataset = ""

@@ -24,7 +24,7 @@ abstract_short = "Wilson et al. (2015) presented data from three well-powered ex
 selected = "true"
 
 # Links (optional).
-url_pdf = ""
+url_pdf = "https://journals.sagepub.com/doi/full/10.1177/0956797620929302"
 url_preprint = ""
 url_code = "https://osf.io/4kmf8/"
 url_dataset = "https://osf.io/4kmf8/"
