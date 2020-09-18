@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Fri, 01 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Computational modelling of attentional selectivity in depression reveals perceptual deficits</title>
       <link>/publication/grange-depression_flanker/</link>
-      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>/publication/grange-depression_flanker/</guid>
       <description></description>
@@ -24,9 +24,18 @@
     <item>
       <title>Exploring the impact of mindfulness on false-memory susceptibility</title>
       <link>/publication/sherman-mindfulness/</link>
-      <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
       
       <guid>/publication/sherman-mindfulness/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The effect of episodic retrieval on inhibition in task switching: A diffusion model analysis</title>
+      <link>/publication/kowalczyk-diffusion/</link>
+      <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/kowalczyk-diffusion/</guid>
       <description></description>
     </item>
     
@@ -36,15 +45,6 @@
       <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>/publication/davenport-/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>The effect of episodic retrieval on inhibition in task switching: A diffusion model analysis</title>
-      <link>/publication/kowalczyk-diffusion/</link>
-      <pubDate>Tue, 10 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/kowalczyk-diffusion/</guid>
       <description></description>
     </item>
     

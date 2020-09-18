@@ -1,6 +1,6 @@
 +++
 title = "Computational modelling of attentional selectivity in depression reveals perceptual deficits"
-date = "2020-05-01"
+date = "2020-06-01"
 
 authors = ["**Grange, J.A**",  "& Rydon-Grange, M."]
 
@@ -24,7 +24,7 @@ abstract_short = "Depression is associated with broad deficits in cognitive cont
 selected = "true"
 
 # Links (optional).
-url_pdf = ""
+url_pdf = "https://www.cambridge.org/core/journals/psychological-medicine/article/computational-modelling-of-attentional-selectivity-in-depression-reveals-perceptual-deficits/D409F686702DEE570F6B97FE576223F8"
 url_preprint = "https://psyarxiv.com/nsc6h/"
 url_code = "https://osf.io/rufp9/"
 url_dataset = "https://osf.io/rufp9/"
