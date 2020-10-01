@@ -35,6 +35,6 @@ weight = 1
 +++
 
 # Biography
-I am a Senior Lecturer in Cognitive Psychology at [Keele University, UK](https://www.keele.ac.uk/psychology/), where I am also currently serving as Head of School. I am also the University Academic Lead for Resarch Integrity and Improvement. I joined Keele in 2010 after completing my PhD at Bangor University under the supervision of [Dr George Houghton.](https://www.bangor.ac.uk/psychology/people/profiles/george_houghton.php.en)
+I am a Senior Lecturer in Cognitive Psychology at [Keele University, UK](https://www.keele.ac.uk/psychology/) where I am the Research Group Lead for the Cognition, Brain, & Behaviour group in the School. I am also the University Academic Lead for Resarch Integrity and Improvement. I joined Keele in 2010 after completing my PhD at Bangor University under the supervision of [Dr George Houghton.](https://www.bangor.ac.uk/psychology/people/profiles/george_houghton.php.en)
 
 The mission of my lab's work is to conduct fundamental research to understand cognitive control processes, and to then use this knowledge to tackle applied and clinical questions.  
