@@ -28,3 +28,5 @@ ggplot(faithfuld, aes(waiting, eruptions)) +
 
 
 What other reasons did I need?
+
+{{ template "_internal/disqus.html" . }}
