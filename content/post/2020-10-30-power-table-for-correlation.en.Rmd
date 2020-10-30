@@ -1,0 +1,137 @@
+---
+title: Power Table for Correlation
+author: ''
+date: '2020-10-30'
+slug: power-table-for-correlation
+categories: [R, Statistics]
+tags: [R, Statistics]
+header:
+  caption: ''
+  image: ''
+  preview: yes
+---
+
+Final Year Psychology students across the UK are busy preparing their experimental work. Many students will be conducting correlation studies. Several of my own students are using correlation methods to explore the relationship between aspects of cognition and severity of certain clinical disorders (for example depression). A typical question I receive from students is "How many participants do I need for my study?"
+
+```{r, cache = TRUE, echo = FALSE}
+set.seed(42)
+
+op <- par(cex.main = 1.5, mar = c(5, 6, 4, 5) + 0.1, mgp = c(3.5, 1, 0), cex.lab = 1.5 , font.lab = 2, cex.axis = 1.3, bty = "n", las = 1)
+
+A <- rnorm(100)
+
+B <- A + rnorm(100, 0, 1)
+
+plot(A, B, pch = 21, bg = "grey", cex = 2, axes = FALSE, 
+     ylab = "", xlab = "")
+axis(1)
+axis(2) 
+par(las = 0)
+mtext("Measure A", side = 1, line = 2.5, cex = 1.5)
+mtext("Measure B", side = 2, line = 3.7, cex = 1.5)
+
+```
+
+For my students I have developed a "Power Table for Correlations" to help them answer this question. They (and some colleagues) have found this table useful, and so I thought I would share it. The table is generated via simulation using the **pwr** package in R. The table is below, and the code used to create this table is posted at the end of this post. The code can of course be adapted to other designs, so hopfully it's a useful starting point for others using different tests in their work. 
+
+First, I ask students to determine the [smallest effect size of interest](https://journals.sagepub.com/doi/full/10.1177/2515245918770963) (measured as correlation coefficient *r*) for the question they have, with the guidelines of *r*=0.1 as small effect, *r*=0.3 as medium, and *r*=0.5 as a large effect size. To aid visualisation of different correlation effect sizes, I use [this excellent visualisation tool from Kristoffer Magnusson](https://rpsychologist.com/correlation/).
+
+With the smallest effect size of interest in hand, we then just need to decide on what power we wish our study to have. Psychology utilises a minimum power of 80%, but more is obviously better. Once we have decided on power, all the student needs to do is consult the below Power Table for Correlations.
+
+```{r, echo = FALSE, results = "hide"}
+# you need the pwr package
+library(pwr)
+
+
+# vector of effect sizes to explore
+effect_sizes <- seq(from = 0.05, to = 0.95, by = 0.05)
+
+# vector of desired power
+power <- seq(from = 0.8, to = 0.95, length.out = 4)
+
+# initialise matrix to store final results in
+sim_results <- matrix(0, nrow = length(effect_sizes), 
+                      ncol = length(power))
+
+# change the column & row names accordingly
+rownames(sim_results) <- effect_sizes
+colnames(sim_results) <- power
+
+# sample size determination starts here
+# for each effect size...
+for(i in 1:nrow(sim_results)){
+  
+  # for each level of desired power...
+  for(j in 1:ncol(sim_results)){
+    # calculate the sample size for current effect size & power
+    curr_power <- pwr.r.test(r = effect_sizes[i], 
+                             power = power[j], 
+                             sig.level = 0.05, 
+                             alternative = "two.sided")
+    # store the resulting sample size in the matrix
+    sim_results[i, j] <- round(curr_power$n, 0)
+  }
+  
+  
+}
+```
+
+```{r, echo = FALSE}
+
+library(kableExtra)
+
+sim_results %>%
+  kbl() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"))
+```
+
+The first column indicates the effect size of interest in the planned study. The other columns are different categorisations of power planned for in the study. Determining sample size is simple: Locate the row that contains your smallest effect size of interest, and then go across this row to the column that states your desired power. The number in the cell you end up in is how many participants you need to meet your power requirements!
+
+For example, if your smallest effect size of interest is 0.2 and you wish to have 90% power in your study, you need 258 participants in your study.
+
+
+## Simulation Code
+Below is the code used to conduct the simulation to generate the values in the Power Table for Correlations. Note that the table is for 2-tailed correlation tests. The code can of course be adapted to other designs, so hopefully it's a useful starting point for others using different tests in their work. 
+
+```{r, echo = TRUE, eval = FALSE}
+# you need the pwr package
+library(pwr)
+
+
+# vector of effect sizes to explore
+effect_sizes <- seq(from = 0.05, to = 0.95, by = 0.05)
+
+# vector of desired power
+power <- seq(from = 0.8, to = 0.95, length.out = 4)
+
+# initialise matrix to store final results in
+sim_results <- matrix(0, nrow = length(effect_sizes), 
+                      ncol = length(power))
+
+# change the column & row names accordingly
+rownames(sim_results) <- effect_sizes
+colnames(sim_results) <- power
+
+# sample size determination starts here
+# for each effect size...
+for(i in 1:nrow(sim_results)){
+  
+  # for each level of desired power...
+  for(j in 1:ncol(sim_results)){
+    # calculate the sample size for current effect size & power
+    curr_power <- pwr.r.test(r = effect_sizes[i], 
+                             power = power[j], 
+                             sig.level = 0.05, 
+                             alternative = "two.sided")
+    # store the resulting sample size in the matrix
+    sim_results[i, j] <- round(curr_power$n, 0)
+  }
+  
+
+# produce the table in html format using the kableExtra package
+library(kableExtra)
+
+sim_results %>%
+  kbl() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"))
+}

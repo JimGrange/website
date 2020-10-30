@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>R on Jim Grange</title>
-    <link>/tags/r/</link>
-    <description>Recent content in R on Jim Grange</description>
+    <title>Statistics on Jim Grange</title>
+    <link>/tags/statistics/</link>
+    <description>Recent content in Statistics on Jim Grange</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Fri, 30 Oct 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/statistics/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,16 +20,6 @@
       <guid>/post/power-table-for-correlation/</guid>
       <description>Final Year Psychology students across the UK are busy preparing their experimental work. Many students will be conducting correlation studies. Several of my own students are using correlation methods to explore the relationship between aspects of cognition and severity of certain clinical disorders (for example depression). A typical question I receive from students is “How many participants do I need for my study?”
 For my students I have developed a “Power Table for Correlations” to help them answer this question.</description>
-    </item>
-    
-    <item>
-      <title>Update to trimr: A response time trimming package in R</title>
-      <link>/post/update-to-trimr-a-response-time-trimming-package-in-r/</link>
-      <pubDate>Sat, 16 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/update-to-trimr-a-response-time-trimming-package-in-r/</guid>
-      <description>In 2015, I published my first ever R package: “trimr: An implementation of common response time trimming methods”. To date, this package has had over 5,600 downloads from CRAN, which is unbelievable!
-3 years is a long time for a package, so I thought it was time to update the package, fix some bugs, and implement some additional functionality. To this end, I have spent some time over the past few days working on a new release.</description>
     </item>
     
   </channel>
