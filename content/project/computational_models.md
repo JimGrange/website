@@ -37,6 +37,12 @@ We use these models to aid our understanding of cognition, with the aim of apply
 
 ## Representative Publications
 
+* **Grange, J.A.** * Rydon-Grange, M. (2020). Computational modelling of attentional selectivity in depression reveals perceptual deficits. *Psychological Medicine, in press.*[(Link)](https://www.jimgrange.org/gpublication/grange-depression_flanker/)
+
+* Kowalczyk, A. & **Grange, J.A.** (2020). The effect of episodic retriaval on inhibition in task switching: A diffusion model analysis. *Psychological Research, 84*, 1965--1999. [(Link)](https://www.jimgrange.org/publication/kowalczyk-diffusion/)
+
+* **Grange, J.A.**, Kedra, P., & Walker, A. (2019). The effect of practice on inhibition in task switching: Controlling for episodic retrieval. *Acta Psychologica, 192*, 59--72.
+
 * **Grange, J.A.**, Stephens, R., Jones, K., & Owen, L. (2016). The effect of alcohol hangover on choice response time. *Journal of Psychopharmacology, 30*, 654--661. [(Link)](https://www.jimgrange.org/publication/Grange-hangover_rt/)
 
 * **Grange, J.A.** (2016). flankr: An R package implementing computational models of attentional selectivity. *Behavior Research Methods, 48*, 528--541. [(Link)](https://www.jimgrange.org/publication/Grange-flankr/)

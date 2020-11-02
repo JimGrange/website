@@ -43,6 +43,10 @@ What is the nature of this inhibition? What cognitive representations does it ac
 
 ### Representative Publications
 
+* Kowalczyk, A. & **Grange, J.A.** (2020). The effect of episodic retriaval on inhibition in task switching: A diffusion model analysis. *Psychological Research, 84*, 1965--1999. [(Link)](https://www.jimgrange.org/publication/kowalczyk-diffusion/)
+
+* **Grange, J.A.**, Kedra, P., & Walker, A. (2019). The effect of practice on inhibition in task switching: Controlling for episodic retrieval. *Acta Psychologica, 192*, 59--72.
+
 * Kowalczyk, A., & **Grange, J.A.** (2017). Inhibition in task switching: The reliability of the n--2 repetition cost. *Quarterly Journal of Experimental Psychology, 70*, 2419--2433. [(Link)](https://www.jimgrange.org/publication/kowalczyk-inhibition_reliability/)
 
 * **Grange, J.A.,** & Juvina, I. (2015). The effect of practice on n--2 repetition costs in set switching. *Acta Psychologica, 154*, 14--25. [(Link)](https://www.jimgrange.org/publication/Grange-inhibition_practice/)

@@ -371,8 +371,8 @@ newData &lt;- subset(newData, select = -condition)
 # now let&#39;s look at our new data
 head(newData)</code></pre>
 <pre><code>##   participant   rt accuracy taskSequence   reward
-## 1           1 1660        1       Switch NoReward
-## 2           1  913        1       Switch   Reward
+## 1           1 1660        1       Switch   Reward
+## 2           1  913        1       Switch NoReward
 ## 3           1 2312        1       Repeat   Reward
 ## 4           1  754        1       Repeat NoReward
 ## 5           1 3394        1       Switch NoReward
@@ -385,8 +385,8 @@ newData$condition &lt;- paste(newData$taskSequence, &quot;_&quot;, newData$rewar
 # let&#39;s again look at the data
 head(newData)</code></pre>
 <pre><code>##   participant   rt accuracy taskSequence   reward       condition
-## 1           1 1660        1       Switch NoReward Switch_NoReward
-## 2           1  913        1       Switch   Reward   Switch_Reward
+## 1           1 1660        1       Switch   Reward   Switch_Reward
+## 2           1  913        1       Switch NoReward Switch_NoReward
 ## 3           1 2312        1       Repeat   Reward   Repeat_Reward
 ## 4           1  754        1       Repeat NoReward Repeat_NoReward
 ## 5           1 3394        1       Switch NoReward Switch_NoReward
@@ -398,13 +398,13 @@ trimmedData &lt;- sdTrim(newData, minRT = 150, sd = 2.5, digits = 0,
 
 # check it worked
 head(trimmedData)</code></pre>
-<pre><code>##   participant Switch_NoReward Switch_Reward Repeat_Reward Repeat_NoReward
-## 1           1            1017          1104           696             759
-## 2          10             794           766           637             671
-## 3          11            1045          1077           954             959
-## 4          12             855           885           635             641
-## 5          13             877           928           761             765
-## 6          14            1004          1050           845             783</code></pre>
+<pre><code>##   participant Switch_Reward Switch_NoReward Repeat_Reward Repeat_NoReward
+## 1           1          1027            1104           758             718
+## 2          10           753             815           660             644
+## 3          11          1092            1043           966             956
+## 4          12           857             882           630             641
+## 5          13           901             905           758             775
+## 6          14           993            1047           839             806</code></pre>
 <hr />
 </div>
 <div id="references" class="section level2">

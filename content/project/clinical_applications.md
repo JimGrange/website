@@ -30,8 +30,9 @@ image = "headers/research_overview_small.png"
 Much of our work has focussed on basic questions on cognitive psychology. More recently, we have shifted our attention to some more applied questions, and it is our aim to increase our focus on this line of research. We aim to utilise the findings from our basic research programme to probe cognition in clinical and ageing populations.
 
 ## Representative Publications
+* **Grange, J.A.** * Rydon-Grange, M. (2020). Computational modelling of attentional selectivity in depression reveals perceptual deficits. *Psychological Medicine, in press.*[(Link)](https://www.jimgrange.org/gpublication/grange-depression_flanker/)
 
-* **Grange, J.A.**, & Becker, R. (2018). The effect of aging on response congruency in task switching. *Journals of Gerentology Series B: Psychological Sciences & Social Sciences*, in press. [(Link)](https://www.jimgrange.org/publication/Grange-congruency_meta/)
+* **Grange, J.A.**, & Becker, R. (2019). The effect of aging on response congruency in task switching. *Journals of Gerentology Series B: Psychological Sciences & Social Sciences, 74*, 389--396. [(Link)](https://www.jimgrange.org/publication/Grange-congruency_meta/)
 
 * Martini, A., Ellis, S.J., **Grange, J.A.,** Tamburin, S., Dal Lago, D., Vianello, G., & Edelstyn, N.M.J. (2018). Risky decision-making and affective features of impulse control disorder in Parkinson's disease. *Journal of Neural Transmission, 125*, 131-143. [(Link)](https://www.jimgrange.org/publication/Martini-2018/)
 
