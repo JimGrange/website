@@ -340,6 +340,8 @@
 
     <div class="article-style" itemprop="articleBody">
       
+<link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
 
 
 <p>In 2015, I published my first ever R package: <a href="https://cran.r-project.org/web/packages/trimr/index.html">“trimr: An implementation of common response time trimming methods”</a>. To date, this package has had over 5,600 downloads from CRAN, which is unbelievable!</p>
@@ -704,8 +706,8 @@ head(newData)</code></pre>
 ## 1           1 1660        1       Switch   Reward
 ## 2           1  913        1       Switch NoReward
 ## 3           1 2312        1       Repeat   Reward
-## 4           1  754        1       Repeat NoReward
-## 5           1 3394        1       Switch NoReward
+## 4           1  754        1       Repeat   Reward
+## 5           1 3394        1       Switch   Reward
 ## 6           1  930        1       Repeat   Reward</code></pre>
 <p>This now looks how data typically comes in from a factorial design. Now, to get trimr to work on this, we need to create a new column called “condition”, and to place in this column the levels of all factors in the design. For example, if the first trial in our newData has taskSequence = Switch and reward = NoReward, we would like our condition entry for this trial to read “Switch_NoReward”. This is simple to do using R’s “paste” function. (Note that this code can be adapted to deal with any number of factors.)</p>
 <pre class="r"><code># add a new column called &quot;condition&quot;, and fill it with information from both 
@@ -718,8 +720,8 @@ head(newData)</code></pre>
 ## 1           1 1660        1       Switch   Reward   Switch_Reward
 ## 2           1  913        1       Switch NoReward Switch_NoReward
 ## 3           1 2312        1       Repeat   Reward   Repeat_Reward
-## 4           1  754        1       Repeat NoReward Repeat_NoReward
-## 5           1 3394        1       Switch NoReward Switch_NoReward
+## 4           1  754        1       Repeat   Reward   Repeat_Reward
+## 5           1 3394        1       Switch   Reward   Switch_Reward
 ## 6           1  930        1       Repeat   Reward   Repeat_Reward</code></pre>
 <p>Now we can pass this data frame to any function in <em>trimr</em>, and it will work perfectly:</p>
 <pre class="r"><code># trim the data
@@ -729,12 +731,12 @@ trimmedData &lt;- sdTrim(newData, minRT = 150, sd = 2.5, digits = 0,
 # check it worked
 head(trimmedData)</code></pre>
 <pre><code>##   participant Switch_Reward Switch_NoReward Repeat_Reward Repeat_NoReward
-## 1           1          1027            1104           758             718
-## 2          10           753             815           660             644
-## 3          11          1092            1043           966             956
-## 4          12           857             882           630             641
-## 5          13           901             905           758             775
-## 6          14           993            1047           839             806</code></pre>
+## 1           1          1053            1054           741             730
+## 2          10           769             789           686             622
+## 3          11          1029            1091           960             952
+## 4          12           871             871           632             653
+## 5          13           925             875           775             752
+## 6          14          1022            1029           823             811</code></pre>
 <hr />
 </div>
 <div id="references" class="section level2">
