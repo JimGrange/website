@@ -6,7 +6,7 @@
     <url>
     
       <loc>/publication/grange-mixtur/</loc>
-      <lastmod>2020-12-01T00:00:00+00:00</lastmod>
+      <lastmod>2021-08-01T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -508,7 +508,7 @@
     
     <url>
     
-      <loc>/tags/general/</loc>
+      <loc>/categories/general/</loc>
       <lastmod>2020-07-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -518,7 +518,7 @@
     
     <url>
     
-      <loc>/categories/general/</loc>
+      <loc>/tags/general/</loc>
       <lastmod>2020-07-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -559,17 +559,7 @@
     <url>
     
       <loc>/publication/</loc>
-      <lastmod>2020-12-01T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/tags/r/</loc>
-      <lastmod>2020-10-30T00:00:00+00:00</lastmod>
+      <lastmod>2021-08-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -588,7 +578,7 @@
     
     <url>
     
-      <loc>/tags/statistics/</loc>
+      <loc>/tags/r/</loc>
       <lastmod>2020-10-30T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -599,6 +589,16 @@
     <url>
     
       <loc>/categories/statistics/</loc>
+      <lastmod>2020-10-30T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/statistics/</loc>
       <lastmod>2020-10-30T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -688,7 +688,7 @@
     
     <url>
     
-      <loc>/tags/response-times/</loc>
+      <loc>/categories/response-times/</loc>
       <lastmod>2018-06-16T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -698,7 +698,7 @@
     
     <url>
     
-      <loc>/categories/response-times/</loc>
+      <loc>/tags/response-times/</loc>
       <lastmod>2018-06-16T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
