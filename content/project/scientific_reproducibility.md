@@ -32,7 +32,7 @@ Replication is the most important statistic. If an experimental effect does not 
 
 I was involved in the work conducted by the Open Science Collaboration, which was published in the journal *Science* in 2015. This paper was a large-scale, world-wide collaborative effort to systematically examine the rate and predictors of reproducibility in psychological science. The collaboration  attempted to replicate 100 studies published in three prominent psychology journals in 2008, with the aim of calculating an empirical rate of replication, as well as investigating factors that predict reproducibility. The news wasn't pretty: Reproducibility in psychological science is low.
 
-I have been involved in several published projects working on improving reproducibility in psychological science. I also have ongoing work looking factors that might influence reproducibility in work more closely related to my own, and how to improve these factors. More on this soon... 
+I have been involved in several published projects working on improving reproducibility in psychological science. I also have ongoing work looking factors that might influence reproducibility in work more closely related to my own, and how to improve these factors.
 
 
 ## Representative Publications
