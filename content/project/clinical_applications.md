@@ -6,7 +6,7 @@ date = "2018-02-15"
 title = "Cognition in Clinical & Ageing Populations"
 
 # Project summary to display on homepage.
-summary = "Using our understanding of healthy cognition to probe cognition in clinical & ageing populations"
+summary = "Applying our basic research to tackle clinical and applied questions"
 
 # Optional image to display on homepage (relative to `static/img/` folder).
 image_preview = "ageing.jpg"
@@ -27,9 +27,13 @@ image = "headers/research_overview_small.png"
 
 +++
 
-Much of our work has focussed on basic questions on cognitive psychology. More recently, we have shifted our attention to some more applied questions, and it is our aim to increase our focus on this line of research. We aim to utilise the findings from our basic research programme to probe cognition in clinical and ageing populations.
+Much of our work has focussed on basic questions on cognitive psychology. More recently, we have shifted our attention (pun intended!) to applying the knowledge gained from this basic research towards clinical and applied questions. To date, we have conducted research on cognition in Healthy Ageing (Grange & Becker, 2019), depression (Grange, under review; Grange & Rydon-Grange, 2020), and Parkinson's Disease (Martini et al., 2018).
+
+Much of the clinical and applied work we conduct utilises computational modelling to quantify (potential) disruption to latent cognitive processes in clinical populations. We believe that the utilisation of computational modelling provides unique insights into clinical profiles beyond that which can be gleaned via behavioural methods alone.
 
 ## Representative Publications
+* **Grange, J.A.** (under review). Computational modelling of the speed--accuracy tradeoff: No evidence for an association with depression symptomatology. [(Link to preprint)](https://psyarxiv.com/fzg6d)
+
 * **Grange, J.A.** * Rydon-Grange, M. (2020). Computational modelling of attentional selectivity in depression reveals perceptual deficits. *Psychological Medicine, in press.*[(Link)](https://www.jimgrange.org/gpublication/grange-depression_flanker/)
 
 * **Grange, J.A.**, & Becker, R. (2019). The effect of aging on response congruency in task switching. *Journals of Gerentology Series B: Psychological Sciences & Social Sciences, 74*, 389--396. [(Link)](https://www.jimgrange.org/publication/Grange-congruency_meta/)

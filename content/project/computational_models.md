@@ -37,6 +37,10 @@ We use these models to aid our understanding of cognition, with the aim of apply
 
 ## Representative Publications
 
+* **Grange, J.A.** (under review). Computational modelling of the speed--accuracy tradeoff: No evidence for an association with depression symptomatology. [(Link to preprint)](https://psyarxiv.com/fzg6d)
+
+* **Grange, J.A.** & Moore, S.B. (in press). mixtur: An R package for designing, analysing, and modelling continuous report visual short-term memory studies. *Behavior Research Methods, in press* [(Link to preprint)](https://psyarxiv.com/n6gqx/)
+
 * **Grange, J.A.** * Rydon-Grange, M. (2020). Computational modelling of attentional selectivity in depression reveals perceptual deficits. *Psychological Medicine, in press.*[(Link)](https://www.jimgrange.org/gpublication/grange-depression_flanker/)
 
 * Kowalczyk, A. & **Grange, J.A.** (2020). The effect of episodic retriaval on inhibition in task switching: A diffusion model analysis. *Psychological Research, 84*, 1965--1999. [(Link)](https://www.jimgrange.org/publication/kowalczyk-diffusion/)

@@ -6,7 +6,7 @@ date = "2018-02-17"
 title = "Cognitive Control Processes"
 
 # Project summary to display on homepage.
-summary = "How do we control out attention to external stimuli and internal goals?"
+summary = "Researching how the mind exerts control over goal-directed behaviour"
 
 # Optional image to display on homepage (relative to `static/img/` folder).
 image_preview = "cognitive_control.jpg"
