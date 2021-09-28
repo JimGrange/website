@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 01 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Sep 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Computational modelling of the speed–accuracy tradeoff: No evidence for an association with depression symptomatology</title>
+      <link>/publication/grange-depression_sat/</link>
+      <pubDate>Tue, 28 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-depression_sat/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>mixtur: An R package for designing, analysisng, and modelling continuous report visual short-term memory studies</title>

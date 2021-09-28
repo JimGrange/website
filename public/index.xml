@@ -11,6 +11,15 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Computational modelling of the speed–accuracy tradeoff: No evidence for an association with depression symptomatology</title>
+      <link>/publication/grange-depression_sat/</link>
+      <pubDate>Tue, 28 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-depression_sat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>mixtur: An R package for designing, analysisng, and modelling continuous report visual short-term memory studies</title>
       <link>/publication/grange-mixtur/</link>
       <pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate>
@@ -906,11 +915,11 @@ newData &amp;lt;- subset(newData, select = -condition)
 head(newData)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##   participant   rt accuracy taskSequence   reward
 ## 1           1 1660        1       Switch   Reward
-## 2           1  913        1       Switch NoReward
-## 3           1 2312        1       Repeat NoReward
+## 2           1  913        1       Switch   Reward
+## 3           1 2312        1       Repeat   Reward
 ## 4           1  754        1       Repeat NoReward
 ## 5           1 3394        1       Switch NoReward
-## 6           1  930        1       Repeat   Reward&lt;/code&gt;&lt;/pre&gt;
+## 6           1  930        1       Repeat NoReward&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This now looks how data typically comes in from a factorial design. Now, to get trimr to work on this, we need to create a new column called “condition”, and to place in this column the levels of all factors in the design. For example, if the first trial in our newData has taskSequence = Switch and reward = NoReward, we would like our condition entry for this trial to read “Switch_NoReward”. This is simple to do using R’s “paste” function. (Note that this code can be adapted to deal with any number of factors.)&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# add a new column called &amp;quot;condition&amp;quot;, and fill it with information from both 
 # columns that code for our factors
@@ -920,11 +929,11 @@ newData$condition &amp;lt;- paste(newData$taskSequence, &amp;quot;_&amp;quot;, n
 head(newData)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##   participant   rt accuracy taskSequence   reward       condition
 ## 1           1 1660        1       Switch   Reward   Switch_Reward
-## 2           1  913        1       Switch NoReward Switch_NoReward
-## 3           1 2312        1       Repeat NoReward Repeat_NoReward
+## 2           1  913        1       Switch   Reward   Switch_Reward
+## 3           1 2312        1       Repeat   Reward   Repeat_Reward
 ## 4           1  754        1       Repeat NoReward Repeat_NoReward
 ## 5           1 3394        1       Switch NoReward Switch_NoReward
-## 6           1  930        1       Repeat   Reward   Repeat_Reward&lt;/code&gt;&lt;/pre&gt;
+## 6           1  930        1       Repeat NoReward Repeat_NoReward&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now we can pass this data frame to any function in &lt;em&gt;trimr&lt;/em&gt;, and it will work perfectly:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# trim the data
 trimmedData &amp;lt;- sdTrim(newData, minRT = 150, sd = 2.5, digits = 0, 
@@ -932,13 +941,13 @@ trimmedData &amp;lt;- sdTrim(newData, minRT = 150, sd = 2.5, digits = 0,
 
 # check it worked
 head(trimmedData)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##   participant Switch_Reward Switch_NoReward Repeat_NoReward Repeat_Reward
-## 1           1          1065            1040             772           705
-## 2          10           780             778             664           639
-## 3          11          1055            1067             941           974
-## 4          12           836             899             647           629
-## 5          13           912             889             782           751
-## 6          14          1005            1030             804           822&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   participant Switch_Reward Repeat_Reward Repeat_NoReward Switch_NoReward
+## 1           1          1025           754             716            1089
+## 2          10           767           669             633             802
+## 3          11          1088           931             995            1045
+## 4          12           861           629             647             869
+## 5          13           875           759             774             918
+## 6          14          1005           830             812            1044&lt;/code&gt;&lt;/pre&gt;
 &lt;hr /&gt;
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level2&#34;&gt;
@@ -977,76 +986,6 @@ ggplot(faithfuld, aes(waiting, eruptions)) +
 &lt;p&gt;&lt;img src=&#34;/post/2018-04-20-a-new-website_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;What other reasons did I need?&lt;/p&gt;
 &lt;!-- {{ template &#34;_internal/disqus.html&#34; . }} --&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cognitive Control Processes</title>
-      <link>/project/cognitive_control/</link>
-      <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/project/cognitive_control/</guid>
-      <description>
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;current-projects&#34;&gt;Current Projects:&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;#task_switching&#34;&gt;Task Switching&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;#memory_cognitive_control&#34;&gt;Memory &amp;amp; Cognitive Control&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&#34;task_switching&#34;&gt;Task Switching&lt;/h3&gt;
-
-&lt;p&gt;Humans live in an increasingly busy, multi-task environment which often requires frequent switching between different cognitive operations and tasks. Driving, for example, presents us with an incredibly complex environment wherein many sub-tasks&amp;mdash;e.g. speed monitoring, interpretation of abstract road signs, planning the best route etc.&amp;mdash;must be organised and deployed appropriately in order to arrive at our destination safely. Yet, despite the complexity, humans are able to act efficiently in a goal-directed manner. The question thus arises as to how humans are able to organise and control the selection and deployment of on-going cognitive processes to ensure successful performance in multi-task environments.&lt;/p&gt;
-
-&lt;p&gt;Our work focusses on how this control is achieved. In particular, much of our work has focussed on one mechanism thought to aid control during task switching: Inhibition of competing tasks. When switching from one task to another, the persisting activation of the now-irrelevant task can interfere with the selection of the new task. There is good evidence that the cognitive system overcomes this problem by inhibiting (i.e., suppressing) the activation of recently performed tasks, enabling efficient selection of the new task.&lt;/p&gt;
-
-&lt;p&gt;What is the nature of this inhibition? What cognitive representations does it act on? How does the cognitive system know what &amp;amp; when to inhibit? What drives individual differences in inhibition?&lt;/p&gt;
-
-&lt;h3 id=&#34;representative-publications&#34;&gt;Representative Publications&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Kowalczyk, A. &amp;amp; &lt;strong&gt;Grange, J.A.&lt;/strong&gt; (2020). The effect of episodic retriaval on inhibition in task switching: A diffusion model analysis. &lt;em&gt;Psychological Research, 84&lt;/em&gt;, 1965&amp;ndash;1999. &lt;a href=&#34;https://www.jimgrange.org/publication/kowalczyk-diffusion/&#34; target=&#34;_blank&#34;&gt;(Link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Grange, J.A.&lt;/strong&gt;, Kedra, P., &amp;amp; Walker, A. (2019). The effect of practice on inhibition in task switching: Controlling for episodic retrieval. &lt;em&gt;Acta Psychologica, 192&lt;/em&gt;, 59&amp;ndash;72.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Kowalczyk, A., &amp;amp; &lt;strong&gt;Grange, J.A.&lt;/strong&gt; (2017). Inhibition in task switching: The reliability of the n&amp;ndash;2 repetition cost. &lt;em&gt;Quarterly Journal of Experimental Psychology, 70&lt;/em&gt;, 2419&amp;ndash;2433. &lt;a href=&#34;https://www.jimgrange.org/publication/kowalczyk-inhibition_reliability/&#34; target=&#34;_blank&#34;&gt;(Link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Grange, J.A.,&lt;/strong&gt; &amp;amp; Juvina, I. (2015). The effect of practice on n&amp;ndash;2 repetition costs in set switching. &lt;em&gt;Acta Psychologica, 154&lt;/em&gt;, 14&amp;ndash;25. &lt;a href=&#34;https://www.jimgrange.org/publication/Grange-inhibition_practice/&#34; target=&#34;_blank&#34;&gt;(Link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Grange, J.A.,&lt;/strong&gt; &amp;amp; Houghton, G. (Eds.). &lt;em&gt;Task switching and cognitive control&lt;/em&gt;. New York, NY: Oxford University Press. &lt;a href=&#34;https://www.jimgrange.org/publication/grange-task_switching_book/&#34; target=&#34;_blank&#34;&gt;(Link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Grange, J.A.,&lt;/strong&gt; Juvina, I., &amp;amp; Houghton, G. (2013). On costs and benefits of n&amp;ndash;2 repetition costs in task switching: Toward a behavioral marker of cognitive inhibition. &lt;em&gt;Psychological Research, 77&lt;/em&gt;, 211&amp;ndash;222. &lt;a href=&#34;https://www.jimgrange.org/publication/grange-costs_benefits_inhibition_model/&#34; target=&#34;_blank&#34;&gt;(Link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Grange, J.A.,&lt;/strong&gt; &amp;amp; Houghton, G. (2010). Heightened conflict in cue&amp;ndash;target translation increases backward inhibition in set switching. &lt;em&gt;Journal of Experimental Psychology: Learning, Memory, &amp;amp; Cognition, 36&lt;/em&gt;, 1003&amp;ndash;1009 &lt;a href=&#34;https://www.jimgrange.org/publication/grange-negative_transfer/&#34; target=&#34;_blank&#34;&gt;(Link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;memory_cognitive_control&#34;&gt;Memory &amp;amp; Cognitive Control&lt;/h2&gt;
-
-&lt;p&gt;Although memory and cognitive control are typically treated (and researched) as separate sub-disciplines in cognitive psychology, there is plenty of evidence that they interact. I have become interested in what role memory retrieval plays in cognitive control during task switching.&lt;/p&gt;
-
-&lt;p&gt;In a typical task switching experiment, a participant might be presented with a single digit (e.g., &amp;ldquo;9&amp;rdquo;) and be asked to judge whether it is odd/even or lower/higher than 5 (and make a speeded response accordingly). Whilst of course participants could solve these tasks using a relatively involved algorithm (e.g., to decide if a number is odd, see if it is divisible by 2), participants could also just retrieve the correct answer from memory.&lt;/p&gt;
-
-&lt;p&gt;There is evidence that this memory retrieval is automatic (see for example the classic paper by &lt;a href=&#34;http://www.psy.vanderbilt.edu/faculty/logan/1988LoganPR.pdf&#34; target=&#34;_blank&#34;&gt;Logan, 1998&lt;/a&gt;): When presented with a stimulus, the cognitive system automatically retrieves all responses previously associated with that stimulus. Such &lt;em&gt;episodic retrieval&lt;/em&gt; is obviously very useful in some circumstances, allowing us to act on auto-pilot. However, if multiple&amp;mdash;conflicting&amp;mdash;responses have been associated with the same stimulus, this can often lead to difficulties in selecting the most appropriate action.&lt;/p&gt;
-
-&lt;p&gt;My work has investigated how memory retrieval interacts with cognitive control in task switching. I have shown that successful episodic retrieval depends on how distinctive that episodic trace is in long term memory (Grange &amp;amp; Cross, 2015). In this work I also extended a successful model from the memory literature &lt;a href=&#34;http://psycnet.apa.org/fulltext/2007-10421-001.html&#34; target=&#34;_blank&#34;&gt;(SIMPLE; Brown et al., 2007)&lt;/a&gt; to the task switching paradigm to predict both mean response times &lt;a href=&#34;https://www.jimgrange.org/publication/Grange-temporal_distinctiveness/&#34; target=&#34;_blank&#34;&gt;(Grange &amp;amp; Cross, 2015)&lt;/a&gt; and their distributions &lt;a href=&#34;https://www.jimgrange.org/publication/Grange-mixture_dist/&#34; target=&#34;_blank&#34;&gt;(Grange, 2016)&lt;/a&gt;. I have also shown that measures of inhibition in task switching can also largely be explained by episodic memory processes &lt;a href=&#34;https://www.jimgrange.org/publication/episodic_retrieval/&#34; target=&#34;_blank&#34;&gt;(Grange et al., 2017)&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;representative-publications-1&#34;&gt;Representative Publications&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Grange, J.A.,&lt;/strong&gt; Kowalczyk, A., &amp;amp; O&amp;rsquo;Loughlin, R. (2017). The effect of episodic retrieval on inhibition in task switching. &lt;em&gt;Journal of Experimental Psychology: Human Perception &amp;amp; Performance, 43&lt;/em&gt;, 1568&amp;ndash;1583. &lt;a href=&#34;https://www.jimgrange.org/publication/episodic_retrieval/&#34; target=&#34;_blank&#34;&gt;(Link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Grange, J.A.&lt;/strong&gt; (2016). Temporal distinctiveness in task switching: Assessing the mixture-distribution assumption. &lt;em&gt;Frontiers in Cognition, 7&lt;/em&gt;:251. &lt;a href=&#34;https://www.jimgrange.org/publication/Grange-mixture_dist/&#34; target=&#34;_blank&#34;&gt;(Link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Grange, J.A.,&lt;/strong&gt; &amp;amp; Cross, E. (2015). Can time-based decay explain temporal distinctiveness effects in task switching? &lt;em&gt;Quarterly Journal of Experimental Psychology, 68&lt;/em&gt;, 19&amp;ndash;45. &lt;a href=&#34;https://www.jimgrange.org/publication/Grange-temporal_distinctiveness/&#34; target=&#34;_blank&#34;&gt;(Link)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
 </description>
     </item>
     
