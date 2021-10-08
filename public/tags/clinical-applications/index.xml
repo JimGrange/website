@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>clinical-applications on Jim Grange</title>
+    <link>/tags/clinical-applications/</link>
+    <description>Recent content in clinical-applications on Jim Grange</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Thu, 15 Feb 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/clinical-applications/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cognition in Clinical &amp; Ageing Populations</title>
+      <link>/project/clinical_applications/</link>
+      <pubDate>Thu, 15 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/project/clinical_applications/</guid>
+      <description>Much of our work has focussed on basic questions on cognitive psychology. More recently, we have shifted our attention (pun intended!) to applying the knowledge gained from this basic research towards clinical and applied questions. To date, we have conducted research on cognition in Healthy Ageing (Grange &amp;amp; Becker, 2019), depression (Grange, under review; Grange &amp;amp; Rydon-Grange, 2020), and Parkinson&amp;rsquo;s Disease (Martini et al., 2018).
+Much of the clinical and applied work we conduct utilises computational modelling to quantify (potential) disruption to latent cognitive processes in clinical populations.</description>
+    </item>
+    
+  </channel>
+</rss>

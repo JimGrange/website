@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Statistics on Jim Grange</title>
+    <link>/categories/statistics/</link>
+    <description>Recent content in Statistics on Jim Grange</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Fri, 30 Oct 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/statistics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Power Table for Correlation</title>
+      <link>/post/power-table-for-correlation/</link>
+      <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/power-table-for-correlation/</guid>
+      <description>Final Year Psychology students across the UK are busy preparing their experimental work. Many students will be conducting correlation studies. Several of my own students are using correlation methods to explore the relationship between aspects of cognition and severity of certain clinical disorders (for example depression). A typical question I receive from students is “How many participants do I need for my study?”
+For my students I have developed a “Power Table for Correlations” to help them answer this question.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cognitive-control on Jim Grange</title>
+    <link>/tags/cognitive-control/</link>
+    <description>Recent content in cognitive-control on Jim Grange</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sat, 17 Feb 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/cognitive-control/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cognitive Control Processes</title>
+      <link>/project/cognitive_control/</link>
+      <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/project/cognitive_control/</guid>
+      <description>Current Projects: Task Switching
+Memory &amp;amp; Cognitive Control
+Task Switching Humans live in an increasingly busy, multi-task environment which often requires frequent switching between different cognitive operations and tasks. Driving, for example, presents us with an incredibly complex environment wherein many sub-tasks&amp;mdash;e.g. speed monitoring, interpretation of abstract road signs, planning the best route etc.&amp;mdash;must be organised and deployed appropriately in order to arrive at our destination safely. Yet, despite the complexity, humans are able to act efficiently in a goal-directed manner.</description>
+    </item>
+    
+    <item>
+      <title>Cognition in Clinical &amp; Ageing Populations</title>
+      <link>/project/clinical_applications/</link>
+      <pubDate>Thu, 15 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/project/clinical_applications/</guid>
+      <description>Much of our work has focussed on basic questions on cognitive psychology. More recently, we have shifted our attention (pun intended!) to applying the knowledge gained from this basic research towards clinical and applied questions. To date, we have conducted research on cognition in Healthy Ageing (Grange &amp;amp; Becker, 2019), depression (Grange, under review; Grange &amp;amp; Rydon-Grange, 2020), and Parkinson&amp;rsquo;s Disease (Martini et al., 2018).
+Much of the clinical and applied work we conduct utilises computational modelling to quantify (potential) disruption to latent cognitive processes in clinical populations.</description>
+    </item>
+    
+  </channel>
+</rss>

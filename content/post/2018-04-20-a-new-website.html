@@ -1,0 +1,28 @@
+---
+title: A new website
+author: ~
+date: '2018-04-28'
+slug: a-new-website
+categories: [General]
+tags: [General]
+---
+
+<link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
+
+
+<p>I have spent the past day or so transporting my acedemic website from <a href="https://jimgrange.wordpress.com">Wordpress</a> to the current website, which is written using the (superb!) <a href="https://bookdown.org/yihui/blogdown/">R package ‘blogdown’</a>.</p>
+<p>I made the change for a variety of reasons:</p>
+<ul>
+<li><p>I am now able to use R for <em>most</em> things—analysis, simulations, writing papers using <a href="https://github.com/crsh/papaja">papaja</a> and now my website—making my workflow more efficient (and high on the nerd-scale).</p></li>
+<li><p>I could never really get my wordpress site to look sleek and professional. Using R and blogdown I was able to utilise the <a href="https://themes.gohugo.io/">Hugo website templates</a>, which look very nice. (The current versio of my website uses the <a href="https://themes.gohugo.io/academic/">Hugo Academic theme</a>.)</p></li>
+<li><p>As the blog is written in R and blogdown, it means that all the content &amp; code behind it can be made freely available. You can see the Github page for the code of my website <a href="https://github.com/JimGrange/website">here</a>.</p></li>
+<li><p>The blog posts on my previous site which I enjoyed writing the most had R demonstrations in them. As blogdown uses markdown, I can now write blog posts using markdown meaning I can integrate R code into the blog post! Not just that, plots are automatically integrated into the blog! Observe thus!</p></li>
+</ul>
+<pre class="r"><code>library(ggplot2)
+ggplot(faithfuld, aes(waiting, eruptions)) +
+  geom_raster(aes(fill = density)) +
+  scale_fill_distiller(palette = &quot;Spectral&quot;)</code></pre>
+<p><img src="/post/2018-04-20-a-new-website_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p>What other reasons did I need?</p>
+<!-- {{ template "_internal/disqus.html" . }} -->

@@ -1,0 +1,993 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jim Grange on Jim Grange</title>
+    <link>/</link>
+    <description>Recent content in Jim Grange on Jim Grange</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Computational modelling of the speed–accuracy tradeoff: No evidence for an association with depression symptomatology</title>
+      <link>/publication/grange-depression_sat/</link>
+      <pubDate>Tue, 28 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-depression_sat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mixtur: An R package for designing, analysisng, and modelling continuous report visual short-term memory studies</title>
+      <link>/publication/grange-mixtur/</link>
+      <pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-mixtur/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Power Table for Correlation</title>
+      <link>/post/power-table-for-correlation/</link>
+      <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/power-table-for-correlation/</guid>
+      <description>
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+
+
+&lt;p&gt;Final Year Psychology students across the UK are busy preparing their experimental work. Many students will be conducting correlation studies. Several of my own students are using correlation methods to explore the relationship between aspects of cognition and severity of certain clinical disorders (for example depression). A typical question I receive from students is “How many participants do I need for my study?”&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-10-30-power-table-for-correlation.en_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;For my students I have developed a “Power Table for Correlations” to help them answer this question. They (and some colleagues) have found this table useful, and so I thought I would share it. The table is generated via simulation using the &lt;strong&gt;pwr&lt;/strong&gt; package in R. The table is below, and the code used to create this table is posted at the end of this post. The code can of course be adapted to other designs, so hopfully it’s a useful starting point for others using different tests in their work.&lt;/p&gt;
+&lt;p&gt;First, I ask students to determine the &lt;a href=&#34;https://journals.sagepub.com/doi/full/10.1177/2515245918770963&#34;&gt;smallest effect size of interest&lt;/a&gt; (measured as correlation coefficient &lt;em&gt;r&lt;/em&gt;) for the question they have, with the guidelines of &lt;em&gt;r&lt;/em&gt;=0.1 as small effect, &lt;em&gt;r&lt;/em&gt;=0.3 as medium, and &lt;em&gt;r&lt;/em&gt;=0.5 as a large effect size. To aid visualisation of different correlation effect sizes, I use &lt;a href=&#34;https://rpsychologist.com/correlation/&#34;&gt;this excellent visualisation tool from Kristoffer Magnusson&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;With the smallest effect size of interest in hand, we then just need to decide on what power we wish our study to have. Psychology utilises a minimum power of 80%, but more is obviously better. Once we have decided on power, all the student needs to do is consult the below Power Table for Correlations.&lt;/p&gt;
+&lt;table class=&#34;table table-striped table-hover table-condensed&#34; style=&#34;margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+0.8
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+0.85
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+0.9
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+0.95
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.05
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+3136
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+3587
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+4198
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+5191
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+782
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+894
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1046
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1293
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.15
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+346
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+395
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+462
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+571
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.2
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+193
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+221
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+258
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+318
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.25
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+122
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+140
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+163
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+201
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.3
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+84
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+96
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+112
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+138
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.35
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+61
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+69
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+81
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+99
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+46
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+52
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+61
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+75
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.45
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+36
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+40
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+47
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+57
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.5
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+28
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+32
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+37
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+45
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.55
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+23
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+26
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+30
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+36
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.6
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+19
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+21
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+24
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+29
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.65
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+15
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+17
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+20
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+24
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.7
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+13
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+14
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+16
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+20
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.75
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+11
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+12
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+14
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+16
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.8
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+9
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+10
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+11
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+13
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.85
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+8
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+8
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+9
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+11
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.9
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+6
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+7
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+7
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+9
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0.95
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+5
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+5
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+6
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+7
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The first column indicates the effect size of interest in the planned study. The other columns are different categorisations of power planned for in the study. Determining sample size is simple: Locate the row that contains your smallest effect size of interest, and then go across this row to the column that states your desired power. The number in the cell you end up in is how many participants you need to meet your power requirements!&lt;/p&gt;
+&lt;p&gt;For example, if your smallest effect size of interest is 0.2 and you wish to have 90% power in your study, you need 258 participants in your study.&lt;/p&gt;
+&lt;div id=&#34;simulation-code&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Simulation Code&lt;/h2&gt;
+&lt;p&gt;Below is the code used to conduct the simulation to generate the values in the Power Table for Correlations. Note that the table is for 2-tailed correlation tests. The code can of course be adapted to other designs, so hopefully it’s a useful starting point for others using different tests in their work.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# you need the pwr package
+library(pwr)
+
+
+# vector of effect sizes to explore
+effect_sizes &amp;lt;- seq(from = 0.05, to = 0.95, by = 0.05)
+
+# vector of desired power
+power &amp;lt;- seq(from = 0.8, to = 0.95, length.out = 4)
+
+# initialise matrix to store final results in
+sim_results &amp;lt;- matrix(0, nrow = length(effect_sizes), 
+                      ncol = length(power))
+
+# change the column &amp;amp; row names accordingly
+rownames(sim_results) &amp;lt;- effect_sizes
+colnames(sim_results) &amp;lt;- power
+
+# sample size determination starts here
+# for each effect size...
+for(i in 1:nrow(sim_results)){
+  
+  # for each level of desired power...
+  for(j in 1:ncol(sim_results)){
+    # calculate the sample size for current effect size &amp;amp; power
+    curr_power &amp;lt;- pwr.r.test(r = effect_sizes[i], 
+                             power = power[j], 
+                             sig.level = 0.05, 
+                             alternative = &amp;quot;two.sided&amp;quot;)
+    # store the resulting sample size in the matrix
+    sim_results[i, j] &amp;lt;- round(curr_power$n, 0)
+  }
+  
+
+# produce the table in html format using the kableExtra package
+library(kableExtra)
+
+sim_results %&amp;gt;%
+  kbl() %&amp;gt;%
+  kable_styling(bootstrap_options = c(&amp;quot;striped&amp;quot;, &amp;quot;hover&amp;quot;, &amp;quot;condensed&amp;quot;))
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>A decade at Keele</title>
+      <link>/post/a-decade-at-keele/</link>
+      <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/a-decade-at-keele/</guid>
+      <description>
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;Today marks my 10 year anniversary of working at Keele University. On the one hand it feels like a blink of an eye, and yet on the other a lifetime. (Well, as I am 38 years old, a quarter of a lifetime.)&lt;/p&gt;
+&lt;p&gt;I started my lectureship in Psychology at Keele on the 1st July 2010, 3 weeks before I obtained my PhD. Imposter syndrome was—and still is—alive and well. Looking at the CV I appended to my job application, I had 2 papers published, 1 paper in press, and 1 under review. It’s strange to think that such a CV wouldn’t even make a long-list in today’s job market for lectureships. Even though I didn’t feel ready, I applied to Keele at the advice of my PhD supervisor: “If you get it, great; if not, you gain the experience of an application process”. This was wonderful advice, and on the day of the interview I remember being much more relaxed than I thought possible; after all, I was just there for the experience, right? On the day there was another candidate with a much better publication record than me interviewing, so that cemented in my mind that there was no way I would get the post. I left Keele that day thinking that I had gained a lot from the experience, but that I would not be successful.&lt;/p&gt;
+&lt;p&gt;So I was completely shocked when—a few days later—the Head of School called. I remember that moment vividly: It was March and I was in my PhD office at Bangor University working on a paper; my PhD didn’t finish until September 1st, so my early thesis submission meant I had a few months of working on other things. The HoS informed me I had been successful. I fell silent, and he had to prompt me: “Well, would you like to accept the position?”. Of course I did!&lt;/p&gt;
+&lt;p&gt;Starting Keele meant living away from my (now) wife mid-week. We lived in Bangor North Wales, and Keele was a 2 hour drive away. Whilst there would be days later in my Keele tenure when I would sleep at home and do daily 4-hour commutes, in the early days I rented a flat on Keele campus (later moving to the lap of luxury by staying in the local Travelodge). Relocation is a well-known challenge of academic life and it was certainly the hardest part of starting my first lectureship. There were many evenings where I sat in my flat wondering whether this upheaval was worth it. My wife and I viewed the temporary living arrangements as an investment in our future. We soon got into a routine: I would leave Wales very early Monday morning, and would travel home late Wednesday evening, so it was only two nights apart for most weeks.&lt;/p&gt;
+&lt;p&gt;Much has filled the past 10 years. I’ve tried to immerse myself in all arms of the academic profile (research, teaching, and service). Each bring their own unique challenges, and I’ve enjoyed engaging with them all.&lt;/p&gt;
+&lt;p&gt;I spend too much of my time comparing myself to others around me, especially when it comes to research productivity and success. This can be terribly demotivating, because there are many excellent scientists winning grants, winning awards, and publishing beautiful papers. So, if instead I compare myself &lt;strong&gt;to myself 10-years ago&lt;/strong&gt;, I think I am pretty pleased with what I have achieved at Keele. I have maintained a decent research profile. (I haven’t won any large grants, and this is something I need to work very hard on.) I have published a decent amount. I have published a book. I have developed my statistical skills, programming skills, and computational modelling skills. I have supervised over 100 undergraduate research projects, 10 MSc projects, and 2 PhD projects. I have designed and delivered many modules. I created and led an MSc programme. I have led a research group in the School. I have taught hundreds of students. I have won some teaching awards. I hope I have been a good colleague. For the past 3 years I have been the Head of School, which has been very challenging, but I am pleased I took it on.&lt;/p&gt;
+&lt;p&gt;I am now entering the dreaded “mid-career” stage. I step down from Head of School in September, so this will be an opportune time to reflect more on the past 10 years and my future direction.&lt;/p&gt;
+&lt;p&gt;Keele has been a wonderful place to spend the first 10 years of my academic career. I owe a debt of gratitude to all at Keele for giving me my start in my academic career.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Computational modelling of attentional selectivity in depression reveals perceptual deficits</title>
+      <link>/publication/grange-depression_flanker/</link>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-depression_flanker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exploring the impact of mindfulness on false-memory susceptibility</title>
+      <link>/publication/sherman-mindfulness/</link>
+      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/sherman-mindfulness/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The effect of episodic retrieval on inhibition in task switching: A diffusion model analysis</title>
+      <link>/publication/kowalczyk-diffusion/</link>
+      <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/kowalczyk-diffusion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Beliefs about voices in voice-hearers: The role of schema functioning</title>
+      <link>/publication/davenport-/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/davenport-/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cognitive function, self-awareness, and neuroimaging findings in OCD-type presentations after Traumatic Brain Injury</title>
+      <link>/publication/coetzer/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/coetzer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Increased cognitive control after task conflict? Investigating the n–3 effect in task switching</title>
+      <link>/publication/schuch-task_conflict/</link>
+      <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/schuch-task_conflict/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The effect of aging on response congruency in task switching: A meta-analysis</title>
+      <link>/publication/grange-congruency_meta/</link>
+      <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-congruency_meta/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The effect of practice on inhibition in task switching: Controlling for episodic retrieval</title>
+      <link>/publication/grange-practice_episodic/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-practice_episodic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Does task activation in task switching influence inhibition or episodic interference?</title>
+      <link>/publication/grange-rci_inhibition/</link>
+      <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-rci_inhibition/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Update to trimr: A response time trimming package in R</title>
+      <link>/post/update-to-trimr-a-response-time-trimming-package-in-r/</link>
+      <pubDate>Sat, 16 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/update-to-trimr-a-response-time-trimming-package-in-r/</guid>
+      <description>
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;In 2015, I published my first ever R package: &lt;a href=&#34;https://cran.r-project.org/web/packages/trimr/index.html&#34;&gt;“trimr: An implementation of common response time trimming methods”&lt;/a&gt;. To date, this package has had over 5,600 downloads from CRAN, which is unbelievable!&lt;/p&gt;
+&lt;p&gt;3 years is a long time for a package, so I thought it was time to update the package, fix some bugs, and implement some additional functionality. To this end, I have spent some time over the past few days working on a new release. This new release is version 1.1.0. I will spend some time testing this version before updating it on CRAN; at present, &lt;a href=&#34;https://github.com/JimGrange/trimr&#34;&gt;it is only available at GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In this post I will provide an overview of the main changes since the previous version. I will also provide an updated tutorial on how to use &lt;em&gt;trimr&lt;/em&gt; from the &lt;a href=&#34;https://jimgrange.wordpress.com/2015/08/03/trimr-an-r-package-of-response-time-trimming-methods/&#34;&gt;previous tutorial released in 2015&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;If you use trimr in your work&lt;/strong&gt;, I would really appreciate a citation to the package. Please see the &lt;a href=&#34;#references&#34;&gt;references&lt;/a&gt; section for how to do this.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;div id=&#34;contents&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Contents&lt;/h2&gt;
+&lt;p&gt;Here’s a table of contents for the blog post. If you are here just to learn about how to use &lt;em&gt;trimr&lt;/em&gt;, then just skip over the list of updates and get stuck right in:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;#updates&#34;&gt;Overview of Updates&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;#install&#34;&gt;Installing trimr&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;#example_data&#34;&gt;Example Data&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;#trimming_overview&#34;&gt;Overview of Trimming Methods&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;#absolute_value_criterion&#34;&gt;Absolute Value Criterion:&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;#sd_criterion&#34;&gt;Standard Deviation Criterion&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;#recursive_criterion&#34;&gt;Recursive / Moving Criterion&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;#factorial_designs&#34;&gt;Data from Factorial Designs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;updates&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Overview of Updates&lt;/h2&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Bug fixes.&lt;/strong&gt; Since its release in 2015, I have been contacted by many users kindly pointing out some bugs in &lt;em&gt;trimr&lt;/em&gt;. Some of these were very minor and won’t be mentioned here, but below I outline some of the key bugs that are fixed in the newest release. Note that some issues remain, but are less urgent; you can find a list of issues &lt;a href=&#34;https://github.com/JimGrange/trimr/issues&#34;&gt;and add your own if you find any here&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;There was an error in the &lt;em&gt;sdTrim&lt;/em&gt; function when the user was asking for trimming at the participant and condition level. It would just return a blank data frame (ooops, sorry!).&lt;/li&gt;
+&lt;li&gt;The recursive trimming functions would break when there were more than 97 trials.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Flexible naming of columns in file containing the data.&lt;/strong&gt; In the previous version of &lt;em&gt;trimr&lt;/em&gt;, users were forced to name their columns in a fixed way so that the package knew (for example) which column contained the response time data, which column contained the experimental conditions, etc. With massive thanks to contributions made by &lt;a href=&#34;https://eddjberry.netlify.com/&#34;&gt;Ed Berry&lt;/a&gt;, users can now specify their own names for the columns, and tell &lt;em&gt;trimr&lt;/em&gt; where to find the relevant data. This is a huge improvement, so a massive thanks to Ed!!&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;All trimming functions now return trial-level data.&lt;/strong&gt; The two trimming methods I expect most users are utilising in &lt;em&gt;trimr&lt;/em&gt; are the &lt;em&gt;absoluteTrim&lt;/em&gt; method and the &lt;em&gt;sdTrim&lt;/em&gt; method. Both of these methods allowed users to dictate the format for how the trimmed data should be returned:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;mean&lt;/em&gt; returns calculated mean RT per participant per condition after trimming&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;median&lt;/em&gt; returns calculated median RT per participant per condition after trimming&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;raw&lt;/em&gt; returns trial-level data after the trials with trimmed RTs are removed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;However, this “returnType” argument was not available for the recursive / moving criterion trimming methods. In particular, I received several email requests for an update to &lt;em&gt;trimr&lt;/em&gt; to allow return-type of “raw” for these methods to allow the user to model their data using linear mixed effect modelling (which often requires trial-level, rather than aggregated, participant data). These different return-types are now implemented for all methods.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;install&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Installing trimr&lt;/h2&gt;
+&lt;p&gt;This version of &lt;em&gt;trimr&lt;/em&gt; will soon be submitted to the official R package repository, CRAN. When it is available on CRAN (I will provide an update here when this is the case), you can install &lt;em&gt;trimr&lt;/em&gt; directly by opening R and typing:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(&amp;quot;trimr&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To install the latest version of trimr (which should always be considered developmental), you will first need to install the &lt;em&gt;devtools&lt;/em&gt; package and install &lt;em&gt;trimr&lt;/em&gt; directly from GitHub by using the following commands:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# install devtools
+install.packages(&amp;quot;devtools&amp;quot;)
+
+# install trimr from GitHub
+devtools::install_github(&amp;quot;JimGrange/trimr&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;example_data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Example Data&lt;/h2&gt;
+&lt;p&gt;Of course, you will be using &lt;em&gt;trimr&lt;/em&gt; on your own data. This data will be a &lt;a href=&#34;http://www.r-tutor.com/r-introduction/data-frame&#34;&gt;data frame&lt;/a&gt; that contains your experimental data. At present, &lt;em&gt;trimr&lt;/em&gt; only accepts data in &lt;a href=&#34;https://www.theanalysisfactor.com/wide-and-long-data/&#34;&gt;wide format&lt;/a&gt;, but it is on my to-do list to allow long format entry. This data frame should contain (at a minimum) columns that specify your participant numbers, your experimental conditions, your response time data, and your accuracy data.&lt;/p&gt;
+&lt;p&gt;In previous versions of &lt;em&gt;trimr&lt;/em&gt; your data had to contain columns with the same names used below. However, you can now specify your own column names. The default values are the old required values meaning no code written for previous versions of &lt;em&gt;trimr&lt;/em&gt; will be broken by this change. You can have other columns in your data file (which will just be ignored by &lt;em&gt;trimr&lt;/em&gt;).&lt;/p&gt;
+&lt;p&gt;Whilst you are getting use to &lt;em&gt;trimr&lt;/em&gt;’s functionality, you can use some example data that ships with the package.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# load the trimr package
+library(trimr)
+
+# activate the data
+data(exampleData)
+
+# look at the top of the data
+head(exampleData)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   participant condition   rt accuracy
+## 1           1    Switch 1660        1
+## 2           1    Switch  913        1
+## 3           1    Repeat 2312        1
+## 4           1    Repeat  754        1
+## 5           1    Switch 3394        1
+## 6           1    Repeat  930        1&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This data is simulated, and has data from 32 subjects. This data is from a task switching experiment, where RT and accuracy was recorded for two experimental conditions: Switch, when the task switched from the previous trial, and Repeat, when the task repeated from the previous trial. (If you have data from a factorial design (i.e., the condition codes are spread over more than one column), then please see the final section of this vignette for how to deal with this in &lt;em&gt;trimr&lt;/em&gt;).&lt;/p&gt;
+&lt;p&gt;The example data consists of 4 columns:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;strong&gt;participant:&lt;/strong&gt; Codes the number of each participant in the experiment&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;condition:&lt;/strong&gt; In this example, there are two experimental conditions: “Switch”, and “Repeat”.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;rt:&lt;/strong&gt; Logs the response time of the participant in milliseconds.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;accuracy:&lt;/strong&gt; Logs the accuracy of the response. 1 codes a correct response, 0 an error response.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;If the columns of your data frame (from your real experiment) have different names from the defaults these can be specified in the calls to the trimming functions (described later). For now, here is an example:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# perform the trimming (note this is just an example and won&amp;#39;t run)
+trimmedData &amp;lt;- absoluteRT(data = exampleData, 
+                          pptVar = &amp;quot;id&amp;quot;, condVar = &amp;quot;cond&amp;quot;, rtVar = &amp;quot;RT&amp;quot;, 
+                          accVar = &amp;quot;correct&amp;quot;, minRT = 150, maxRT = 2000, 
+                          digits = 0)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is the functionality added by &lt;a href=&#34;https://eddjberry.netlify.com/&#34;&gt;Ed Berry&lt;/a&gt;. In this call, the arguments are as follows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;pptVar:&lt;/strong&gt; The name of the column holding participant identification numbers&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;condVar:&lt;/strong&gt; The name of the column holding the different conditions&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;rtVar:&lt;/strong&gt; The name of the column holding response time data&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;accVar:&lt;/strong&gt; The name of the column holding accuracy data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;overview-of-trimming&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span id=&#34;trimming_overview&#34;&gt;Overview of Trimming&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;The trimming functions provided by &lt;em&gt;trimr&lt;/em&gt;—at present—fall broadly into three families (seen here with their &lt;em&gt;trimr&lt;/em&gt; function names). Click on each family member to be taken to the relevant overview &amp;amp; tutorial:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;#absolute_value_criterion&#34;&gt;Absolute Value Criterion:&lt;/a&gt; involves identifying an absolute upper- and lower-limit on RTs to include in the final analysis (e.g., “RTs faster than 150ms and slower than 2,000ms were excluded from data analysis”).
+&lt;ul&gt;
+&lt;li&gt;absoluteRT&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sd_criterion&#34;&gt;Standard Deviation Criterion:&lt;/a&gt; whereby the upper limit for RT removal is based on a standard deviation criterion (e.g., “RTs slower than 2.5 standard deviations about the mean for each participant for each experimental condition were excluded from data analysis”).
+&lt;ul&gt;
+&lt;li&gt;sdTrim&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recursive_criterion&#34;&gt;Recursive / Moving Criterion:&lt;/a&gt; are various function introduced by Van Selst &amp;amp; Jolicoeur (1994) which try to minimise bias when the number of trials entering the trimming function can vary.
+&lt;ul&gt;
+&lt;li&gt;nonRecursive&lt;/li&gt;
+&lt;li&gt;modifiedRecursive&lt;/li&gt;
+&lt;li&gt;hybridRecursive&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;absolute-value-criterion&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span id=&#34;absolute_value_criterion&#34;&gt;Absolute Value Criterion&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;The absolute value criterion is the simplest of all of the trimming methods available (except of course for having no trimming). An upper- and lower-criterion is set by the user, and any response time that falls outside of these limits are removed. The function that performs this trimming method in &lt;em&gt;trimr&lt;/em&gt; is called &lt;em&gt;absoluteRT&lt;/em&gt;.&lt;/p&gt;
+&lt;div id=&#34;absolutert&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;absoluteRT&lt;/h3&gt;
+&lt;p&gt;In this function, the user declares lower- and upper-criterion for RT trimming (minRT and maxRT arguments, respectively); RTs outside of these criteria are removed. Note that these criteria must be in the same unit as the RTs are logged in within the data frame being used. The function also has some other important arguments:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;omitErrors:&lt;/strong&gt; If the user wishes error trials to be removed from the trimming, this needs to be set to TRUE (it is set to this by default). Alternatively, some users may wish to keep error trials included. Therefore, set this argument to FALSE.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returnType:&lt;/strong&gt; Here, the user can control how the data are returned.
+&lt;ul&gt;
+&lt;li&gt;“raw” returns trial-level data after the trials with trimmed RTs are removed;&lt;/li&gt;
+&lt;li&gt;“mean” returns calculated mean RT per participant per condition after trimming;&lt;/li&gt;
+&lt;li&gt;“median” returns calculated median RT per participant per condition after trimming. This is set to “mean” by default.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;digits:&lt;/strong&gt; Controls how many digits to round the data to after trimming. If the user has a data frame where the RTs are recorded in seconds (e.g., 0.657), this argument can be left at its default value of 3. However, if the data are logged in milliseconds, it might be best to change this argument to zero, so there are no decimal places in the rounding of RTs (e.g., 657).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this first example, let’s trim the data using criteria of RTs less than 150 milliseconds and greater than 2,000 milliseconds, with error trials removed before trimming commences. Let’s also return the mean RTs for each condition, and round the data to zero decimal places.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# perform the trimming
+trimmedData &amp;lt;- absoluteRT(data = exampleData, minRT = 150, maxRT = 2000, 
+                          omitErrors = TRUE, returnType = &amp;quot;mean&amp;quot;, 
+                          digits = 0)
+
+# look at the top of the data
+head(trimmedData)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   participant Switch Repeat
+## 1           1    901    742
+## 2          10    793    669
+## 3          11   1054    943
+## 4          12    880    662
+## 5          13    914    773
+## 6          14   1000    817&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Just to show how the other arguments are used, let’s now do the same trimming but return the raw (i.e., trial-level) data rather than just participant averages (by changing the &lt;em&gt;returnType&lt;/em&gt; argument input):&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# perform the trimming
+trimmedData &amp;lt;- absoluteRT(data = exampleData, minRT = 150, maxRT = 2000, 
+                          omitErrors = TRUE, returnType = &amp;quot;raw&amp;quot;, 
+                          digits = 0)
+
+# look at the top of the data
+head(trimmedData)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##    participant condition   rt accuracy
+## 1            1    Switch 1660        1
+## 2            1    Switch  913        1
+## 4            1    Repeat  754        1
+## 6            1    Repeat  930        1
+## 7            1    Switch 1092        1
+## 11           1    Repeat  708        1&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You will see in this case that the returned data frame is the same format as the input, but now the trimmed trials are removed.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;standard-deviation-criterion&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span id=&#34;sd_criterion&#34;&gt;Standard Deviation Criterion&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;This trimming method uses a standard deviation multiplier as the upper criterion for RT removal (users still need to enter a lower-bound manually via &lt;em&gt;minRT&lt;/em&gt;). For example, this method can be used to trim all RTs 2.5 standard deviations above the mean RT. This trimming can be done per condition (e.g., 2.5 SDs above the mean of each condition), per participant (e.g., 2.5 SDs above the mean of each participant), or per condition per participant (e.g., 2.5 SDs above the mean of each participant for each condition).&lt;/p&gt;
+&lt;div id=&#34;sdtrim&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;sdTrim&lt;/h3&gt;
+&lt;p&gt;In this function, the user declares a lower-bound on RT trimming (e.g., 150 milliseconds) and an upper-bound in standard deviations. The value of standard deviation used is set by the SD argument. How this is used varies depending on the values the user passes to two important additional function arguments:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;perCondition:&lt;/strong&gt; If set to TRUE, the trimming will occur above the mean of each experimental condition in the data file&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;perParticipant:&lt;/strong&gt; If set to TRUE, the trimming will occur above the mean of each participant in the data file&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note that if both are set to TRUE, the trimming will occur per participant per condition (e.g., if SD is set to 2.5, the function will trim RTs 2.5 SDs above the mean RT of each participant for each condition).&lt;/p&gt;
+&lt;p&gt;In this example, let’s trim RTs faster than 150 milliseconds, and greater than 3 SDs above the mean of each participant, and return the mean RTs:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;trimmedData &amp;lt;- sdTrim(data = exampleData, minRT = 150, sd = 3, 
+                      perCondition = FALSE, perParticipant = TRUE, 
+                      returnType = &amp;quot;mean&amp;quot;, digits = 0)
+
+# look at the top of the data
+head(trimmedData)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   participant Switch Repeat
+## 1           1   1042    775
+## 2          10    779    666
+## 3          11   1082    964
+## 4          12    871    652
+## 5          13    914    773
+## 6          14   1034    827&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, let’s trim per condition per participant:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# trim the data
+trimmedData &amp;lt;- sdTrim(data = exampleData, minRT = 150, sd = 3, 
+                      perCondition = TRUE, perParticipant = TRUE, 
+                      returnType = &amp;quot;mean&amp;quot;, digits = 0)
+
+# look at the top of the data
+head(trimmedData)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   participant Switch Repeat
+## 1           1   1099    742
+## 2          10    784    660
+## 3          11   1079    968
+## 4          12    874    644
+## 5          13    911    776
+## 6          14   1038    827&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;recursive-moving-criterion&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span id=&#34;recursive_criterion&#34;&gt;Recursive / Moving Criterion&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;Three functions in this family implement the trimming methods proposed &amp;amp; discussed by van Selst &amp;amp; Jolicoeur (1994): &lt;strong&gt;nonRecursive&lt;/strong&gt;, &lt;strong&gt;modifiedRecursive&lt;/strong&gt;, and &lt;strong&gt;hybridRecursive.&lt;/strong&gt; van Selst &amp;amp; Jolicoeur noted that the outcome of many trimming methods is influenced by the sample size (i.e., the number of trials) being considered, thus potentially producing bias. For example, even if RTs are drawn from identical positively-skewed distributions, a “per condition per participant” SD procedure (see sdTrim above) would result in a higher mean estimate for small sample sizes than larger sample sizes.&lt;/p&gt;
+&lt;p&gt;This bias was shown to be removed when a “moving criterion” (MC) was used; this is where the SD used for trimming is adapted to the sample size being considered.&lt;/p&gt;
+&lt;div id=&#34;nonrecursive&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;nonRecursive&lt;/h3&gt;
+&lt;p&gt;The non-recursive method proposed by van Selst &amp;amp; Jolicoeur (1994) is very similar to the standard deviation method outlined above with the exception that the user does not specify the SD to use as the upper bound. The SD used for the upper bound is instead decided by the sample size of the RTs being passed to the trimming function, with larger SDs being used for larger sample sizes.&lt;/p&gt;
+&lt;p&gt;Also, the function only trims per participant per condition.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;nonRecursive&lt;/strong&gt; function checks the sample size of the data being passed to it, and looks up the SD criterion required for the data’s sample size. The function looks in a data file contained in &lt;em&gt;trimr&lt;/em&gt; called &lt;strong&gt;linearInterpolation&lt;/strong&gt;. Should the user wish to see this data file (although the user will never need to access it if they are not interested), type:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# load the linear interpolation data file
+data(linearInterpolation)
+
+# show the first 20 rows (there are 100 in total)
+linearInterpolation[1:20, ]&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##    sampleSize modifiedRecursive nonRecursive
+## 1           4             8.000       1.4580
+## 2           5             6.200       1.6800
+## 3           6             5.300       1.8410
+## 4           7             4.800       1.9610
+## 5           8             4.475       2.0500
+## 6           9             4.250       2.1200
+## 7          10             4.110       2.1700
+## 8          11             4.000       2.2200
+## 9          12             3.920       2.2460
+## 10         13             3.850       2.2740
+## 11         14             3.800       2.3100
+## 12         15             3.750       2.3260
+## 13         16             3.728       2.3390
+## 14         17             3.706       2.3520
+## 15         18             3.684       2.3650
+## 16         19             3.662       2.3780
+## 17         20             3.640       2.3910
+## 18         21             3.631       2.3948
+## 19         22             3.622       2.3986
+## 20         23             3.613       2.4024&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Notice there are two columns. This current function will only look in the nonRecursive column; the other column is used by the modifiedRecursive function, discussed below. If the sample size of the current set of data is 16 RTs (for example), the function will use an upper SD criterion of 2.359, and will proceed much like the sdTrim function’s operations.&lt;/p&gt;
+&lt;p&gt;Here is how to use the function:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# trim the data
+trimmedData &amp;lt;- nonRecursive(data = exampleData, minRT = 150, digits = 0, 
+                            returnType = &amp;quot;mean&amp;quot;)
+
+# see the top of the data
+head(trimmedData)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   participant Switch Repeat
+## 1           1   1053    732
+## 2          10    779    652
+## 3          11   1066    960
+## 4          12    871    638
+## 5          13    900    766
+## 6          14   1018    817&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;important-update&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Important update!&lt;/h4&gt;
+&lt;p&gt;Note that in previous versions of &lt;em&gt;trimr&lt;/em&gt;, the user could only return the mean trimmed RTs (i.e., there was no “returnType” argument for this function). This has now been changed for the newest release of &lt;em&gt;trimr&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;To show this new functionality, let’s repeat the above, but return the raw (i.e., trial-level) data:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# trim the data
+trimmedData &amp;lt;- nonRecursive(data = exampleData, minRT = 150, digits = 0, 
+                            returnType = &amp;quot;raw&amp;quot;)
+
+# see the top of the data
+head(trimmedData)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##    participant condition   rt accuracy
+## 1            1    Switch 1660        1
+## 2            1    Switch  913        1
+## 7            1    Switch 1092        1
+## 9            1    Switch 2473        1
+## 12           1    Switch 2211        1
+## 14           1    Switch 1842        1&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;modifiedrecursive&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;modifiedRecursive&lt;/h3&gt;
+&lt;p&gt;The modifiedRecursive function is more involved than the nonRecursive function. This function performs trimming in cycles. It first temporarily removes the slowest RT from the distribution; then, the mean of the sample is calculated, and the cut-off value is calculated using a certain number of SDs around the mean, with the value for SD being determined by the current sample size. In this procedure, required SD &lt;em&gt;decreases&lt;/em&gt; with increased sample size (cf., the nonRecursive method, with increasing SDs with &lt;em&gt;increasing&lt;/em&gt; sample size; see the linearInterpolation data file above); see Van Selst and Jolicoeur (1994) for justification.&lt;/p&gt;
+&lt;p&gt;The temporarily removed RT is then returned to the sample, and the fastest and slowest RTs are then compared to the cut-off, and removed if they fall outside. This process is then repeated until no outliers remain, or until the sample size drops below four. The SD used for the cut-off is thus &lt;em&gt;dynamically altered&lt;/em&gt; based on the sample size of each cycle of the procedure, rather than static like the nonRecursive method.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# trim the data
+trimmedData &amp;lt;- modifiedRecursive(data = exampleData, minRT = 150, digits = 0, 
+                                 returnType = &amp;quot;mean&amp;quot;)
+
+# see the top of the data
+head(trimmedData)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   participant Switch Repeat
+## 1           1   1047    717
+## 2          10    779    647
+## 3          11   1075    931
+## 4          12    871    638
+## 5          13    911    763
+## 6          14   1014    799&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As with the nonRecursive function, in the new release of &lt;em&gt;trimr&lt;/em&gt; you can now obtain trial-level trimmed data:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# trim the data
+trimmedData &amp;lt;- modifiedRecursive(data = exampleData, minRT = 150, digits = 0, 
+                                 returnType = &amp;quot;raw&amp;quot;)
+
+# see the top of the data
+head(trimmedData)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   participant condition   rt accuracy
+## 1           1    Switch 1660        1
+## 2           1    Switch  913        1
+## 3           1    Switch 1092        1
+## 4           1    Switch 2473        1
+## 5           1    Switch 2211        1
+## 6           1    Switch 1842        1&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;hybridrecursive&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;hybridRecursive&lt;/h3&gt;
+&lt;p&gt;van Selst and Jolicoeur (1994) reported slight opposing trends of the non-recursive and modified-recursive trimming methods (see page 648, footnote 2). They therefore, in passing, suggested a “hybrid-recursive” method might balance the opposing trends. The hybrid-recursive method simply takes the average of the non-recursive and the modified-recursive methods.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Please note&lt;/strong&gt; that this function does not allow for different types of “returnType”; it only returns mean data per participant, per condition.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# trim the data
+trimmedData &amp;lt;- hybridRecursive(data = exampleData, minRT = 150, digits = 0)
+
+# see the top of the data
+head(trimmedData)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   participant Switch Repeat
+## 1           1   1050    724
+## 2          10    779    649
+## 3          11   1071    946
+## 4          12    871    638
+## 5          13    906    764
+## 6          14   1016    808&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-from-factorial-designs&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span id=&#34;factorial_designs&#34;&gt;Data from Factorial Designs&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;In the example data that ships with &lt;em&gt;trimr&lt;/em&gt;, the RT data comes from just two conditions (Switch vs. Repeat), which are coded in the column “condition”. However, in experimental psychology, factorial designs are prevalent, where RT data comes from more than one independent variable, with each IV having multiple levels. How can &lt;em&gt;trimr&lt;/em&gt; deal with this format?&lt;/p&gt;
+&lt;p&gt;First, let’s re-shape the exampleData set to how data might be stored from a factorial design. Let there be two IVs, each with two levels:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;strong&gt;taskSequence:&lt;/strong&gt; Switch vs. Repeat&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;reward:&lt;/strong&gt; Reward vs. NoReward&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The &lt;em&gt;taskSequence&lt;/em&gt; factor is coding whether the task has Switched or Repeated from the task on the previous trial (as before). The &lt;em&gt;reward&lt;/em&gt; factor is coding whether the participant was presented with a reward or not on the current trial (presented randomly). Let’s reshape our data frame to match this fictitious experimental scenario:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# get the example data that ships with trimr
+data(exampleData)
+
+# pass it to a new variable
+newData &amp;lt;- exampleData
+
+# add a column called &amp;quot;taskSequence&amp;quot; that logs whether the current task was a 
+# repetition or a switch trial (which is currently coded in the &amp;quot;condition&amp;quot;)
+# column
+newData$taskSequence &amp;lt;- newData$condition
+
+# add a column called &amp;quot;reward&amp;quot; that logs whether the participant received a 
+# reward or not. Fill it with random entries, just for example. This uses Rs
+# &amp;quot;sample&amp;quot; function
+newData$reward &amp;lt;- sample(c(&amp;quot;Reward&amp;quot;, &amp;quot;NoReward&amp;quot;), nrow(newData), 
+                         replace = TRUE)
+
+# delete the &amp;quot;condition&amp;quot; column
+newData &amp;lt;- subset(newData, select = -condition)
+
+# now let&amp;#39;s look at our new data
+head(newData)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   participant   rt accuracy taskSequence   reward
+## 1           1 1660        1       Switch NoReward
+## 2           1  913        1       Switch NoReward
+## 3           1 2312        1       Repeat   Reward
+## 4           1  754        1       Repeat NoReward
+## 5           1 3394        1       Switch   Reward
+## 6           1  930        1       Repeat   Reward&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This now looks how data typically comes in from a factorial design. Now, to get trimr to work on this, we need to create a new column called “condition”, and to place in this column the levels of all factors in the design. For example, if the first trial in our newData has taskSequence = Switch and reward = NoReward, we would like our condition entry for this trial to read “Switch_NoReward”. This is simple to do using R’s “paste” function. (Note that this code can be adapted to deal with any number of factors.)&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# add a new column called &amp;quot;condition&amp;quot;, and fill it with information from both 
+# columns that code for our factors
+newData$condition &amp;lt;- paste(newData$taskSequence, &amp;quot;_&amp;quot;, newData$reward, sep = &amp;quot;&amp;quot;)
+
+# let&amp;#39;s again look at the data
+head(newData)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   participant   rt accuracy taskSequence   reward       condition
+## 1           1 1660        1       Switch NoReward Switch_NoReward
+## 2           1  913        1       Switch NoReward Switch_NoReward
+## 3           1 2312        1       Repeat   Reward   Repeat_Reward
+## 4           1  754        1       Repeat NoReward Repeat_NoReward
+## 5           1 3394        1       Switch   Reward   Switch_Reward
+## 6           1  930        1       Repeat   Reward   Repeat_Reward&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we can pass this data frame to any function in &lt;em&gt;trimr&lt;/em&gt;, and it will work perfectly:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# trim the data
+trimmedData &amp;lt;- sdTrim(newData, minRT = 150, sd = 2.5, digits = 0, 
+                      returnType = &amp;quot;mean&amp;quot;)
+
+# check it worked
+head(trimmedData)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   participant Switch_NoReward Repeat_Reward Repeat_NoReward Switch_Reward
+## 1           1            1068           732             734          1026
+## 2          10             772           644             660           786
+## 3          11            1054           950             955          1088
+## 4          12             843           652             625           903
+## 5          13             909           781             731           895
+## 6          14            1029           817             799          1022&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span id=&#34;references&#34;&gt;References&lt;/span&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Grange, J.A. (2015). trimr: An implementation of common response time trimming methods. R package version 1.0.1. &lt;a href=&#34;https://cran.r-project.org/web/packages/trimr/index.html&#34; class=&#34;uri&#34;&gt;https://cran.r-project.org/web/packages/trimr/index.html&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Van Selst, M. &amp;amp; Jolicoeur, P. (1994). A solution to the effect of sample size on outlier elimination. &lt;em&gt;Quarterly Journal of Experimental Psychology, 47 (A)&lt;/em&gt;, 631—650.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>A new website</title>
+      <link>/post/a-new-website/</link>
+      <pubDate>Sat, 28 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/a-new-website/</guid>
+      <description>
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;I have spent the past day or so transporting my acedemic website from &lt;a href=&#34;https://jimgrange.wordpress.com&#34;&gt;Wordpress&lt;/a&gt; to the current website, which is written using the (superb!) &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;R package ‘blogdown’&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I made the change for a variety of reasons:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;I am now able to use R for &lt;em&gt;most&lt;/em&gt; things—analysis, simulations, writing papers using &lt;a href=&#34;https://github.com/crsh/papaja&#34;&gt;papaja&lt;/a&gt; and now my website—making my workflow more efficient (and high on the nerd-scale).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;I could never really get my wordpress site to look sleek and professional. Using R and blogdown I was able to utilise the &lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;Hugo website templates&lt;/a&gt;, which look very nice. (The current versio of my website uses the &lt;a href=&#34;https://themes.gohugo.io/academic/&#34;&gt;Hugo Academic theme&lt;/a&gt;.)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;As the blog is written in R and blogdown, it means that all the content &amp;amp; code behind it can be made freely available. You can see the Github page for the code of my website &lt;a href=&#34;https://github.com/JimGrange/website&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The blog posts on my previous site which I enjoyed writing the most had R demonstrations in them. As blogdown uses markdown, I can now write blog posts using markdown meaning I can integrate R code into the blog post! Not just that, plots are automatically integrated into the blog! Observe thus!&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)
+ggplot(faithfuld, aes(waiting, eruptions)) +
+  geom_raster(aes(fill = density)) +
+  scale_fill_distiller(palette = &amp;quot;Spectral&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-04-20-a-new-website_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;What other reasons did I need?&lt;/p&gt;
+&lt;!-- {{ template &#34;_internal/disqus.html&#34; . }} --&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

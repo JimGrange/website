@@ -1,0 +1,40 @@
++++
+# About/Biography widget.
+widget = "about"
+active = true
+date = "2016-04-20T00:00:00"
+
+# Order that this section will appear in.
+weight = 1
+
+# List your academic interests.
+[interests]
+  interests = [
+    "Cognitive Control Processes",
+    "Cognition in Clinical & Applied Settings",
+    "Computational Modelling",
+    "Scientific Reproducibility"
+  ]
+
+# List your qualifications (such as academic degrees).
+[[education.courses]]
+  course = "PhD in Cognitive Psychology"
+  institution = "Bangor University, UK"
+  year = 2010
+
+[[education.courses]]
+  course = "MSc in Psychological Research"
+  institution = "Bangor University, UK"
+  year = 2007
+
+[[education.courses]]
+  course = "BSc in Psychology"
+  institution = "Bangor University, UK"
+  year = 2006
+ 
++++
+
+# Biography
+I am a Reader in Cognitive Psychology at [Keele University, UK](https://www.keele.ac.uk/psychology/) where I am the Research Group Lead for the Cognition, Brain, & Behaviour group in the School. I am also the University Academic Lead for Resarch Integrity and Improvement. I joined Keele in 2010 after completing my PhD at Bangor University under the supervision of [Dr George Houghton.](https://www.bangor.ac.uk/psychology/people/profiles/george_houghton.php.en)
+
+The mission of my lab's work is to conduct fundamental research to understand cognitive control processes, and to then use this knowledge to tackle clinical and applied questions.  

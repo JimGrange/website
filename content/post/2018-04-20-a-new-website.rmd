@@ -1,0 +1,32 @@
+---
+title: A new website
+author: ~
+date: '2018-04-28'
+slug: a-new-website
+categories: [General]
+tags: [General]
+---
+
+I have spent the past day or so transporting my acedemic website from [Wordpress](https://jimgrange.wordpress.com) to the current website, which is written using the (superb!) [R package 'blogdown'](https://bookdown.org/yihui/blogdown/).
+
+I made the change for a variety of reasons:
+
+* I am now able to use R for *most* things---analysis, simulations, writing papers using [papaja](https://github.com/crsh/papaja) and now my website---making my workflow more efficient (and high on the nerd-scale).
+
+* I could never really get my wordpress site to look sleek and professional. Using R and blogdown I was able to utilise the [Hugo website templates](https://themes.gohugo.io/), which look very nice. (The current versio of my website uses the [Hugo Academic theme](https://themes.gohugo.io/academic/).) 
+
+* As the blog is written in R and blogdown, it means that all the content & code behind it can be made freely available. You can see the Github page for the code of my website [here](https://github.com/JimGrange/website).
+
+* The blog posts on my previous site which I enjoyed writing the most had R demonstrations in them. As blogdown uses markdown, I can now write blog posts using markdown meaning I can integrate R code into the blog post! Not just that, plots are automatically integrated into the blog! Observe thus!
+
+```{r, echo = TRUE}
+library(ggplot2)
+ggplot(faithfuld, aes(waiting, eruptions)) +
+  geom_raster(aes(fill = density)) +
+  scale_fill_distiller(palette = "Spectral")
+```
+
+
+What other reasons did I need?
+
+<!-- {{ template "_internal/disqus.html" . }} -->

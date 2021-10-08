@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications on Jim Grange</title>
+    <link>/publication/</link>
+    <description>Recent content in Publications on Jim Grange</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Tue, 28 Sep 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Computational modelling of the speed–accuracy tradeoff: No evidence for an association with depression symptomatology</title>
+      <link>/publication/grange-depression_sat/</link>
+      <pubDate>Tue, 28 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-depression_sat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mixtur: An R package for designing, analysisng, and modelling continuous report visual short-term memory studies</title>
+      <link>/publication/grange-mixtur/</link>
+      <pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-mixtur/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Computational modelling of attentional selectivity in depression reveals perceptual deficits</title>
+      <link>/publication/grange-depression_flanker/</link>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-depression_flanker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exploring the impact of mindfulness on false-memory susceptibility</title>
+      <link>/publication/sherman-mindfulness/</link>
+      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/sherman-mindfulness/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The effect of episodic retrieval on inhibition in task switching: A diffusion model analysis</title>
+      <link>/publication/kowalczyk-diffusion/</link>
+      <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/kowalczyk-diffusion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Beliefs about voices in voice-hearers: The role of schema functioning</title>
+      <link>/publication/davenport-/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/davenport-/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cognitive function, self-awareness, and neuroimaging findings in OCD-type presentations after Traumatic Brain Injury</title>
+      <link>/publication/coetzer/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/coetzer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Increased cognitive control after task conflict? Investigating the n–3 effect in task switching</title>
+      <link>/publication/schuch-task_conflict/</link>
+      <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/schuch-task_conflict/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The effect of aging on response congruency in task switching: A meta-analysis</title>
+      <link>/publication/grange-congruency_meta/</link>
+      <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-congruency_meta/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The effect of practice on inhibition in task switching: Controlling for episodic retrieval</title>
+      <link>/publication/grange-practice_episodic/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-practice_episodic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Does task activation in task switching influence inhibition or episodic interference?</title>
+      <link>/publication/grange-rci_inhibition/</link>
+      <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-rci_inhibition/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Impulse control disorder in Parkinson’s disease: A meta-analysis of cognitive, affective, and motivational correlates</title>
+      <link>/publication/martini-meta-2018/</link>
+      <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/martini-meta-2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Justify your alpha</title>
+      <link>/publication/lakens-2018/</link>
+      <pubDate>Tue, 02 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/lakens-2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Risky decision-making and affective features of impulse control disorder in Parkinson’s disease</title>
+      <link>/publication/martini-2018/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/martini-2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The effect of episodic retrieval on inhibition in task switching</title>
+      <link>/publication/grange-inhibition_ep_retrieval/</link>
+      <pubDate>Fri, 13 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-inhibition_ep_retrieval/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Inhibition in task switching: The reliability of the n−2 repetition cost</title>
+      <link>/publication/kowalczyk-inhition_reliability/</link>
+      <pubDate>Thu, 12 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/kowalczyk-inhition_reliability/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Does familial risk for alcohol use disorder predict alcohol hangover?</title>
+      <link>/publication/stephens-familial_risk/</link>
+      <pubDate>Fri, 06 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/stephens-familial_risk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A deficit in familiarity-driven recognition in a right-sided mediodorsal thalamic lesion patient</title>
+      <link>/publication/edelstyn-familiarity_parkinsons/</link>
+      <pubDate>Wed, 24 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/edelstyn-familiarity_parkinsons/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Temporal distinctiveness in task switching: Assessing the mixture-distribution assumption.</title>
+      <link>/publication/grange-mixture_dist/</link>
+      <pubDate>Wed, 24 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-mixture_dist/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>flankr: An R package implementing computational models of attentional selectivity</title>
+      <link>/publication/grange-flankr/</link>
+      <pubDate>Wed, 06 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-flankr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Response to a comment on &#39;Estimating the reproducibility of psychological science&#39;</title>
+      <link>/publication/anderson-2016-osc_reply/</link>
+      <pubDate>Tue, 05 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/anderson-2016-osc_reply/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The effect of alcohol hangover on choice response time</title>
+      <link>/publication/grange-hangover_rt/</link>
+      <pubDate>Tue, 05 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-hangover_rt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Time for insulting reviews to stop</title>
+      <link>/publication/grange-insulting_reviews/</link>
+      <pubDate>Sun, 03 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-insulting_reviews/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Estimating the reproducibility of psychological science</title>
+      <link>/publication/osc-science_article/</link>
+      <pubDate>Fri, 28 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/osc-science_article/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The effect of n–3 on n–2 repetition costs in task switching</title>
+      <link>/publication/schuch-n_3/</link>
+      <pubDate>Fri, 01 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/schuch-n_3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The effect of practice on n–2 repetition costs in set switching</title>
+      <link>/publication/grange-inhibition_practice/</link>
+      <pubDate>Sat, 10 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-inhibition_practice/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Can time-based decay explain temporal distinctiveness effects in task switching?</title>
+      <link>/publication/grange-temporal_distinctiveness/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-temporal_distinctiveness/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Task switching and cognitive control</title>
+      <link>/publication/grange-task_switching_book/</link>
+      <pubDate>Thu, 19 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-task_switching_book/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Task switching and cognitive control: An introduction</title>
+      <link>/publication/grange-task_switching_book_intro/</link>
+      <pubDate>Wed, 18 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-task_switching_book_intro/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Models of cognitive control in task switching</title>
+      <link>/publication/grange-task_switching_book_models/</link>
+      <pubDate>Tue, 17 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-task_switching_book_models/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title> A critical analysis of alcohol hangover research methodology for surveys or studies of effects on cognition.</title>
+      <link>/publication/stephens-hangover_review/</link>
+      <pubDate>Sat, 01 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/stephens-hangover_review/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The replication recipe: What makes for a convincing replication?</title>
+      <link>/publication/brandt-replication_recipe/</link>
+      <pubDate>Sat, 01 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/brandt-replication_recipe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>What&#39;s all this business about Bayes?</title>
+      <link>/publication/grange-bayes/</link>
+      <pubDate>Sun, 01 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-bayes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Reproducibility Project: A model of large-scale collaboration for empirical research on reproducibility</title>
+      <link>/publication/osc-book_chapter/</link>
+      <pubDate>Sat, 01 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/osc-book_chapter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>On costs and benefits of n–2 repetitions in task switching: Towards a behavioural marker of cognitive inhibition.</title>
+      <link>/publication/grange-costs_benefits_inhibition_model/</link>
+      <pubDate>Mon, 01 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-costs_benefits_inhibition_model/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>An open, large-scale, collaborative effort to estimate the reproducibility of psychological science</title>
+      <link>/publication/osc-estimating_reproducibility/</link>
+      <pubDate>Wed, 07 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/osc-estimating_reproducibility/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cost–benefit and distributional analyses of accessory stimuli</title>
+      <link>/publication/grange-accessory_stimuli/</link>
+      <pubDate>Sat, 01 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-accessory_stimuli/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CDF-XL: Computing cumulative distribution frequencies of reaction time data in Excel</title>
+      <link>/publication/houghton-cdf_xl/</link>
+      <pubDate>Thu, 01 Dec 2011 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/houghton-cdf_xl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Task preparation and task inhibition: A comment on Koch, Gade, Schuch, &amp; Philip (2010)</title>
+      <link>/publication/grange-koch_comment/</link>
+      <pubDate>Tue, 01 Feb 2011 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-koch_comment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Control of working memory contents during task switching</title>
+      <link>/publication/grange-nova_chapter/</link>
+      <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-nova_chapter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title> Heightened conflict in cue–target translation increases backward inhibition in set switching</title>
+      <link>/publication/grange-negative_transfer/</link>
+      <pubDate>Wed, 01 Sep 2010 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-negative_transfer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cue-switch costs in task-switching: Cue priming or control processes?</title>
+      <link>/publication/grange-cue_switching/</link>
+      <pubDate>Sun, 01 Aug 2010 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-cue_switching/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Temporal cue–target overlap is not essential for backward inhibition in task switching</title>
+      <link>/publication/grange-cue_overlap/</link>
+      <pubDate>Thu, 01 Oct 2009 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-cue_overlap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The role of cue–target translation in backward inhibition of attentional set</title>
+      <link>/publication/houghton-backward_inhibition/</link>
+      <pubDate>Sun, 01 Mar 2009 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/houghton-backward_inhibition/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/publication/episodic_retrieval/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/episodic_retrieval/</guid>
+      <description>Grange+++ title = &amp;ldquo;The effect of episodic retrieval on inhibition in task switching&amp;rdquo; date = &amp;ldquo;2017-01-08&amp;rdquo;
+authors = [&amp;rdquo;Grange, J.A.&amp;rdquo;, &amp;ldquo;Kowalczyk, A.W.&amp;rdquo;, &amp;ldquo;&amp;amp; O&amp;rsquo;Loughlin, R&amp;rdquo;]
+Publication type. Legend: 0 = Uncategorized 1 = Conference proceedings 2 = Journal 3 = Work in progress 4 = Technical report 5 = Book 6 = Book chapter publication_types = [&amp;ldquo;2&amp;rdquo;]
+publication = &amp;ldquo;Journal of Experimental Psychology: Human Perception &amp;amp; Performance, 43, 1568&amp;ndash;1583&amp;rdquo; publication_short = &amp;ldquo;Journal of Experimental Psychology: Human Perception &amp;amp; Performance, 43, 1568&amp;ndash;1583&amp;rdquo;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Jim Grange</title>
+    <link>/project/</link>
+    <description>Recent content in Projects on Jim Grange</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sat, 17 Feb 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cognitive Control Processes</title>
+      <link>/project/cognitive_control/</link>
+      <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/project/cognitive_control/</guid>
+      <description>Current Projects: Task Switching
+Memory &amp;amp; Cognitive Control
+Task Switching Humans live in an increasingly busy, multi-task environment which often requires frequent switching between different cognitive operations and tasks. Driving, for example, presents us with an incredibly complex environment wherein many sub-tasks&amp;mdash;e.g. speed monitoring, interpretation of abstract road signs, planning the best route etc.&amp;mdash;must be organised and deployed appropriately in order to arrive at our destination safely. Yet, despite the complexity, humans are able to act efficiently in a goal-directed manner.</description>
+    </item>
+    
+    <item>
+      <title>Computational Cognitive Models</title>
+      <link>/project/computational_models/</link>
+      <pubDate>Fri, 16 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/project/computational_models/</guid>
+      <description>The ultimate goal in the field of cognitive science/psychology is to understand the workings of the human/animal mind. How do we selectively attend to goal-relevant stimuli? How do we remember such vast amounts of information? How do we plan and co-ordinate complex plans of action? Researchers address these problems by describing behaviour, through observation and experimentation. At a higher level, researchers aim to predict behaviour: Only a solid understanding of a phenomenon allows successful prediction of future behaviour in differing contexts.</description>
+    </item>
+    
+    <item>
+      <title>Cognition in Clinical &amp; Ageing Populations</title>
+      <link>/project/clinical_applications/</link>
+      <pubDate>Thu, 15 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/project/clinical_applications/</guid>
+      <description>Much of our work has focussed on basic questions on cognitive psychology. More recently, we have shifted our attention (pun intended!) to applying the knowledge gained from this basic research towards clinical and applied questions. To date, we have conducted research on cognition in Healthy Ageing (Grange &amp;amp; Becker, 2019), depression (Grange, under review; Grange &amp;amp; Rydon-Grange, 2020), and Parkinson&amp;rsquo;s Disease (Martini et al., 2018).
+Much of the clinical and applied work we conduct utilises computational modelling to quantify (potential) disruption to latent cognitive processes in clinical populations.</description>
+    </item>
+    
+    <item>
+      <title>Scientific Reproducibility &amp; Replication</title>
+      <link>/project/scientific_reproducibility/</link>
+      <pubDate>Wed, 14 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/project/scientific_reproducibility/</guid>
+      <description>Replication is the most important statistic. If an experimental effect does not replicateóeither in your own lab or independentlyóthen trust in that effect should rightly diminish. Thus, assessing the reproducibility of an effect should rightly be among the priorities of psychological scientists. Despite the importance, replication attempts in psychology are rare, likely due to the enhanced incentive (e.g. publications, grant income) to introduce new ideas to the field rather than assess the validity of old ones.</description>
+    </item>
+    
+  </channel>
+</rss>
