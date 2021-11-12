@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Tue, 28 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 12 Nov 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>A spurious correlation between difference scores in evidence accumulation model parameters</title>
+      <link>/publication/grange-diffusion_correlations/</link>
+      <pubDate>Fri, 12 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/grange-diffusion_correlations/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Improving research quality: The view from the UK Reproducibility Network institutional leads for research improvement</title>
+      <link>/publication/ukrn/</link>
+      <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/ukrn/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Computational modelling of the speed–accuracy tradeoff: No evidence for an association with depression symptomatology</title>
