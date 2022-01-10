@@ -1,6 +1,6 @@
 +++
 title = "A spurious correlation between difference scores in evidence accumulation model parameters"
-date = "2021-11-12"
+date = "2022-01-11"
 
 authors = ["**Grange, J.A**", "& Schuch, S."]
 
