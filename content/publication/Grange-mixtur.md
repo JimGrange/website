@@ -1,5 +1,5 @@
 +++
-title = "mixtur: An R package for designing, analysisng, and modelling continuous report visual short-term memory studies"
+title = "mixtur: An R package for designing, analysing, and modelling continuous report visual short-term memory studies"
 date = "2021-08-01"
 
 authors = ["**Grange, J.A**", "& Moore, S.B."]
