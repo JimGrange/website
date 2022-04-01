@@ -11,6 +11,15 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>The evolution of primate short-term memory</title>
+      <link>/publication/manyprimates/</link>
+      <pubDate>Fri, 01 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/manyprimates/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Rumination and inhibition in task switching: Controlling for episodic retrieval</title>
       <link>/publication/grange-rumination/</link>
       <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
@@ -62,8 +71,7 @@
       
       <guid>/post/power-table-for-correlation/</guid>
       <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
@@ -475,8 +483,7 @@ sim_results %&amp;gt;%
       
       <guid>/post/a-decade-at-keele/</guid>
       <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;Today marks my 10 year anniversary of working at Keele University. On the one hand it feels like a blink of an eye, and yet on the other a lifetime. (Well, as I am 38 years old, a quarter of a lifetime.)&lt;/p&gt;
@@ -550,15 +557,6 @@ sim_results %&amp;gt;%
       <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>/publication/grange-congruency_meta/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>The effect of practice on inhibition in task switching: Controlling for episodic retrieval</title>
-      <link>/publication/grange-practice_episodic/</link>
-      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/grange-practice_episodic/</guid>
       <description></description>
     </item>
     
