@@ -11,6 +11,113 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Help! Latent change score modelling</title>
+      <link>/post/help-latent-change-score-modelling/</link>
+      <pubDate>Tue, 05 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/help-latent-change-score-modelling/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;A reviewer has asked myself and my co-author to conduct some additional analysis using latent change score modelling for a computational cognitive modelling paper we have submitted. As I have absolutely no idea how to conduct any form of structural equation modelling, I am asking the universe (i.e., you!) for help.&lt;/p&gt;
+&lt;p&gt;If you can help, &lt;a href=&#34;https://www.jimgrange.org/#contact&#34;&gt;please do reach out&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I am conducting all analysis in R, so will be looking to use the (seemingly excellent) &lt;a href=&#34;https://cran.r-project.org/web/packages/lavaan/index.html&#34;&gt;lavaan package&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I will provide a quick overview of the paper’s contribution, before outlining the SEM model requested by the reviewer.&lt;/p&gt;
+&lt;div id=&#34;overview-of-paper&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Overview of Paper&lt;/h2&gt;
+&lt;p&gt;We have a computational cognitive model that when fit to human response time data provides me with three independent parameters, labelled &lt;span class=&#34;math inline&#34;&gt;\(a\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(v\)&lt;/span&gt;, and &lt;span class=&#34;math inline&#34;&gt;\(t0\)&lt;/span&gt;. I fit the cognitive model to two experimental conditions. Let’s call these “easy” and “hard” conditions. This then provides 6 parameter values for each participant:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(a_{easy}\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(a_{hard}\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(v_{easy}\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(v_{hard}\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(t0_{easy}\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(t0_{hard}\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When we calculate difference scores—which we call delta (&lt;span class=&#34;math inline&#34;&gt;\(\Delta\)&lt;/span&gt;)—for each parameter by subtracting the easy parameter value from the hard parameter value:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\Delta_{a} = a_{hard} - a_{easy}\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\Delta_{v} = v_{hard} - v_{easy}\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\Delta_{t0} = t0_{hard} - t0_{easy}\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Our paper reports a spurious correlation that emerges between &lt;span class=&#34;math inline&#34;&gt;\(\Delta_{a}\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\Delta_{t0}\)&lt;/span&gt;, something which shouldn’t occur according to the theory we are modelling. We have a preprint on this effect here: &lt;a href=&#34;https://psyarxiv.com/u6py8&#34;&gt;https://psyarxiv.com/u6py8&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;reviewers-request&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Reviewer’s Request&lt;/h2&gt;
+&lt;p&gt;The reviewer suggested we attempt to model the correlation between the difference scores at the latent level using latent change score modelling.&lt;/p&gt;
+&lt;p&gt;The reviewer’s exact wording is:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“An alternative would be to use latent change models to regress model estimates from the hard condition on the easier condition and to then correlate latent changes score of the a-parameter and the t0 parameters”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;From my understanding of this request, we could do the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;First, split the human trial-level data into “odd” and “even” trials in both the easy and the hard conditions. (Each participant had 1,000 trials in total.)&lt;/li&gt;
+&lt;li&gt;Second, fit the cognitive model separately to odd and even trials for both easy and hard conditions.&lt;/li&gt;
+&lt;li&gt;Use these as “manifest variables” in an SEM to create latent variables for each parameter for each condition. For example, estimate a latent variable &lt;span class=&#34;math inline&#34;&gt;\(a_{easy}\)&lt;/span&gt; from the manifest variables &lt;span class=&#34;math inline&#34;&gt;\(a_{easy(odd)}\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(a_{easy(even)}\)&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;Then, have latent variables reflecting the &lt;em&gt;difference&lt;/em&gt; between the latent variables between experimental conditions:
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\Delta_{a} = a_{hard} - a_{easy}\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\Delta_{v} = v_{hard} - v_{easy}\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\Delta_{t0} = t0_{hard} - t0_{easy}\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Then, we are interested in the relationship between &lt;span class=&#34;math inline&#34;&gt;\(\Delta_{a}\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\Delta_{t0}\)&lt;/span&gt;. .&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;From this description, I’ve knocked up a quick visual of what I think this model looks like (but forgive lack of accuracy in any deviations from )&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2022-07-05-help-latent-change-score-modelling.en_files/model_outline.png&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;my-questions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;My Questions&lt;/h2&gt;
+&lt;p&gt;So, I basically have two questions that we would &lt;em&gt;really&lt;/em&gt; apprecitate some help on:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Is this model properly specified (i.e., can we get the type of analysis we want from the data we have?)?
+&lt;ul&gt;
+&lt;li&gt;(To my admittedly naiive mind, we don’t seem to have enough manifest variables to create so many latent variables, but maybe SEM is much more magic than I thought!)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;How on earth does one create such a model in lavaan? Are there any examples of these types of models with open-source code you could provide? Or any helpful resources to help get started with this?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;fake-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Fake Data&lt;/h2&gt;
+&lt;p&gt;Here’s some fake data with the same structure as my real data:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
+
+# sample size 
+n &amp;lt;- 500
+
+data &amp;lt;- tibble(
+  a_easy_odd = rnorm(n, 0, 1), 
+  a_easy_even= rnorm(n, 0, 1),
+  a_hard_odd = rnorm(n, 0, 1),
+  a_hard_even = rnorm(n, 0, 1),
+  v_easy_odd = rnorm(n, 0, 1), 
+  v_easy_even= rnorm(n, 0, 1),
+  v_hard_odd = rnorm(n, 0, 1),
+  v_hard_even = rnorm(n, 0, 1),
+  t0_easy_odd = rnorm(n, 0, 1), 
+  t0_easy_even= rnorm(n, 0, 1),
+  t0_hard_odd = rnorm(n, 0, 1),
+  t0_hard_even = rnorm(n, 0, 1)
+)
+
+head(data)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 × 12
+##   a_easy_odd a_easy_even a_hard_odd a_hard_even v_easy_odd v_easy_even
+##        &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt;      &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt;      &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt;
+## 1      0.834       0.143     -1.02       0.943       1.13       -1.04 
+## 2     -0.493       1.33       0.497     -0.812      -0.697       0.640
+## 3      0.792      -1.34      -1.16      -0.754      -1.80       -0.333
+## 4      2.01        1.73      -0.315     -0.363      -1.43       -0.547
+## 5     -0.336      -0.742     -1.83      -0.0768     -1.63        0.513
+## 6     -1.42       -0.422      0.288     -0.770      -0.936       0.106
+## # … with 6 more variables: v_hard_odd &amp;lt;dbl&amp;gt;, v_hard_even &amp;lt;dbl&amp;gt;,
+## #   t0_easy_odd &amp;lt;dbl&amp;gt;, t0_easy_even &amp;lt;dbl&amp;gt;, t0_hard_odd &amp;lt;dbl&amp;gt;,
+## #   t0_hard_even &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Change detection across dimensions: The impact of dimension switching on change detection performance</title>
       <link>/publication/moore-change_detection/</link>
       <pubDate>Tue, 24 May 2022 00:00:00 +0000</pubDate>
@@ -548,15 +655,6 @@ sim_results %&amp;gt;%
       <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>/publication/coetzer/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Increased cognitive control after task conflict? Investigating the n–3 effect in task switching</title>
-      <link>/publication/schuch-task_conflict/</link>
-      <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/schuch-task_conflict/</guid>
       <description></description>
     </item>
     

@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Fri, 30 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 05 Jul 2022 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/statistics/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Help! Latent change score modelling</title>
+      <link>/post/help-latent-change-score-modelling/</link>
+      <pubDate>Tue, 05 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/help-latent-change-score-modelling/</guid>
+      <description>A reviewer has asked myself and my co-author to conduct some additional analysis using latent change score modelling for a computational cognitive modelling paper we have submitted. As I have absolutely no idea how to conduct any form of structural equation modelling, I am asking the universe (i.e., you!) for help.
+If you can help, please do reach out.
+I am conducting all analysis in R, so will be looking to use the (seemingly excellent) lavaan package.</description>
+    </item>
     
     <item>
       <title>Power Table for Correlation</title>

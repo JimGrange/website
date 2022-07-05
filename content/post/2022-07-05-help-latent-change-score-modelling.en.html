@@ -1,0 +1,110 @@
+---
+title: Help! Latent change score modelling
+author: Jim Grange
+date: '2022-07-05'
+slug: help-latent-change-score-modelling
+categories: [R, Statistics]
+tags: [R, Statistics]
+header:
+  caption: ''
+  image: ''
+  preview: yes
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<p>A reviewer has asked myself and my co-author to conduct some additional analysis using latent change score modelling for a computational cognitive modelling paper we have submitted. As I have absolutely no idea how to conduct any form of structural equation modelling, I am asking the universe (i.e., you!) for help.</p>
+<p>If you can help, <a href="https://www.jimgrange.org/#contact">please do reach out</a>.</p>
+<p>I am conducting all analysis in R, so will be looking to use the (seemingly excellent) <a href="https://cran.r-project.org/web/packages/lavaan/index.html">lavaan package</a>.</p>
+<p>I will provide a quick overview of the paper’s contribution, before outlining the SEM model requested by the reviewer.</p>
+<div id="overview-of-paper" class="section level2">
+<h2>Overview of Paper</h2>
+<p>We have a computational cognitive model that when fit to human response time data provides me with three independent parameters, labelled <span class="math inline">\(a\)</span>, <span class="math inline">\(v\)</span>, and <span class="math inline">\(t0\)</span>. I fit the cognitive model to two experimental conditions. Let’s call these “easy” and “hard” conditions. This then provides 6 parameter values for each participant:</p>
+<ul>
+<li><span class="math inline">\(a_{easy}\)</span></li>
+<li><span class="math inline">\(a_{hard}\)</span></li>
+<li><span class="math inline">\(v_{easy}\)</span></li>
+<li><span class="math inline">\(v_{hard}\)</span></li>
+<li><span class="math inline">\(t0_{easy}\)</span></li>
+<li><span class="math inline">\(t0_{hard}\)</span></li>
+</ul>
+<p>When we calculate difference scores—which we call delta (<span class="math inline">\(\Delta\)</span>)—for each parameter by subtracting the easy parameter value from the hard parameter value:</p>
+<ul>
+<li><span class="math inline">\(\Delta_{a} = a_{hard} - a_{easy}\)</span></li>
+<li><span class="math inline">\(\Delta_{v} = v_{hard} - v_{easy}\)</span></li>
+<li><span class="math inline">\(\Delta_{t0} = t0_{hard} - t0_{easy}\)</span></li>
+</ul>
+<p>Our paper reports a spurious correlation that emerges between <span class="math inline">\(\Delta_{a}\)</span> and <span class="math inline">\(\Delta_{t0}\)</span>, something which shouldn’t occur according to the theory we are modelling. We have a preprint on this effect here: <a href="https://psyarxiv.com/u6py8">https://psyarxiv.com/u6py8</a>.</p>
+</div>
+<div id="reviewers-request" class="section level2">
+<h2>Reviewer’s Request</h2>
+<p>The reviewer suggested we attempt to model the correlation between the difference scores at the latent level using latent change score modelling.</p>
+<p>The reviewer’s exact wording is:</p>
+<blockquote>
+<p>“An alternative would be to use latent change models to regress model estimates from the hard condition on the easier condition and to then correlate latent changes score of the a-parameter and the t0 parameters”</p>
+</blockquote>
+<p>From my understanding of this request, we could do the following:</p>
+<ul>
+<li>First, split the human trial-level data into “odd” and “even” trials in both the easy and the hard conditions. (Each participant had 1,000 trials in total.)</li>
+<li>Second, fit the cognitive model separately to odd and even trials for both easy and hard conditions.</li>
+<li>Use these as “manifest variables” in an SEM to create latent variables for each parameter for each condition. For example, estimate a latent variable <span class="math inline">\(a_{easy}\)</span> from the manifest variables <span class="math inline">\(a_{easy(odd)}\)</span> and <span class="math inline">\(a_{easy(even)}\)</span>.</li>
+<li>Then, have latent variables reflecting the <em>difference</em> between the latent variables between experimental conditions:
+<ul>
+<li><span class="math inline">\(\Delta_{a} = a_{hard} - a_{easy}\)</span></li>
+<li><span class="math inline">\(\Delta_{v} = v_{hard} - v_{easy}\)</span></li>
+<li><span class="math inline">\(\Delta_{t0} = t0_{hard} - t0_{easy}\)</span></li>
+</ul></li>
+<li>Then, we are interested in the relationship between <span class="math inline">\(\Delta_{a}\)</span> and <span class="math inline">\(\Delta_{t0}\)</span>. .</li>
+</ul>
+<p>From this description, I’ve knocked up a quick visual of what I think this model looks like (but forgive lack of accuracy in any deviations from )</p>
+<p><img src="/post/2022-07-05-help-latent-change-score-modelling.en_files/model_outline.png" /></p>
+</div>
+<div id="my-questions" class="section level2">
+<h2>My Questions</h2>
+<p>So, I basically have two questions that we would <em>really</em> apprecitate some help on:</p>
+<ul>
+<li>Is this model properly specified (i.e., can we get the type of analysis we want from the data we have?)?
+<ul>
+<li>(To my admittedly naiive mind, we don’t seem to have enough manifest variables to create so many latent variables, but maybe SEM is much more magic than I thought!)</li>
+</ul></li>
+<li>How on earth does one create such a model in lavaan? Are there any examples of these types of models with open-source code you could provide? Or any helpful resources to help get started with this?</li>
+</ul>
+</div>
+<div id="fake-data" class="section level2">
+<h2>Fake Data</h2>
+<p>Here’s some fake data with the same structure as my real data:</p>
+<pre class="r"><code>library(tidyverse)
+
+# sample size 
+n &lt;- 500
+
+data &lt;- tibble(
+  a_easy_odd = rnorm(n, 0, 1), 
+  a_easy_even= rnorm(n, 0, 1),
+  a_hard_odd = rnorm(n, 0, 1),
+  a_hard_even = rnorm(n, 0, 1),
+  v_easy_odd = rnorm(n, 0, 1), 
+  v_easy_even= rnorm(n, 0, 1),
+  v_hard_odd = rnorm(n, 0, 1),
+  v_hard_even = rnorm(n, 0, 1),
+  t0_easy_odd = rnorm(n, 0, 1), 
+  t0_easy_even= rnorm(n, 0, 1),
+  t0_hard_odd = rnorm(n, 0, 1),
+  t0_hard_even = rnorm(n, 0, 1)
+)
+
+head(data)</code></pre>
+<pre><code>## # A tibble: 6 × 12
+##   a_easy_odd a_easy_even a_hard_odd a_hard_even v_easy_odd v_easy_even
+##        &lt;dbl&gt;       &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;
+## 1      0.834       0.143     -1.02       0.943       1.13       -1.04 
+## 2     -0.493       1.33       0.497     -0.812      -0.697       0.640
+## 3      0.792      -1.34      -1.16      -0.754      -1.80       -0.333
+## 4      2.01        1.73      -0.315     -0.363      -1.43       -0.547
+## 5     -0.336      -0.742     -1.83      -0.0768     -1.63        0.513
+## 6     -1.42       -0.422      0.288     -0.770      -0.936       0.106
+## # … with 6 more variables: v_hard_odd &lt;dbl&gt;, v_hard_even &lt;dbl&gt;,
+## #   t0_easy_odd &lt;dbl&gt;, t0_easy_even &lt;dbl&gt;, t0_hard_odd &lt;dbl&gt;,
+## #   t0_hard_even &lt;dbl&gt;</code></pre>
+</div>
