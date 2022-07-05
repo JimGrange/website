@@ -55,7 +55,7 @@ From my understanding of this request, we could do the following:
   * $\Delta_{t0} = t0_{hard} - t0_{easy}$
 * Then, we are interested in the relationship between $\Delta_{a}$ and $\Delta_{t0}$. .
 
-From this description, I've knocked up a quick visual of what I think this model looks like (but forgive lack of accuracy in any deviations from )
+From this description, I've knocked up a quick visual of what I think this model looks like (but forgive lack of accuracy in any deviations from how these models are traditionally presented).
 
 ![](/post/2022-07-05-help-latent-change-score-modelling.en_files/model_outline.png)
 
