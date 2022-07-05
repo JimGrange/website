@@ -96,7 +96,6 @@ Of course, you will be using *trimr* on your own data. This data will be a [data
 
 In previous versions of *trimr* your data had to contain columns with the same names used below. However, you can now specify your own column names. The default values are the old required values meaning no code written for previous versions of *trimr* will be broken by this change. You can have other columns in your data file (which will just be ignored by *trimr*).  
 
-
 Whilst you are getting use to *trimr*'s functionality, you can use some example data that ships with the package.
 
 ```{r}
