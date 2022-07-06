@@ -1,6 +1,6 @@
 +++
 title = "Rumination and inhibition in task switching: Controlling for episodic retrieval"
-date = "2022-01-12"
+date = "2022-12-29"
 
 authors = ["**Grange, J.A**"]
 

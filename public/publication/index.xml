@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Tue, 24 May 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 31 Dec 2022 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,36 +15,36 @@
     <item>
       <title>Change detection across dimensions: The impact of dimension switching on change detection performance</title>
       <link>/publication/moore-change_detection/</link>
-      <pubDate>Tue, 24 May 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 31 Dec 2022 00:00:00 +0000</pubDate>
       
       <guid>/publication/moore-change_detection/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>The evolution of primate short-term memory</title>
-      <link>/publication/manyprimates/</link>
-      <pubDate>Fri, 01 Apr 2022 00:00:00 +0000</pubDate>
+      <title>A spurious correlation between difference scores in evidence accumulation model parameters</title>
+      <link>/publication/grange-diffusion_correlations/</link>
+      <pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>/publication/manyprimates/</guid>
+      <guid>/publication/grange-diffusion_correlations/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Rumination and inhibition in task switching: Controlling for episodic retrieval</title>
       <link>/publication/grange-rumination/</link>
-      <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 29 Dec 2022 00:00:00 +0000</pubDate>
       
       <guid>/publication/grange-rumination/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>A spurious correlation between difference scores in evidence accumulation model parameters</title>
-      <link>/publication/grange-diffusion_correlations/</link>
-      <pubDate>Tue, 11 Jan 2022 00:00:00 +0000</pubDate>
+      <title>The evolution of primate short-term memory</title>
+      <link>/publication/manyprimates/</link>
+      <pubDate>Wed, 06 Jul 2022 00:00:00 +0000</pubDate>
       
-      <guid>/publication/grange-diffusion_correlations/</guid>
+      <guid>/publication/manyprimates/</guid>
       <description></description>
     </item>
     

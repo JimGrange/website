@@ -1,6 +1,6 @@
 +++
 title = "The evolution of primate short-term memory"
-date = "2022-04-01"
+date = "2022-07-06"
 
 authors = ["**ManyPrimates**"]
 
@@ -15,8 +15,8 @@ authors = ["**ManyPrimates**"]
 # 6 = Book chapter
 publication_types = ["2"]
 
-publication = "Under Review"
-publication_short = "Under Review"
+publication = "*Animal Behavior & Cognition*, in press"
+publication_short = "*Animal Behavior & Cognition*, in press"
 
 abstract = "Short-term memory is implicated in a range of cognitive abilities and is critical for understanding primate cognitive evolution. To investigate the effects of phylogeny, ecology and sociality on short-term memory ability, we tested 421 non-human primates across 41 species in a pre-registered, experimental delayed-response task. Our results confirm previous findings that longer delays decrease memory performance across species and taxa. Our analyses demonstrate a considerable contribution of phylogeny over ecological and social factors on the distribution of short-term memory performance in primates; closely related species had more similar short-term memory abilities. However, interdependencies between phylogeny and socioecology of a given species present an obstacle to disentangling the effects of each of these factors on the evolution of short-term memory capacity. The dataset corresponding to the study is freely accessible and constitutes an important resource for studying the evolution of primate cognition."
 abstract_short = "Short-term memory is implicated in a range of cognitive abilities and is critical for understanding primate cognitive evolution. To investigate the effects of phylogeny, ecology and sociality on short-term memory ability, we tested 421 non-human primates across 41 species in a pre-registered, experimental delayed-response task. Our results confirm previous findings that longer delays decrease memory performance across species and taxa. Our analyses demonstrate a considerable contribution of phylogeny over ecological and social factors on the distribution of short-term memory performance in primates; closely related species had more similar short-term memory abilities. However, interdependencies between phylogeny and socioecology of a given species present an obstacle to disentangling the effects of each of these factors on the evolution of short-term memory capacity. The dataset corresponding to the study is freely accessible and constitutes an important resource for studying the evolution of primate cognition."

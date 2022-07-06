@@ -1,6 +1,6 @@
 +++
 title = "Change detection across dimensions: The impact of dimension switching on change detection performance"
-date = "2022-05-24"
+date = "2022-12-31"
 
 authors = ["Moore, S.B. & **Grange, J.A.**"]
 
